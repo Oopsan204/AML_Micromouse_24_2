@@ -1,0 +1,144 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: áda Lenovo, ads, LIC=32B1Q-NH6SJ-9UK4U-SM2MZ-C6LJA-Y8QDP
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+E:\code\micromouse2024\AML_Micromouse_24_2_code\AML_Micromouse_24_2\MDK-ARM\AML_Micromouse_24_2.uvprojx
+Project File Date:  08/09/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'AML_Micromouse_24_2'
+assembling startup_stm32h743xx.s...
+compiling queue.c...
+../Core/Inc/queue.h(8): warning:  #1295-D: Deprecated declaration queue_create - give arg types
+  queue queue_create();
+../Core/Inc/queue.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\Src\queue.c: 2 warnings, 0 errors
+compiling API.c...
+..\Core\Src\API.c(127): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\API.c: 1 warning, 0 errors
+compiling solver.c...
+../Core/Inc/solver.h(45): warning:  #1295-D: Deprecated declaration initialize - give arg types
+  void initialize();
+../Core/Inc/solver.h(46): warning:  #1295-D: Deprecated declaration updateMaze - give arg types
+  void updateMaze();      // updates the maze array with the walls around the mouse's current position
+../Core/Inc/solver.h(47): warning:  #1295-D: Deprecated declaration updateDistances - give arg types
+  void updateDistances();         // the "floodfill" algorithm
+../Core/Inc/solver.h(48): warning:  #1295-D: Deprecated declaration resetDistances - give arg types
+  void resetDistances();
+../Core/Inc/solver.h(54): warning:  #1295-D: Deprecated declaration solver - give arg types
+  Action solver();
+../Core/Inc/solver.h(55): warning:  #1295-D: Deprecated declaration leftWallFollower - give arg types
+  Action leftWallFollower();
+../Core/Inc/solver.h(56): warning:  #1295-D: Deprecated declaration floodFill - give arg types
+  Action floodFill();
+../Core/Inc/solver.h(58): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Inc/API.h(3): warning:  #1295-D: Deprecated declaration API_mazeWidth - give arg types
+  int API_mazeWidth();
+../Core/Inc/API.h(4): warning:  #1295-D: Deprecated declaration API_mazeHeight - give arg types
+  int API_mazeHeight();
+../Core/Inc/API.h(6): warning:  #1295-D: Deprecated declaration API_wallFront - give arg types
+  int API_wallFront();
+../Core/Inc/API.h(7): warning:  #1295-D: Deprecated declaration API_wallRight - give arg types
+  int API_wallRight();
+../Core/Inc/API.h(8): warning:  #1295-D: Deprecated declaration API_wallLeft - give arg types
+  int API_wallLeft();
+../Core/Inc/API.h(10): warning:  #1295-D: Deprecated declaration API_moveForward - give arg types
+  int API_moveForward();  // Returns 0 if crash, else returns 1
+../Core/Inc/API.h(11): warning:  #1295-D: Deprecated declaration API_turnRight - give arg types
+  void API_turnRight();
+../Core/Inc/API.h(12): warning:  #1295-D: Deprecated declaration API_turnLeft - give arg types
+  void API_turnLeft();
+../Core/Inc/API.h(19): warning:  #1295-D: Deprecated declaration API_clearAllColor - give arg types
+  void API_clearAllColor();
+../Core/Inc/API.h(23): warning:  #1295-D: Deprecated declaration API_clearAllText - give arg types
+  void API_clearAllText();
+../Core/Inc/API.h(25): warning:  #1295-D: Deprecated declaration API_wasReset - give arg types
+  int API_wasReset();
+../Core/Inc/API.h(26): warning:  #1295-D: Deprecated declaration API_ackReset - give arg types
+  void API_ackReset();
+../Core/Inc/API.h(30): warning:  #1-D: last line of file ends without a newline
+  void debug_coord(int x, int y);
+../Core/Inc/queue.h(8): warning:  #1295-D: Deprecated declaration queue_create - give arg types
+  queue queue_create();
+../Core/Inc/queue.h(28): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\Core\Src\solver.c(124): warning:  #177-D: variable "north"  was declared but never referenced
+      unsigned int north = _1000;
+..\Core\Src\solver.c(415): warning:  #1-D: last line of file ends without a newline
+  }
+..\Core\Src\solver.c: 25 warnings, 0 errors
+compiling main.c...
+compiling stm32h7xx_hal_tim_ex.c...
+compiling stm32h7xx_hal_gpio.c...
+compiling stm32h7xx_it.c...
+compiling stm32h7xx_hal_tim.c...
+compiling stm32h7xx_hal_msp.c...
+compiling stm32h7xx_hal_cortex.c...
+compiling stm32h7xx_hal_flash.c...
+compiling stm32h7xx_hal_flash_ex.c...
+compiling stm32h7xx_hal_rcc.c...
+compiling stm32h7xx_hal_rcc_ex.c...
+compiling stm32h7xx_hal_hsem.c...
+compiling system_stm32h7xx.c...
+compiling stm32h7xx_hal_exti.c...
+compiling stm32h7xx_hal_mdma.c...
+compiling stm32h7xx_hal_pwr.c...
+compiling stm32h7xx_hal_i2c_ex.c...
+compiling stm32h7xx_hal.c...
+compiling stm32h7xx_hal_dma_ex.c...
+compiling stm32h7xx_hal_pwr_ex.c...
+compiling stm32h7xx_hal_i2c.c...
+compiling stm32h7xx_hal_dma.c...
+linking...
+Program Size: Code=3944 RO-data=712 RW-data=20 ZI-data=1636  
+FromELF: creating hex file...
+"AML_Micromouse_24_2\AML_Micromouse_24_2.axf" - 0 Error(s), 28 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32H7xx_DFP.3.1.1.pack
+                Keil.STM32H7xx_DFP.3.1.1
+                STMicroelectronics STM32H7 Series Device Support and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_AML_Micromouse_24_2
+  C:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+Build Time Elapsed:  00:01:11
+</pre>
+</body>
+</html>
