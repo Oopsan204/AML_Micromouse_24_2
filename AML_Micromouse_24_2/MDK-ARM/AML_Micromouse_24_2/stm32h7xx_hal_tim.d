@@ -24,6 +24,9 @@ aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h
@@ -31,3 +34,8 @@ aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h
 aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
+aml_micromouse_24_2\stm32h7xx_hal_tim.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
