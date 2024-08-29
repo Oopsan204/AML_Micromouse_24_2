@@ -3081,10 +3081,28 @@
 		(uuid "5217afc1-2e23-4a1e-9f8d-98cd5a9c22e2")
 	)
 	(junction
+		(at 640.08 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "60d7c700-9161-4349-b590-184a7bfc4744")
+	)
+	(junction
 		(at 632.46 519.43)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8e430ce9-82a0-42d9-8994-53554c266f3e")
+	)
+	(junction
+		(at 642.62 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8e4fd0c3-ef5f-4a7a-8283-2a803a10e062")
+	)
+	(junction
+		(at 637.54 350.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "96616d5f-618f-43c8-8002-30b057a5cf08")
 	)
 	(junction
 		(at 632.46 506.73)
@@ -3194,6 +3212,16 @@
 	)
 	(wire
 		(pts
+			(xy 635 350.52) (xy 637.54 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2ab0159a-0ce8-481a-84ae-b9ce099d9929")
+	)
+	(wire
+		(pts
 			(xy 610.87 514.35) (xy 610.87 519.43)
 		)
 		(stroke
@@ -3201,6 +3229,16 @@
 			(type default)
 		)
 		(uuid "3e6b952e-fc8a-4ae3-b929-ff271f472388")
+	)
+	(wire
+		(pts
+			(xy 635 353.06) (xy 635 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "45c7c9a4-e2ec-400a-8e0e-d4ee384396b8")
 	)
 	(wire
 		(pts
@@ -3234,6 +3272,26 @@
 	)
 	(wire
 		(pts
+			(xy 637.54 350.52) (xy 640.08 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e00e17d-2790-4360-aa17-4bc6e1296f24")
+	)
+	(wire
+		(pts
+			(xy 640.08 350.52) (xy 642.62 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "750ea944-0044-4db8-b995-e677dc4f9ed2")
+	)
+	(wire
+		(pts
 			(xy 621.03 519.43) (xy 621.03 514.35)
 		)
 		(stroke
@@ -3254,6 +3312,16 @@
 	)
 	(wire
 		(pts
+			(xy 642.62 350.52) (xy 642.62 353.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "89bd6536-b775-4529-9c6e-219c2cce20f1")
+	)
+	(wire
+		(pts
 			(xy 666.75 519.43) (xy 666.75 514.35)
 		)
 		(stroke
@@ -3264,6 +3332,16 @@
 	)
 	(wire
 		(pts
+			(xy 645.16 350.52) (xy 645.16 353.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9027eba2-3c09-40f6-a918-c9820be46c42")
+	)
+	(wire
+		(pts
 			(xy 643.89 519.43) (xy 643.89 514.35)
 		)
 		(stroke
@@ -3271,6 +3349,16 @@
 			(type default)
 		)
 		(uuid "93f7b5ef-cbcf-4d3d-9812-2587c50ffeb7")
+	)
+	(wire
+		(pts
+			(xy 640.08 350.52) (xy 640.08 353.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9af5d784-b8c4-425b-8883-52a13d49bee6")
 	)
 	(wire
 		(pts
@@ -3291,6 +3379,26 @@
 			(type default)
 		)
 		(uuid "dff62349-d159-4f2a-8ce0-708f83c55529")
+	)
+	(wire
+		(pts
+			(xy 642.62 350.52) (xy 645.16 350.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e28a5ce1-c50c-4c00-b5b5-90a566f2767a")
+	)
+	(wire
+		(pts
+			(xy 637.54 350.52) (xy 637.54 353.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e7468e2d-3ed0-4b6b-a7e1-1211be68afe9")
 	)
 	(rectangle
 		(start 477.52 322.58)
@@ -4090,6 +4198,72 @@
 			(project "schematic"
 				(path "/294fb569-9d7c-450c-aa5f-45fbbde8417a"
 					(reference "C5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 640.08 350.52 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a260e138-f3c2-4659-8562-2816d18607de")
+		(property "Reference" "#PWR04"
+			(at 640.08 354.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 640.08 345.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 640.08 350.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 640.08 350.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 640.08 350.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "419e57c9-29bf-4ee4-bbcb-377644938091")
+		)
+		(instances
+			(project ""
+				(path "/294fb569-9d7c-450c-aa5f-45fbbde8417a"
+					(reference "#PWR04")
 					(unit 1)
 				)
 			)
