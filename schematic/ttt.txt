@@ -1,0 +1,61 @@
+## Các bước chi tiết để tính toán thiết kế chọn linh kiện cho ra Vo=5V, Vin từ 6V với MP1584
+
+Dựa trên thông tin từ tài liệu "MP1584EN-LF-Z.pdf", dưới đây là các bước chi tiết để tính toán và chọn linh kiện cho mạch buck converter sử dụng MP1584 với điện áp đầu ra Vo=5V và điện áp đầu vào Vin từ 6V:
+
+**1. Chọn điện trở phản hồi (R1 và R2):**
+
+* Điện áp đầu ra được thiết lập bằng cách sử dụng bộ chia điện trở từ điện áp đầu ra đến chân FB.
+* Điện áp phản hồi (VFB) được tính bằng công thức: **VFB = VOUT * R2 / (R1 + R2)**
+* Với VOUT = 5V và VFB = 0.8V (điện áp tham chiếu nội bộ), chọn **R2 = 40.2kΩ** (khuyến nghị sử dụng giá trị này)
+* Từ đó, ta tính được **R1 = (VOUT * R2 / VFB) - R2 = (5V * 40.2kΩ / 0.8V) - 40.2kΩ = 211kΩ**
+
+**2. Chọn cuộn cảm (L1):**
+
+* Chọn dòng điện gợn sóng đỉnh-đỉnh trong cuộn cảm (ΔIL) khoảng 30% dòng điện giới hạn tối đa của switch (3A). 
+    * **ΔIL = 0.3 * 3A = 0.9A**
+* Giá trị điện cảm (L) được tính bằng công thức: **L = (VIN - VOUT) * VOUT / (ΔIL * fS * VIN)**
+    * Với VIN = 6V, VOUT = 5V, ΔIL = 0.9A, và tần số chuyển mạch (fS) khuyến nghị là 500kHz, ta có: **L = (6V - 5V) * 5V / (0.9A * 500kHz * 6V) ≈ 9.26µH**
+* Chọn cuộn cảm có dòng điện định mức lớn hơn dòng điện đỉnh của cuộn cảm (ILP).
+    * **ILP = ILOAD + (ΔIL / 2) = (VOUT / RLOAD) + (ΔIL / 2)**. 
+    * Với ILOAD là dòng điện tải, giả sử RLOAD = 10Ω, ta có: **ILP = (5V / 10Ω) + (0.9A / 2) = 0.95A**. 
+* **Lựa chọn cuộn cảm từ bảng 1:** Có thể chọn cuộn cảm **10µH** (Wurth Electronics 744066100) với DCR = 0.035Ω và dòng điện định mức 3.6A thỏa mãn yêu cầu.
+
+**3. Chọn Diode chỉnh lưu đầu ra (D1):**
+
+* Chọn diode Schottky có điện áp ngược tối đa lớn hơn điện áp đầu vào tối đa (VIN_max) và dòng điện định mức lớn hơn dòng điện tải tối đa (ILOAD_max).
+* Với VIN_max = 6V và giả sử ILOAD_max = 3A, **có thể chọn diode Schottky B340A-13-F** (40V, 3A).
+
+**4. Chọn tụ điện đầu vào (C1):**
+
+* Chọn tụ điện có dòng điện RMS lớn hơn một nửa dòng điện tải tối đa (ILOAD_max / 2).
+* Nên sử dụng tụ điện gốm, tantal hoặc điện phân ESR thấp.
+* Với ILOAD_max = 3A, nên chọn tụ điện có dòng điện RMS lớn hơn 1.5A.
+* Ngoài ra, cần thêm một tụ điện gốm chất lượng cao, ví dụ 0.1μF, đặt càng gần IC càng tốt.
+
+**5. Chọn tụ điện đầu ra (C2):**
+
+* Nên sử dụng tụ điện gốm, tantal hoặc điện phân ESR thấp.
+* Tụ điện ESR thấp được ưu tiên để giữ gợn sóng điện áp đầu ra thấp.
+* Có thể ước tính gợn sóng điện áp đầu ra (ΔVOUT) theo công thức trong tài liệu.
+* Lựa chọn tụ điện dựa trên yêu cầu về gợn sóng điện áp đầu ra và ESR.
+
+**6. Chọn linh kiện bù (C3, R3, C6):**
+
+* Sử dụng bảng 3 để chọn giá trị linh kiện bù dựa trên điện áp đầu ra (VOUT), điện cảm (L) và tụ điện đầu ra (C2).
+* **Với VOUT = 5V, L = 10µH, and C2 = 22µF (giả sử), ta có R3 = 100kΩ, C3 = 150pF và không cần C6**.
+
+**7. Lưu ý khi thiết kế PCB:**
+
+* Tuân theo hướng dẫn bố trí PCB trong tài liệu để đảm bảo hoạt động ổn định.
+
+**8. Diode Bootstrap ngoài (tùy chọn):**
+
+* Nên sử dụng diode bootstrap ngoài khi điện áp đầu vào không lớn hơn 5V hoặc đường 5V có sẵn trong hệ thống.
+* Diode này cũng được khuyến nghị cho hoạt động ở chu kỳ làm việc cao (khi VOUT / VIN > 65%) hoặc ứng dụng VIN thấp (<5V).
+* Có thể sử dụng diode chi phí thấp như IN4148 hoặc BAT54.
+
+**Lưu ý:** 
+
+* Các giá trị linh kiện được tính toán ở trên chỉ là giá trị tham khảo. 
+* Bạn nên kiểm tra và hiệu chỉnh lại các giá trị linh kiện cho phù hợp với ứng dụng cụ thể của mình. 
+* Nên tham khảo datasheet của MP1584 để biết thêm thông tin chi tiết về linh kiện và tính toán. 
