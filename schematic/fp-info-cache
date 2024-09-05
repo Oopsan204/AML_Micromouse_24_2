@@ -1,4 +1,4 @@
-23848787690599113
+23850513243723747
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -65078,6 +65078,13 @@ Yellow 5381 Series LED
 0
 2
 2
+Library
+SOP65P760X160-24N
+
+
+0
+24
+24
 MP1584
 SO-08POWER
 <b>D (R-PDSO-G8)</b> Plastic Small Outline Package<p>Source: http://focus.ti.com/lit/ds/symlink/sn65als176.pdf

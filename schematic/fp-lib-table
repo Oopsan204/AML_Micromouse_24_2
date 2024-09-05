@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "Library")(type "KiCad")(uri "${KIPRJMOD}/TB6612FNG/TB6612FNG_C_8_EL.pretty/Library.pretty")(options "")(descr ""))
+)
