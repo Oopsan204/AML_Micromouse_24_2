@@ -7808,7 +7808,7 @@
 	)
 	(text "5V"
 		(exclude_from_sim no)
-		(at 1079.754 134.62 0)
+		(at 1075.69 136.144 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -12714,7 +12714,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "63.4K"
+		(property "Value" "75k"
 			(at 1096.772 92.71 0)
 			(effects
 				(font
@@ -13925,7 +13925,6 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "f815cfc8-0b14-42a6-b6d2-6a8c2d10a1a7")
 		(property "Reference" "#PWR022"
 			(at 1101.09 87.63 0)
@@ -13936,13 +13935,12 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "6-7.5V"
-			(at 1093.47 87.6299 90)
+		(property "Value" "6.5-7.5V"
+			(at 1088.136 87.63 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
 			)
 		)
 		(property "Footprint" ""
