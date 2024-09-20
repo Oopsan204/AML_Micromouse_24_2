@@ -59,6 +59,24 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BIT_SW_4_Pin GPIO_PIN_2
+#define BIT_SW_4_GPIO_Port GPIOE
+#define BIT_SW_3_Pin GPIO_PIN_3
+#define BIT_SW_3_GPIO_Port GPIOE
+#define BIT_SW_2_Pin GPIO_PIN_4
+#define BIT_SW_2_GPIO_Port GPIOE
+#define BIT_SW_1_Pin GPIO_PIN_5
+#define BIT_SW_1_GPIO_Port GPIOE
+#define BIT_SW_0_Pin GPIO_PIN_6
+#define BIT_SW_0_GPIO_Port GPIOE
+#define BUTTON_0_Pin GPIO_PIN_2
+#define BUTTON_0_GPIO_Port GPIOA
+#define BUTTON_1_Pin GPIO_PIN_3
+#define BUTTON_1_GPIO_Port GPIOA
+#define BUZZ_Pin GPIO_PIN_14
+#define BUZZ_GPIO_Port GPIOD
+#define LED_FF_Pin GPIO_PIN_15
+#define LED_FF_GPIO_Port GPIOD
 #define LED_L_Pin GPIO_PIN_6
 #define LED_L_GPIO_Port GPIOC
 #define LED_R_Pin GPIO_PIN_7
@@ -67,11 +85,9 @@ void Error_Handler(void);
 #define LED_FL_GPIO_Port GPIOC
 #define LED_FR_Pin GPIO_PIN_9
 #define LED_FR_GPIO_Port GPIOC
-#define LED_FF_Pin GPIO_PIN_8
-#define LED_FF_GPIO_Port GPIOA
-#define BUZZ_Pin GPIO_PIN_9
-#define BUZZ_GPIO_Port GPIOA
-#define BIN1_Pin GPIO_PIN_6
+#define BIN2_Pin GPIO_PIN_6
+#define BIN2_GPIO_Port GPIOD
+#define BIN1_Pin GPIO_PIN_7
 #define BIN1_GPIO_Port GPIOD
 #define AIN1_Pin GPIO_PIN_5
 #define AIN1_GPIO_Port GPIOB

@@ -1,0 +1,129 @@
+(footprint "JST 2"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 1.3716 -3.4036 0)
+		(unlocked yes)
+		(layer "F.SilkS")
+		(uuid "b8c73433-313a-40ae-bd53-dc1572f69631")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+		)
+	)
+	(property "Value" "JST 2"
+		(at 1.3208 3.5052 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "084d8849-ae45-445a-82c3-eb5f37b17ea6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6e3bd439-6398-48af-b896-f2a4455c59c9")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e19454ab-4c2e-40de-9683-c1f4e22ea76d")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "719ad755-5874-4184-84b2-d4df25ce855e")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_rect
+		(start -2.54 -2.54)
+		(end 5.0038 3.429)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "8b248639-642d-4b36-8385-0b2441d23069")
+	)
+	(fp_rect
+		(start 0 -2.54)
+		(end 2.54 -1.524)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "d832c998-ae10-4731-b7b6-7aee3b5c8a47")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 1.5748 1.7272 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "8df74ad1-a9d3-4b74-b641-2900ea2b6f77")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole roundrect
+		(at 0 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(roundrect_rratio 0.25)
+		(uuid "48907d43-d81b-4fcd-b186-87351c25c5d2")
+	)
+	(pad "2" thru_hole circle
+		(at 2.54 0)
+		(size 1.7 1.7)
+		(drill 1)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "db4c3a3d-c636-4e4f-b6ec-24e625d2bd48")
+	)
+	(model "C:/Users/84886/Documents/KiCad/7.0/3dmodels/Thru Vertical/JST - XH - Thru (V) - 2Pin - 2.54mm.stp"
+		(offset
+			(xyz 1.25 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 180)
+		)
+	)
+)
