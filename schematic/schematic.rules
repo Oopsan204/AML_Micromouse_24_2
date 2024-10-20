@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 6985)
+    (start_pass_no 7314)
     (layer_rule F.Cu
       (active on)
       (preferred_direction vertical)
@@ -29,8 +29,6 @@
     (width 200.0)
     (clearance 200.0)
     (clearance 100.0 (type smd_to_turn_gap))
-    (clearance 200.0 (type smd))
-    (clearance 200.0 (type "kicad_default"))
     (clearance 200.0 (type kicad))
   )
   (padstack "Via[0-1]_600:300_um"
@@ -55,13 +53,13 @@
     "Via[0-1]_1000:700_um" "Via[0-1]_1000:700_um" default
   )
   (via 
-    "Via[0-1]_1000:700_um-kicad_default" "Via[0-1]_1000:700_um" "kicad_default"
+    "Via[0-1]_1000:700_um-kicad_default" "Via[0-1]_1000:700_um" default
   )
   (via 
     "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
   )
   (via 
-    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" "kicad_default"
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" default
   )
   (via_rule
     default "Via[0-1]_600:300_um"
@@ -95,7 +93,7 @@
     "/LED_FL" "/LED_R" "/LED_L" "Net-(U5-VI)" "Net-(D8-K)" "Net-(D3-K)" "Net-(D4-K)" "Net-(D5-K)"
     "Net-(RN2-R5.2)" "Net-(RN2-R3.2)" "Net-(RN2-R4.2)" "Net-(RN2-R1.2)" "Net-(RN2-R2.2)" "/BIT_SW_4" "/BIT_SW_1" "/BIT_SW_3"
     "/BIT_SW_0" "/BIT_SW_2" "Net-(D9-K)"
-    (clearance_class "kicad_default")
+    (clearance_class default)
     (via_rule "kicad_default")
     (rule
       (width 200.0)
