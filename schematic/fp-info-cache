@@ -1,4 +1,4 @@
-23859145292019384
+23864334104136988
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2442,6 +2442,13 @@ buzzer
 0
 2
 2
+Buzzer_Beeper
+CUI_CMT-8530S-SMT
+
+
+0
+4
+4
 Buzzer_Beeper
 Indicator_PUI_AI-1440-TWT-24V-2-R
 14mm Indicator, https://www.puiaudio.com/media/SpecSheet/AI-1440-TWT-24V-2-R.pdf
@@ -36672,6 +36679,13 @@ Surface mounted pin header SMD 2x40 2.54mm double row
 0
 80
 80
+Connector_PinHeader_2.54mm
+jst
+
+
+0
+2
+2
 Connector_PinSocket_1.00mm
 PinSocket_1x02_P1.00mm_Vertical
 Through hole straight socket strip, 1x02, 1.00mm pitch, single row (https://gct.co/files/drawings/bc065.pdf), script generated
@@ -63769,6 +63783,13 @@ JST 6
 0
 6
 6
+JST-254
+conn
+
+
+0
+2
+2
 Jumper
 SolderJumper-2_P1.3mm_Bridged2Bar_Pad1.0x1.5mm
 SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 2 copper strips
