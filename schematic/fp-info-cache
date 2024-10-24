@@ -1,4 +1,4 @@
-23864334104136988
+23866063846716321
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -61767,6 +61767,13 @@ air coil inductor wurth we cair
 0
 2
 2
+Inductor_SMD
+fix inductor 12x12
+
+
+0
+0
+0
 Inductor_SMD_Wurth
 L_Wurth_WE-LQSH-2010
 Semi-Shielded High Saturation Power Inductor, body 2x1.6mm, https://www.we-online.com/catalog/en/WE-LQSH#/articles/WE-LQSH-2010

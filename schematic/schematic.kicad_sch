@@ -16300,7 +16300,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_SH_BM06B-SRSS-TB_1x06-1MP_P1.00mm_Vertical"
+		(property "Footprint" "JST-254:JST 6"
 			(at 382.27 276.86 0)
 			(effects
 				(font
@@ -18337,7 +18337,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Connector_JST:JST_SH_BM06B-SRSS-TB_1x06-1MP_P1.00mm_Vertical"
+		(property "Footprint" "JST-254:JST 6"
 			(at 346.71 276.86 0)
 			(effects
 				(font
@@ -21239,7 +21239,7 @@
 				)
 			)
 		)
-		(property "Value" "15uH"
+		(property "Value" "22uH"
 			(at 357.124 162.814 90)
 			(effects
 				(font
