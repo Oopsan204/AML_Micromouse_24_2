@@ -3,6 +3,7 @@
 "aml_micromouse_24_2\queue.o"
 "aml_micromouse_24_2\solver.o"
 "aml_micromouse_24_2\api.o"
+"aml_micromouse_24_2\aml_sensor.o"
 "aml_micromouse_24_2\main.o"
 "aml_micromouse_24_2\stm32h7xx_it.o"
 "aml_micromouse_24_2\stm32h7xx_hal_msp.o"

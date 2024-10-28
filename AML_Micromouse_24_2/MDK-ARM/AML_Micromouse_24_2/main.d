@@ -41,3 +41,4 @@ aml_micromouse_24_2\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ti
 aml_micromouse_24_2\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 aml_micromouse_24_2\main.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
 aml_micromouse_24_2\main.o: ../Core/Inc/solver.h
+aml_micromouse_24_2\main.o: ../Core/Inc/AML_SenSor.h
