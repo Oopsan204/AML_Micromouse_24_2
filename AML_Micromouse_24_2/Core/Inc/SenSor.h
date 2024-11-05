@@ -1,7 +1,6 @@
-#ifndef ANL_SENSOR_H
-#define ANL_SENSOR_H
+#ifndef SENSOR_H
+#define SENSOR_H
 #include "stm32h7xx.h"
-#include "main.h"
 #include "math.h"
 typedef enum{
     SENSOR_FF,

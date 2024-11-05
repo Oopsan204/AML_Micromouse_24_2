@@ -1,10 +1,15 @@
-#include "AML_SenSor.h"
+#include "SenSor.h"
 uint32_t SENSOR_VALUE[5] = {-1};
 uint32_t SENSOR_BUFFER[5];
 const int AVERAGE_OF = 50;
 const float MCU_VOLTAGE = 3.3;
-const uint8_t RESOLUTION = 65536; // 2^16;
+const int RESOLUTION = 65536; // 2^16;
+
 extern ADC_HandleTypeDef hadc1;
+
+//----------------------------------------------------------------//
+void SENSOR_INIT(void);
+//----------------------------------------------------------------//
 
 uint32_t READ_DISTACE_2_15(uint32_t sensorValue)
 {
@@ -46,21 +51,16 @@ uint32_t READ_DISTACE_4_30(uint32_t sensorValue)
 }
 void SENSOR_INIT()
 {
-    HAL_ADC_Start_DMA(&hadc1, (uint32_t *)SENSOR_BUFFER, 5);
-    SENSOR_BUFFER[0] = SENSOR_FF;
-    SENSOR_BUFFER[1] = SENSOR_FL;
-    SENSOR_BUFFER[2] = SENSOR_L;
-    SENSOR_BUFFER[3] = SENSOR_FR;
-    SENSOR_BUFFER[4] = SENSOR_R;
+    HAL_ADC_Start_IT(&hadc1);
 }
 
 void SENSOR_READ_ALL()
 {
-    SENSOR_VALUE[0] = READ_DISTACE_4_30(SENSOR_FF);
-    SENSOR_VALUE[1] = READ_DISTACE_2_15(SENSOR_FR);
-    SENSOR_VALUE[2] = READ_DISTACE_2_15(SENSOR_FL);
-    SENSOR_VALUE[3] = READ_DISTACE_2_15(SENSOR_R);
-    SENSOR_VALUE[4] = READ_DISTACE_2_15(SENSOR_L);
+    SENSOR_VALUE[0] = READ_DISTACE_4_30(SENSOR_BUFFER[0]);
+    SENSOR_VALUE[1] = READ_DISTACE_2_15(SENSOR_BUFFER[1]);
+    SENSOR_VALUE[2] = READ_DISTACE_2_15(SENSOR_BUFFER[2]);
+    SENSOR_VALUE[3] = READ_DISTACE_2_15(SENSOR_BUFFER[3]);
+    SENSOR_VALUE[4] = READ_DISTACE_2_15(SENSOR_BUFFER[4]);
 }
 uint32_t SENSOR_READ_ONE(int num)
 {
@@ -79,4 +79,12 @@ uint32_t SENSOR_READ_ONE(int num)
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
     UNUSED(hadc);
+    static uint8_t temp=0;
+    SENSOR_BUFFER[temp] = HAL_ADC_GetValue(&hadc1);
+    temp++;
+    if (temp == 5)
+    {
+        temp =0;
+    }
+    
 }

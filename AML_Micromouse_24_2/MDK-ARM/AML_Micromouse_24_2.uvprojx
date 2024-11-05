@@ -54,7 +54,7 @@
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
-          <BrowseInformation>1</BrowseInformation>
+          <BrowseInformation>0</BrowseInformation>
           <ListingPath></ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
@@ -326,7 +326,7 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>1</uGnu>
+            <uGnu>0</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -394,24 +394,34 @@
           <GroupName>Application/User/Core</GroupName>
           <Files>
             <File>
-              <FileName>queue.c</FileName>
+              <FileName>AML_Buzzer .c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\queue.c</FilePath>
+              <FilePath>..\Core\Src\AML_Buzzer .c</FilePath>
             </File>
             <File>
-              <FileName>solver.c</FileName>
+              <FileName>AML_Encoder.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\solver.c</FilePath>
+              <FilePath>..\Core\Src\AML_Encoder.c</FilePath>
             </File>
             <File>
-              <FileName>API.c</FileName>
+              <FileName>AML_MPUSensor.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\API.c</FilePath>
+              <FilePath>..\Core\Src\AML_MPUSensor.c</FilePath>
             </File>
             <File>
-              <FileName>AML_SenSor.c</FileName>
+              <FileName>AML_Switch.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Core\Src\AML_SenSor.c</FilePath>
+              <FilePath>..\Core\Src\AML_Switch.c</FilePath>
+            </File>
+            <File>
+              <FileName>AML_LedDebug.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\AML_LedDebug.c</FilePath>
+            </File>
+            <File>
+              <FileName>SenSor.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\SenSor.c</FilePath>
             </File>
             <File>
               <FileName>main.c</FileName>

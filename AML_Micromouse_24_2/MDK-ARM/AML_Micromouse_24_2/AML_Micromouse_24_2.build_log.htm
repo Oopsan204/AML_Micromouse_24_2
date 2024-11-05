@@ -22,51 +22,16 @@ Dialog DLL:      TCM.DLL V1.46.0.0
  
 <h2>Project:</h2>
 E:\code\micromouse2024\AML_Micromouse_24_2_code\AML_Micromouse_24_2\MDK-ARM\AML_Micromouse_24_2.uvprojx
-Project File Date:  10/28/2024
+Project File Date:  11/05/2024
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'AML_Micromouse_24_2'
-compiling AML_SenSor.c...
-..\Core\Src\AML_SenSor.c(2): warning:  #68-D: integer conversion resulted in a change of sign
-  uint32_t SENSOR_VALUE[5] = {-1};
-..\Core\Src\AML_SenSor.c(6): warning:  #69-D: integer conversion resulted in truncation
-  const uint8_t RESOLUTION = 65536; // 2^16;
-..\Core\Src\AML_SenSor.c(15): warning:  #222-D: floating-point operation result is out of range
-      voltage = (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-..\Core\Src\AML_SenSor.c(18): warning:  #222-D: floating-point operation result is out of range
-          voltage_temp_average += (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-..\Core\Src\AML_SenSor.c(25): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-      distance = -9.5122 * pow(voltage_temp_average, 5) + 57.406 * pow(voltage_temp_average, 4) - 139.06 * pow(voltage_temp_average, 3) + 173.84 * pow(voltage_temp_average, 2) - 119.18 * voltage_temp_average + 41.252;
-..\Core\Src\AML_SenSor.c(12): warning:  #550-D: variable "voltage"  was set but never used
-      float voltage = 0;
-..\Core\Src\AML_SenSor.c(34): warning:  #222-D: floating-point operation result is out of range
-      voltage = (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-..\Core\Src\AML_SenSor.c(37): warning:  #222-D: floating-point operation result is out of range
-          voltage_temp_average += (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-..\Core\Src\AML_SenSor.c(31): warning:  #550-D: variable "voltage"  was set but never used
-      float voltage = 0;
-..\Core\Src\AML_SenSor.c: 9 warnings, 0 errors
 compiling main.c...
-../Core/Inc/solver.h(45): warning:  #1295-D: Deprecated declaration initialize - give arg types
-  void initialize();
-../Core/Inc/solver.h(46): warning:  #1295-D: Deprecated declaration updateMaze - give arg types
-  void updateMaze();      // updates the maze array with the walls around the mouse's current position
-../Core/Inc/solver.h(47): warning:  #1295-D: Deprecated declaration updateDistances - give arg types
-  void updateDistances();         // the "floodfill" algorithm
-../Core/Inc/solver.h(48): warning:  #1295-D: Deprecated declaration resetDistances - give arg types
-  void resetDistances();
-../Core/Inc/solver.h(54): warning:  #1295-D: Deprecated declaration solver - give arg types
-  Action solver();
-../Core/Inc/solver.h(55): warning:  #1295-D: Deprecated declaration leftWallFollower - give arg types
-  Action leftWallFollower();
-../Core/Inc/solver.h(56): warning:  #1295-D: Deprecated declaration floodFill - give arg types
-  Action floodFill();
-../Core/Src/main.c: 7 warnings, 0 errors
 linking...
-Program Size: Code=27622 RO-data=906 RW-data=40 ZI-data=2600  
+Program Size: Code=33150 RO-data=906 RW-data=132 ZI-data=2636  
 FromELF: creating hex file...
-"AML_Micromouse_24_2\AML_Micromouse_24_2.axf" - 0 Error(s), 16 Warning(s).
+"AML_Micromouse_24_2\AML_Micromouse_24_2.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -89,7 +54,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.4.0
-Build Time Elapsed:  00:00:17
+Build Time Elapsed:  00:00:01
 </pre>
 </body>
 </html>
