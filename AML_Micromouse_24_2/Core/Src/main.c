@@ -29,6 +29,7 @@
 #include "AML_Switch.h"
 #include "AML_MotorControl.h"
 #include "AML_Encoder.h"
+#include "AML_PID.h"
 
 /* USER CODE END Includes */
 
@@ -79,7 +80,11 @@ uint32_t frequency_test = 1000;
 uint32_t leftEncoder = 0;
 uint32_t rightEncoder = 0;
 uint8_t test = 0;
+uint32_t pwm = 50;
 uint32_t ADCrawbuffer[5];
+int32_t EncoderGetRightValue = 0;
+int32_t EncoderGetLeftValue = 0;
+uint32_t debug[100];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -149,10 +154,9 @@ int main(void)
   AML_MPUSensor_ResetAngle();
   AML_MPUSensor_Setup();
   AML_Encoder_Setup();
-  SENSOR_INIT();
-  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_1);
-  HAL_TIM_PWM_Start(&htim1,TIM_CHANNEL_2);
-  HAL_GPIO_WritePin(AIN1_GPIO_Port,AIN1_Pin,GPIO_PIN_SET);
+  AML_IRSensor_Setup();
+  // AML_MotorControl_Setup();
+  HAL_GPIO_WritePin(AIN1_GPIO_Port, AIN1_Pin, GPIO_PIN_SET);
   AML_Buzzer_TurnOn();
   // AML_Buzzer_Beep();
   AML_LedDebug_SetAllLED(GPIO_PIN_SET);
@@ -168,14 +172,23 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     CurrentAngle = AML_MPUSensor_GetAngle();
-    SENSOR_READ_ALL();
-    // AML_LedDebug_ToggleAllLED();
+  
+    AML_LedDebug_ToggleAllLED();
+    // AML_MotorControl_Move(pwm, -50);
+    EncoderGetLeftValue = AML_Encoder_GetLeftValue();
+    EncoderGetRightValue = AML_Encoder_GetRightValue();
+    if (AML_Read_Button(1) == 1)
+    {
+      AML_Buzzer_Beep();
+    }
+    else
+    {
+      AML_Buzzer_TurnOff();
+    }
+
     AML_ReadAll_BitSwitch();
     AML_ReadAll_Button();
-
-    // AML_Buzzer_Beep();
-
-    HAL_Delay(100);
+    HAL_Delay(40);
   }
   /* USER CODE END 3 */
 }
@@ -538,10 +551,10 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 1 */
   htim1.Instance = TIM1;
-  htim1.Init.Prescaler = 2400;
+  htim1.Init.Prescaler = 24;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 99;
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
+  htim1.Init.Period = 999;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)

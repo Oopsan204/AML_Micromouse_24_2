@@ -326,7 +326,7 @@
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
             <uC99>1</uC99>
-            <uGnu>0</uGnu>
+            <uGnu>1</uGnu>
             <useXO>0</useXO>
             <v6Lang>1</v6Lang>
             <v6LangP>1</v6LangP>
@@ -424,6 +424,16 @@
               <FilePath>..\Core\Src\SenSor.c</FilePath>
             </File>
             <File>
+              <FileName>AML_MotorControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\AML_MotorControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>AML_PID.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\AML_PID.c</FilePath>
+            </File>
+            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>
@@ -437,6 +447,21 @@
               <FileName>stm32h7xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/stm32h7xx_hal_msp.c</FilePath>
+            </File>
+            <File>
+              <FileName>API.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\API.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>solver.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Core\Src\solver.c</FilePath>
             </File>
           </Files>
         </Group>

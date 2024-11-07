@@ -1,7 +1,8 @@
 #include <AML_MotorControl.h>
 
 extern TIM_HandleTypeDef htim1; // timer for pwm
-GPIO_TypeDef *MotorDirectionPort = GPIOE;
+GPIO_TypeDef *MotorDirectionAPort = GPIOB;
+GPIO_TypeDef *MotorDirectionBPort = GPIOD;
 
 // TimerClock is 240MHz, Prescaler is 12000, AutoReload is 1, so the frequency is 10kHz
 #define TO_CCR(x) (uint16_t)((x) * 10)
@@ -87,20 +88,20 @@ void AML_MotorControl_LeftPWM(int32_t DutyCycle)
 
     if (DutyCycle > 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN1_Pin, LeftMotorDirection);
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN2_Pin, !LeftMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN1_Pin, LeftMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN2_Pin, !LeftMotorDirection);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, TO_CCR(DutyCycle));
     }
     else if (DutyCycle < 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN1_Pin, !LeftMotorDirection);
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN2_Pin, LeftMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN1_Pin, !LeftMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN2_Pin, LeftMotorDirection);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, TO_CCR(-DutyCycle));
     }
     else if (DutyCycle == 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN1_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(MotorDirectionPort, LEFT_MOTOR_IN2_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN1_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(MotorDirectionAPort, AIN2_Pin, GPIO_PIN_RESET);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_1, 0);
     }
 }
@@ -120,20 +121,20 @@ void AML_MotorControl_RightPWM(int32_t DutyCycle)
 
     if (DutyCycle > 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN1_Pin, RightMotorDirection);
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN2_Pin, !RightMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN1_Pin, RightMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN2_Pin, !RightMotorDirection);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, TO_CCR(DutyCycle));
     }
     else if (DutyCycle < 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN1_Pin, !RightMotorDirection);
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN2_Pin, RightMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN1_Pin, !RightMotorDirection);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN2_Pin, RightMotorDirection);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, TO_CCR(-DutyCycle));
     }
     else if (DutyCycle == 0)
     {
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN1_Pin, GPIO_PIN_RESET);
-        HAL_GPIO_WritePin(MotorDirectionPort, RIGHT_MOTOR_IN2_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN1_Pin, GPIO_PIN_RESET);
+        HAL_GPIO_WritePin(MotorDirectionBPort, BIN2_Pin, GPIO_PIN_RESET);
         __HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_2, 0);
     }
 }

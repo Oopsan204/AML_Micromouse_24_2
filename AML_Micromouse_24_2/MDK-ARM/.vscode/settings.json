@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.c": "c",
+        "aml_motorcontrol.h": "c",
+        "aml_encoder.h": "c"
+    }
+}

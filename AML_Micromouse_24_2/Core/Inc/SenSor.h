@@ -1,20 +1,12 @@
-#ifndef SENSOR_H
-#define SENSOR_H
-#include "stm32h7xx.h"
-#include "math.h"
-typedef enum{
-    SENSOR_FF,
-    SENSOR_FR,
-    SENSOR_FL,
-    SENSOR_R,
-    SENSOR_L,
-    SENSOR_BL,
-    SENSOR_BR
-}SENSOR_NAME;
+#ifndef SenSor_H
+#define SenSor_H
 
+#include "stm32h7xx_hal.h"
+#include "main.h"
 
-void SENSOR_INIT(void);
-void SENSOR_READ_ALL(void);
-uint32_t SENSOR_READ_ONE(int num);
+void AML_IRSensor_Setup(void);
+void AML_ReadAll_IRSensor(void);
+void AML_Read_IRSensor(uint8_t sensor);
+uint32_t AML_Get_IRSensor(uint8_t sensor);
 
 #endif

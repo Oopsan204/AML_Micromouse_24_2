@@ -1,5 +1,9 @@
 aml_micromouse_24_2\sensor.o: ..\Core\Src\SenSor.c
 aml_micromouse_24_2\sensor.o: ../Core/Inc/SenSor.h
+aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
+aml_micromouse_24_2\sensor.o: ../Core/Inc/stm32h7xx_hal_conf.h
+aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h
+aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
 aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h
 aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Include/core_cm7.h
@@ -10,10 +14,6 @@ aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Include/mpu_armv7.h
 aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h
-aml_micromouse_24_2\sensor.o: ../Core/Inc/stm32h7xx_hal_conf.h
-aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h
-aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h
-aml_micromouse_24_2\sensor.o: ../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
 aml_micromouse_24_2\sensor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stddef.h
 aml_micromouse_24_2\sensor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
@@ -40,3 +40,4 @@ aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+aml_micromouse_24_2\sensor.o: ../Core/Inc/main.h

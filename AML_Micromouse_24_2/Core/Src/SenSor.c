@@ -1,90 +1,72 @@
 #include "SenSor.h"
-uint32_t SENSOR_VALUE[5] = {-1};
-uint32_t SENSOR_BUFFER[5];
-const int AVERAGE_OF = 50;
-const float MCU_VOLTAGE = 3.3;
-const int RESOLUTION = 65536; // 2^16;
+/*
+    distance low range: y = 33,9 + -69,5x + 62,3x^2 + -25,4x^3 + 3,83x^4
+    distance high range: y = 55.38 - 77.99x + 54.73x^2 - 18.33x^3 + 2.29x^4
+*/
+
+typedef enum IRSensor
+{
+    IR_SENSOR_FF,
+    IR_SENSOR_FL,
+    IR_SENSOR_RL,
+    IR_SENSOR_BL,
+    IR_SENSOR_BR,
+    IR_SENSOR_RR,
+    IR_SENSOR_FR
+} IRSensor_t;
+
+#define ADC_RESOLUTION 65536
+#define ADC_MAX 65535
+#define ADC_VREF 3.3
+
+#define GET_VOLTAGE(adcValue) ((adcValue * ADC_VREF) / ADC_MAX)
+#define GET_DISTANCE_2_15(voltage) (33.9 + (-69.5 * voltage) + (62.3 * pow(voltage, 2)) + (-25.4 * pow(voltage, 3)) + (3.83 * pow(voltage, 4)))   // mm
+#define GET_DISTANCE_4_30(voltage) ( 120.8 * pow(voltage, -1.058)) // mm
+#define GET_DISTANCE(voltage, index) (index > 0) ? GET_DISTANCE_2_15(voltage) : GET_DISTANCE_4_30(voltage)
+
+extern debug[100];
 
 extern ADC_HandleTypeDef hadc1;
 
-//----------------------------------------------------------------//
-void SENSOR_INIT(void);
-//----------------------------------------------------------------//
+uint32_t IRSensorADCValue[5];
+double IRSensorVoltageValue[5];
+double IRSensorDistanceValue[5];
 
-uint32_t READ_DISTACE_2_15(uint32_t sensorValue)
+uint8_t ADCIndex = 0;
+
+//-------------------------------------------------------------------------------------------------------//
+void AML_IRSensor_Setup(void);
+
+//-------------------------------------------------------------------------------------------------------//
+
+void AML_IRSensor_Setup(void)
 {
-
-    float voltage = 0;
-    float distance;
-    float voltage_temp_average = 0;
-    voltage = (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-    for (int i = 0; i < AVERAGE_OF; i++)
-    {
-        voltage_temp_average += (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-    }
-    voltage_temp_average /= AVERAGE_OF;
-
-    // eqution of the fitting curvey
-    // y = -9.5122x5 + 57.406x4 - 139.06x3 + 173.84x2 - 119.18x + 41.252
-
-    distance = -9.5122 * pow(voltage_temp_average, 5) + 57.406 * pow(voltage_temp_average, 4) - 139.06 * pow(voltage_temp_average, 3) + 173.84 * pow(voltage_temp_average, 2) - 119.18 * voltage_temp_average + 41.252;
-    return (uint32_t)distance;
-}
-uint32_t READ_DISTACE_4_30(uint32_t sensorValue)
-{
-
-    float voltage = 0;
-    float distance;
-    float voltage_temp_average = 0;
-    voltage = (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-    for (int i = 0; i < AVERAGE_OF; i++)
-    {
-        voltage_temp_average += (sensorValue * (MCU_VOLTAGE / RESOLUTION));
-    }
-    voltage_temp_average /= AVERAGE_OF;
-
-    // eqution of the fitting curvey
-    // // y = -9.5122x5 + 57.406x4 - 139.06x3 + 173.84x2 - 119.18x + 41.252
-
-    // distance = -9.5122 * pow(voltage_temp_average, 5) + 57.406 * pow(voltage_temp_average, 4) - 139.06 * pow(voltage_temp_average, 3)+173.84 * pow(voltage_temp_average, 2) - 119.18 * voltage_temp_average + 41.252;
-    return (uint32_t)distance;
-}
-void SENSOR_INIT()
-{
+    memset(IRSensorADCValue, 0, sizeof(IRSensorADCValue));
+    // HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED);
+    
+    // HAL_ADC_Start_DMA(&hadc2, IRSensorValue, 7);
     HAL_ADC_Start_IT(&hadc1);
-}
-
-void SENSOR_READ_ALL()
-{
-    SENSOR_VALUE[0] = READ_DISTACE_4_30(SENSOR_BUFFER[0]);
-    SENSOR_VALUE[1] = READ_DISTACE_2_15(SENSOR_BUFFER[1]);
-    SENSOR_VALUE[2] = READ_DISTACE_2_15(SENSOR_BUFFER[2]);
-    SENSOR_VALUE[3] = READ_DISTACE_2_15(SENSOR_BUFFER[3]);
-    SENSOR_VALUE[4] = READ_DISTACE_2_15(SENSOR_BUFFER[4]);
-}
-uint32_t SENSOR_READ_ONE(int num)
-{
-    if (num == 0)
-    {
-        SENSOR_VALUE[0] = READ_DISTACE_4_30(0);
-        return SENSOR_VALUE[0];
-    }
-    else
-    {
-        SENSOR_VALUE[num] = READ_DISTACE_2_15(SENSOR_BUFFER[num]);
-        return SENSOR_VALUE[num];
-    }
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
     UNUSED(hadc);
-    static uint8_t temp=0;
-    SENSOR_BUFFER[temp] = HAL_ADC_GetValue(&hadc1);
-    temp++;
-    if (temp == 5)
+    IRSensorADCValue[ADCIndex] = HAL_ADC_GetValue(&hadc1);
+    IRSensorVoltageValue[ADCIndex] = GET_VOLTAGE(IRSensorADCValue[ADCIndex]);
+    IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(IRSensorVoltageValue[ADCIndex], ADCIndex);
+    // debug[20] = HAL_ADCEx_Calibration_GetValue(&hadc1, ADC_SINGLE_ENDED);
+    ADCIndex++;
+
+    if (ADCIndex == 5)
     {
-        temp =0;
+        ADCIndex = 0;
     }
-    
 }
+
+//-------------------------------------------------------------------------------------------------------//
+
+double AML_IRSensor_GetDistance(uint8_t sensor)
+{
+}
+
+//-------------------------------------------------------------------------------------------------------//
