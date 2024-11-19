@@ -56,7 +56,6 @@ void AML_MotorControl_AMLPIDSetup(void)
 {
     AML_PID_Init(&PID_TurnLeft, &PID_TurnLeft_Input, &PID_TurnLeft_Output, &PID_TurnLeft_Setpoint, PID_TurnLeft_Kp, PID_TurnLeft_Ki, PID_TurnLeft_Kd, PID_TurnLeft_Tau, PIDOutputMin, PIDOutputMax, -PIDOutputMax, PIDOutputMax, SampleTime);
     AML_PID_Init(&PID_TurnRight, &PID_TurnRight_Input, &PID_TurnRight_Output, &PID_TurnRight_Setpoint, PID_TurnRight_Kp, PID_TurnRight_Ki, PID_TurnRight_Kd, PID_TurnRight_Tau, PIDOutputMin, PIDOutputMax, -PIDOutputMax, PIDOutputMax, SampleTime);
-
     AML_PID_Init(&PID_MPUFollow, &PID_MPUFollow_Input, &PID_MPUFollow_Output, &PID_MPUFollow_Setpoint, PID_MPUFollow_Kp, PID_MPUFollow_Ki, PID_MPUFollow_Kd, PID_MPUFollow_Tau, PIDOutputMin, PIDOutputMax, -PIDOutputMax, PIDOutputMax, SampleTime);
     AML_PID_Init(&PID_LeftWallFollow, &PID_LeftWallFollow_Input, &PID_LeftWallFollow_Output, &PID_LeftWallFollow_Setpoint, PID_LeftWallFollow_Kp, PID_LeftWallFollow_Ki, PID_LeftWallFollow_Kd, PID_LeftWallFollow_Tau, PIDOutputMin, PIDOutputMax, -PIDOutputMax, PIDOutputMax, SampleTime);
     AML_PID_Init(&PID_RightWallFollow, &PID_RightWallFollow_Input, &PID_RightWallFollow_Output, &PID_RightWallFollow_Setpoint, PID_RightWallFollow_Kp, PID_RightWallFollow_Ki, PID_RightWallFollow_Kd, PID_RightWallFollow_Tau, PIDOutputMin, PIDOutputMax, -PIDOutputMax, PIDOutputMax, SampleTime);

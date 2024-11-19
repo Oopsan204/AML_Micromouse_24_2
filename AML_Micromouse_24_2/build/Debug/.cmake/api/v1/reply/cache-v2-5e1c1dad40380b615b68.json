@@ -239,7 +239,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "30"
+			"value" : "28"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -251,7 +251,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "1"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -263,7 +263,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/cmake-3.30.2-windows-x86_64/bin/cmake.exe"
+			"value" : "C:/ST/STM32CubeCLT_1.16.0/CMake/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -275,7 +275,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/cmake-3.30.2-windows-x86_64/bin/cpack.exe"
+			"value" : "C:/ST/STM32CubeCLT_1.16.0/CMake/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -287,7 +287,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/cmake-3.30.2-windows-x86_64/bin/ctest.exe"
+			"value" : "C:/ST/STM32CubeCLT_1.16.0/CMake/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER_AR",
@@ -959,7 +959,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/cmake-3.30.2-windows-x86_64/share/cmake-3.30"
+			"value" : "C:/ST/STM32CubeCLT_1.16.0/CMake/share/cmake-3.28"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

@@ -45,6 +45,7 @@ void setup()
   // encoder.checkABZConfig(); // Check if settings are saved
 
   digitalWrite(LedPin, HIGH);
+  Serial.println("done");
 }
 
 void loop()

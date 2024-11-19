@@ -7,7 +7,7 @@
 			{
 				"id" : "GNU",
 				"implicit" : {},
-				"path" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe",
+				"path" : "C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
 				"version" : ""
 			},
 			"language" : "ASM",
@@ -29,8 +29,8 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-gcc.exe",
-				"version" : "10.3.1"
+				"path" : "C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/arm-none-eabi-gcc.exe",
+				"version" : "12.3.1"
 			},
 			"language" : "C",
 			"sourceFileExtensions" : 
@@ -50,8 +50,8 @@
 					"linkFrameworkDirectories" : [],
 					"linkLibraries" : []
 				},
-				"path" : "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin/arm-none-eabi-g++.exe",
-				"version" : "10.3.1"
+				"path" : "C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/arm-none-eabi-g++.exe",
+				"version" : "12.3.1"
 			},
 			"language" : "CXX",
 			"sourceFileExtensions" : 
