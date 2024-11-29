@@ -1,13 +1,11 @@
 #include "solver.h"
-#include "API.h"
-#include "queue.h"
 
 unsigned int maze[MAZE_SIZE][MAZE_SIZE] = {0};
 int distances[MAZE_SIZE][MAZE_SIZE] = {-1}; // 1000 if it hasn't been visited yet
 struct Coordinate position;
 Heading heading;
 
-int reached_center = 0; // "boolean" that stores whether the mouse should start exploring more squares
+int8_t reached_center = 0; // "boolean" that stores whether the mouse should start exploring more squares
 
 void initialize()
 {
@@ -46,7 +44,7 @@ void updateMaze()
     switch (heading)
     {
     case NORTH:
-        if (API_wallFront())
+        if (CHECK_WALL_FRONT)
         {
             walls |= _1000; // stores the wall to the north in walls (to be updated at the end of switch statement)
             // updating neighboring squares as well (if there is one):
@@ -54,7 +52,7 @@ void updateMaze()
             if (y + 1 != MAZE_SIZE)
                 maze[x][y + 1] |= _0010;
         }
-        if (API_wallLeft())
+        if (CHECK_WALL_LEFT)
         {
             walls |= _0001;
             // neu co tuong ben trai thi dat tuong huong tay
@@ -62,7 +60,7 @@ void updateMaze()
             if (x - 1 >= 0)
                 maze[x - 1][y] |= _0100;
         }
-        if (API_wallRight())
+        if (CHECK_WALL_RIGHT)
         {
             walls |= _0100; // dat tuong huong dong
             // dat tuong do thanh tuong huong tay cua o ben canh
@@ -72,19 +70,19 @@ void updateMaze()
         break;
         // tuong tu nhu huong bac
     case EAST:
-        if (API_wallFront())
+        if (CHECK_WALL_FRONT)
         {
             walls |= _0100;
             if (x + 1 != MAZE_SIZE)
                 maze[x + 1][y] |= _0001;
         }
-        if (API_wallLeft())
+        if (CHECK_WALL_LEFT)
         {
             walls |= _1000;
             if (y + 1 != MAZE_SIZE)
                 maze[x][y + 1] |= _0010;
         }
-        if (API_wallRight())
+        if (CHECK_WALL_RIGHT)
         {
             walls |= _0010;
             if (y - 1 >= 0)
@@ -92,19 +90,19 @@ void updateMaze()
         }
         break;
     case SOUTH:
-        if (API_wallFront())
+        if (CHECK_WALL_FRONT)
         {
             walls |= _0010;
             if (y - 1 >= 0)
                 maze[x][y - 1] |= _1000;
         }
-        if (API_wallLeft())
+        if (CHECK_WALL_LEFT)
         {
             walls |= _0100;
             if (x + 1 != MAZE_SIZE)
                 maze[x + 1][y] |= _0001;
         }
-        if (API_wallRight())
+        if (CHECK_WALL_RIGHT)
         {
             walls |= _0001;
             if (x - 1 >= 0)
@@ -112,19 +110,19 @@ void updateMaze()
         }
         break;
     case WEST:
-        if (API_wallFront())
+        if (CHECK_WALL_FRONT)
         {
             walls |= _0001;
             if (x - 1 >= 0)
                 maze[x - 1][y] |= _0100;
         }
-        if (API_wallLeft())
+        if (CHECK_WALL_LEFT)
         {
             walls |= _0010;
             if (y - 1 >= 0)
                 maze[x][y - 1] |= _1000;
         }
-        if (API_wallRight())
+        if (CHECK_WALL_RIGHT)
         {
             walls |= _1000;
             if (y + 1 != MAZE_SIZE)
@@ -357,7 +355,7 @@ Action solver()
 // Put your implementation of floodfill here!
 Action floodFill()
 {
-    unsigned int least_distance = 300; // just some large number, none of the distances will be over 300
+    uint16_t least_distance = 300; // just some large number, none of the distances will be over 300
     Action optimal_move = IDLE;
 
     /*
@@ -450,9 +448,9 @@ Action floodFill()
 // This is an example of a simple left wall following algorithm.
 Action leftWallFollower()
 {
-    if (API_wallFront())
+    if (CHECK_WALL_FRONT)
     {
-        if (API_wallLeft())
+        if (CHECK_WALL_LEFT)
         {
             return RIGHT;
         }

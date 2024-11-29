@@ -1,0 +1,105 @@
+
+(rules PCB schematic
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 7314)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.3)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.8)
+    )
+  )
+  (rule
+    (width 200.0)
+    (clearance 200.0)
+    (clearance 100.0 (type smd_to_turn_gap))
+    (clearance 200.0 (type kicad))
+  )
+  (padstack "Via[0-1]_600:300_um"
+    (shape
+      (circle F.Cu 600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1000:700_um"
+    (shape
+      (circle F.Cu 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1000:700_um" "Via[0-1]_1000:700_um" default
+  )
+  (via 
+    "Via[0-1]_1000:700_um-kicad_default" "Via[0-1]_1000:700_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um" "Via[0-1]_600:300_um" default
+  )
+  (via 
+    "Via[0-1]_600:300_um-kicad_default" "Via[0-1]_600:300_um" default
+  )
+  (via_rule
+    default "Via[0-1]_600:300_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_600:300_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "6.5-7.5V" +5V "/M1-R" "/M1-L" "/M2-L" "/M2-R" +3V3 GND
+    "unconnected-(U1-PE14-Pad44)" "unconnected-(U1-PC12-Pad80)" "unconnected-(U1-PC3_C-Pad18)" "unconnected-(U1-PD10-Pad57)" "unconnected-(U1-PB9-Pad96)" /PWMA /NRST "unconnected-(U1-PE15-Pad45)"
+    "unconnected-(U1-PB8-Pad95)" "Net-(C13-Pad1)" "unconnected-(U1-PE8-Pad38)" "unconnected-(U1-PD1-Pad82)" "unconnected-(U1-PB7-Pad93)" "unconnected-(U1-PC11-Pad79)" "unconnected-(U1-PD4-Pad85)" "unconnected-(U1-PA11-Pad70)"
+    "/BUTTON_0" "unconnected-(U1-PE7-Pad37)" "unconnected-(U1-PA12-Pad71)" "unconnected-(U1-PB15-Pad54)" "unconnected-(U1-PC13-Pad7)" "unconnected-(U1-PE13-Pad43)" "Net-(C12-Pad1)" "unconnected-(U1-PB4-Pad90)"
+    "unconnected-(U1-PB14-Pad53)" "unconnected-(U1-PC1-Pad16)" "unconnected-(U1-PA4-Pad28)" "/UART3_TX" "unconnected-(U1-PE12-Pad42)" "unconnected-(U1-PD2-Pad83)" "unconnected-(U1-PD13-Pad60)" "/SS_FF"
+    "/SS_FR" "unconnected-(U1-PD3-Pad84)" "unconnected-(U1-PD5-Pad86)" "unconnected-(U1-PC14-Pad8)" "unconnected-(U1-PD0-Pad81)" "unconnected-(U1-PE10-Pad40)" "/SS_FL" "unconnected-(U1-PA5-Pad29)"
+    "unconnected-(U1-PD12-Pad59)" "/SS_L" "unconnected-(U1-PC0-Pad15)" "/SS_R" "unconnected-(U1-PE0-Pad97)" "unconnected-(U1-PE1-Pad98)" "unconnected-(U1-PC10-Pad78)" "unconnected-(U1-PC2_C-Pad17)"
+    "/I2C2_SDA" "unconnected-(U1-PB12-Pad51)" "unconnected-(U1-PD11-Pad58)" "unconnected-(U1-PE9-Pad39)" "/BUTTON_1" "unconnected-(U1-PB0-Pad34)" "unconnected-(U1-PA10-Pad69)" "unconnected-(U1-PE11-Pad41)"
+    "unconnected-(U1-PC15-Pad9)" "unconnected-(U1-PB2-Pad36)" /PWMB "unconnected-(U1-PB13-Pad52)" "/UART3_RX" "Net-(U1-BOOT0)" /SWDIO /SWCLK
+    /PH1 /PH0 "Net-(U4-BST)" "Net-(C21-Pad2)" "Net-(U4-COMP)" "Net-(U4-FREQ)" "Net-(U4-EN)" "Net-(U4-FB)"
+    "Net-(D1-K)" "/I2C2_SCL" "/EN_B_R" "/EN_A_R" "/EN_A_L" "/EN_B_L" /AIN2 /AIN1
+    /BIN1 /BIN2 "Net-(BZ1-+)" "Net-(Q1-B)" /BUZZ "Net-(D2-A)" "/LED_FR" "/LED_FF"
+    "/LED_FL" "/LED_R" "/LED_L" "Net-(U5-VI)" "Net-(D8-K)" "Net-(D3-K)" "Net-(D4-K)" "Net-(D5-K)"
+    "Net-(RN2-R5.2)" "Net-(RN2-R3.2)" "Net-(RN2-R4.2)" "Net-(RN2-R1.2)" "Net-(RN2-R2.2)" "/BIT_SW_4" "/BIT_SW_1" "/BIT_SW_3"
+    "/BIT_SW_0" "/BIT_SW_2" "Net-(D9-K)"
+    (clearance_class default)
+    (via_rule "kicad_default")
+    (rule
+      (width 200.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

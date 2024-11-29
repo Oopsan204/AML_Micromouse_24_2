@@ -1,0 +1,23 @@
+{
+    "C_Cpp.errorSquiggles": "enabled",
+    "files.associations": {
+        "*.c": "c",
+        "queue.h": "c",
+        "aml_motorcontrol.h": "c",
+        "aml_pid.h": "c",
+        "aml_encoder.h": "c",
+        "sensor.h": "c",
+        "aml_globalvariable.h": "c"
+    },
+    "files.autoSave": "afterDelay",
+    "editor.inlineSuggest.syntaxHighlightingEnabled": true,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggest.preview": true,
+    "editor.suggest.shareSuggestSelections": true,
+    "editor.suggest.showStatusBar": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "strings": "on"
+    }
+}

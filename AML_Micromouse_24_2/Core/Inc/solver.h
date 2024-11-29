@@ -1,8 +1,31 @@
 #ifndef SOLVER_H
 #define SOLVER_H
 
-typedef enum Heading {NORTH, EAST, SOUTH, WEST} Heading;
-typedef enum Action {LEFT, FORWARD, RIGHT, IDLE} Action;
+#include "main.h"
+#include "queue.h"
+#include <AML_GlobalVariable.h>
+#include <AML_Buzzer.h>
+#include <AML_LedDebug.h>
+#include <AML_Switch.h>
+#include <AML_MPUSensor.h>
+#include <SenSor.h>
+#include <AML_Encoder.h>
+#include <AML_MotorControl.h>
+
+typedef enum Heading
+{
+    NORTH,
+    EAST,
+    SOUTH,
+    WEST
+} Heading;
+typedef enum Action
+{
+    LEFT,
+    FORWARD,
+    RIGHT,
+    IDLE
+} Action;
 
 /* MAZE CONSTANTS */
 #define MAZE_SIZE 16
@@ -27,7 +50,7 @@ Sets the different types of cells (the walls around a given cell) in the format:
 #define _1100 12
 #define _1101 13
 #define _1110 14
-#define _1111 15    // not actually possible in a maze
+#define _1111 15 // not actually possible in a maze
 /*
 _1000 cho tường phía Bắc
 _0100 cho tường phía Đông
@@ -37,14 +60,15 @@ _0001 cho tường phía Tây
 extern unsigned int maze[MAZE_SIZE][MAZE_SIZE];
 extern int distances[MAZE_SIZE][MAZE_SIZE];
 
-struct Coordinate {
+struct Coordinate
+{
     int x;
     int y;
 };
 
 void initialize();
 void updateMaze();      // updates the maze array with the walls around the mouse's current position
-void updateDistances();         // the "floodfill" algorithm
+void updateDistances(); // the "floodfill" algorithm
 void resetDistances();
 int xyToSquare(int x, int y);
 struct Coordinate squareToCoord(int square);
