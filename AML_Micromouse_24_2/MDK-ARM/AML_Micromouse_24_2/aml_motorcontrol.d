@@ -47,3 +47,4 @@ aml_micromouse_24_2\aml_motorcontrol.o: ../Core/Inc/AML_LedDebug.h
 aml_micromouse_24_2\aml_motorcontrol.o: ../Core/Inc/AML_Buzzer.h
 aml_micromouse_24_2\aml_motorcontrol.o: ../Core/Inc/AML_Switch.h
 aml_micromouse_24_2\aml_motorcontrol.o: ../Core/Inc/AML_MPUSensor.h
+aml_micromouse_24_2\aml_motorcontrol.o: ../Core/Inc/AML_Encoder.h

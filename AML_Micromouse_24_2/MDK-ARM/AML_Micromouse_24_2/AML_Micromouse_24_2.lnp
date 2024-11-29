@@ -7,7 +7,6 @@
 "aml_micromouse_24_2\aml_leddebug.o"
 "aml_micromouse_24_2\sensor.o"
 "aml_micromouse_24_2\aml_motorcontrol.o"
-"aml_micromouse_24_2\aml_pid.o"
 "aml_micromouse_24_2\main.o"
 "aml_micromouse_24_2\stm32h7xx_it.o"
 "aml_micromouse_24_2\stm32h7xx_hal_msp.o"

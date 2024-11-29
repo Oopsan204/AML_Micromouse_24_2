@@ -40,4 +40,6 @@ aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h
 aml_micromouse_24_2\sensor.o: ../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h
+aml_micromouse_24_2\sensor.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+aml_micromouse_24_2\sensor.o: ../Core/Inc/AML_GlobalVariable.h
 aml_micromouse_24_2\sensor.o: ../Core/Inc/main.h

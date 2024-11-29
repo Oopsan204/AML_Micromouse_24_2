@@ -429,11 +429,6 @@
               <FilePath>..\Core\Src\AML_MotorControl.c</FilePath>
             </File>
             <File>
-              <FileName>AML_PID.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\AML_PID.c</FilePath>
-            </File>
-            <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/main.c</FilePath>

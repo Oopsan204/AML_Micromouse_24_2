@@ -63,7 +63,6 @@ double AML_PID_Compute(AML_PID_Struct *pid)
 
         double dTerm = pid->Kd * pid->differentiator;
 
-
         *pid->MyOutput = pTerm + iTerm + dTerm;
 
         if (*pid->MyOutput > pid->limMax)
@@ -81,7 +80,7 @@ double AML_PID_Compute(AML_PID_Struct *pid)
         // Remember last time for next calculation
         pid->lastTime = now;
     }
-    
+
     pid->out = *pid->MyOutput;
     return *pid->MyOutput;
 }

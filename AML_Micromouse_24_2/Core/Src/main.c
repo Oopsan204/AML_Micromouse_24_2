@@ -30,6 +30,7 @@
 #include "AML_MotorControl.h"
 #include "AML_Encoder.h"
 #include "AML_PID.h"
+#include "solver.h"
 
 /* USER CODE END Includes */
 
@@ -70,6 +71,7 @@ TIM_HandleTypeDef htim1;
 TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
+TIM_HandleTypeDef htim7;
 
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_rx;
@@ -79,7 +81,7 @@ double CurrentAngle = 0;
 uint32_t frequency_test = 1000;
 uint32_t leftEncoder = 0;
 uint32_t rightEncoder = 0;
-uint8_t test = 0;
+double test = 0;
 uint32_t pwm = 50;
 uint32_t ADCrawbuffer[5];
 int32_t EncoderGetRightValue = 0;
@@ -100,6 +102,7 @@ static void MX_TIM5_Init(void);
 static void MX_USART3_UART_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_TIM4_Init(void);
+static void MX_TIM7_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -150,13 +153,13 @@ int main(void)
   MX_USART3_UART_Init();
   MX_I2C2_Init();
   MX_TIM4_Init();
+  MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
   AML_MPUSensor_ResetAngle();
   AML_MPUSensor_Setup();
   AML_Encoder_Setup();
   AML_IRSensor_Setup();
-  // AML_MotorControl_Setup();
-  HAL_GPIO_WritePin(AIN1_GPIO_Port, AIN1_Pin, GPIO_PIN_SET);
+  AML_MotorControl_Setup();
   AML_Buzzer_TurnOn();
   // AML_Buzzer_Beep();
   AML_LedDebug_SetAllLED(GPIO_PIN_SET);
@@ -172,19 +175,24 @@ int main(void)
     /* USER CODE BEGIN 3 */
 
     CurrentAngle = AML_MPUSensor_GetAngle();
-  
+    test = AML_IRSensor_GetDistance(0);
     AML_LedDebug_ToggleAllLED();
     // AML_MotorControl_Move(pwm, -50);
     EncoderGetLeftValue = AML_Encoder_GetLeftValue();
     EncoderGetRightValue = AML_Encoder_GetRightValue();
-    if (AML_Read_Button(1) == 1)
+    
+    if (AML_Read_Button(0)==1)
     {
+      AML_MotorControl_GoStraghtWithMPU(0);
       AML_Buzzer_Beep();
     }
-    else
+    
+    else if (AML_Read_Button(1) == 1)
     {
       AML_Buzzer_TurnOff();
+      AML_MotorControl_Stop();
     }
+   
 
     AML_ReadAll_BitSwitch();
     AML_ReadAll_Button();
@@ -768,6 +776,44 @@ static void MX_TIM5_Init(void)
   /* USER CODE BEGIN TIM5_Init 2 */
 
   /* USER CODE END TIM5_Init 2 */
+
+}
+
+/**
+  * @brief TIM7 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM7_Init(void)
+{
+
+  /* USER CODE BEGIN TIM7_Init 0 */
+
+  /* USER CODE END TIM7_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM7_Init 1 */
+
+  /* USER CODE END TIM7_Init 1 */
+  htim7.Instance = TIM7;
+  htim7.Init.Prescaler = 0;
+  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim7.Init.Period = 65535;
+  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM7_Init 2 */
+
+  /* USER CODE END TIM7_Init 2 */
 
 }
 

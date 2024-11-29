@@ -2,11 +2,15 @@
 #define SenSor_H
 
 #include "stm32h7xx_hal.h"
+#include "string.h"
+#include <AML_GlobalVariable.h>
+#include "math.h"
 #include "main.h"
 
 void AML_IRSensor_Setup(void);
-void AML_ReadAll_IRSensor(void);
-void AML_Read_IRSensor(uint8_t sensor);
-uint32_t AML_Get_IRSensor(uint8_t sensor);
+double AML_IRSensor_GetDistance(uint8_t sensor);
+uint8_t AML_IRSensor_IsFrontWall(void);
+uint8_t AML_IRSensor_IsRightWall(void);
+uint8_t AML_IRSensor_IsLeftWall(void);
 
 #endif
