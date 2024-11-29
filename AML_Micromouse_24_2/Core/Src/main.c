@@ -173,7 +173,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-
+    int8_t value =10;
     CurrentAngle = AML_MPUSensor_GetAngle();
     test = AML_IRSensor_GetDistance(0);
     AML_LedDebug_ToggleAllLED();
