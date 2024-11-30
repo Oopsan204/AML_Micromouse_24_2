@@ -367,12 +367,36 @@ Discarded input sections
                 0x00000000       0x14 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .text.AML_MotorControl_TurnOffWallFollow
                 0x00000000        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_AMLPIDSetup
+                0x00000000        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .text.AML_MotorControl_Move
-                0x00000000       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x00000000       0x7c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .text.AM_MotorSpeed_Left
-                0x00000000       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x00000000       0x68 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .text.AML_Motorspeed_Right
-                0x00000000       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x00000000       0x68 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_FollowWallLeft
+                0x00000000       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_FollowWallRight
+                0x00000000       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_GoStraight
+                0x00000000      0x108 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_TurnRight
+                0x00000000      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .text.AML_MotorControl_TurnLeft
+                0x00000000       0xfc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_RightWallFollow
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_LeftWallFollow
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_TurnRight
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_TurnLeft
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_RightMotor
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+ .data.PID_LeftMotor
+                0x00000000       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .bss.TempSetPoint
                 0x00000000        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
  .text          0x00000000        0x0 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj
@@ -2494,7 +2518,7 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x08000298                        . = ALIGN (0x4)
 
-.text           0x08000298     0x9830
+.text           0x08000298     0x9508
                 0x08000298                        . = ALIGN (0x4)
  *(.text)
  .text          0x08000298       0x40 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
@@ -2547,689 +2571,683 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .text.AML_MPUSensor_GetAngle
                 0x080008f4       0x1c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
                 0x080008f4                AML_MPUSensor_GetAngle
- .text.AML_MotorControl_AMLPIDSetup
-                0x08000910      0x2a0 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000910                AML_MotorControl_AMLPIDSetup
  .text.AML_MotorControl_Setup
-                0x08000bb0       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000bb0                AML_MotorControl_Setup
+                0x08000910       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x08000910                AML_MotorControl_Setup
  .text.AML_MotorControl_LeftPWM
-                0x08000bd8       0x70 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000bd8                AML_MotorControl_LeftPWM
+                0x08000934       0x70 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x08000934                AML_MotorControl_LeftPWM
  .text.AML_MotorControl_RightPWM
-                0x08000c48       0x70 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000c48                AML_MotorControl_RightPWM
+                0x080009a4       0x70 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x080009a4                AML_MotorControl_RightPWM
  .text.HAL_TIM_PeriodElapsedCallback
-                0x08000cb8       0x6c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000cb8                HAL_TIM_PeriodElapsedCallback
+                0x08000a14       0x50 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x08000a14                HAL_TIM_PeriodElapsedCallback
  .text.AML_MotorControl_Stop
-                0x08000d24       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000d24                AML_MotorControl_Stop
+                0x08000a64       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x08000a64                AML_MotorControl_Stop
  .text.AML_MotorControl_GoStraghtWithMPU
-                0x08000d6c       0x58 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x08000d6c                AML_MotorControl_GoStraghtWithMPU
- .text.AML_PID_Init
-                0x08000dc4       0x40 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj
-                0x08000dc4                AML_PID_Init
+                0x08000aac       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x08000aac                AML_MotorControl_GoStraghtWithMPU
  .text.AML_PID_Compute
-                0x08000e04      0x120 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj
-                0x08000e04                AML_PID_Compute
+                0x08000af4      0x108 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj
+                0x08000af4                AML_PID_Compute
  .text.AML_ReadAll_BitSwitch
-                0x08000f24       0x2c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x08000f24                AML_ReadAll_BitSwitch
+                0x08000bfc       0x2c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x08000bfc                AML_ReadAll_BitSwitch
  .text.AML_ReadAll_Button
-                0x08000f50       0x38 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x08000f50                AML_ReadAll_Button
+                0x08000c28       0x38 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x08000c28                AML_ReadAll_Button
  .text.AML_Read_Button
-                0x08000f88       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x08000f88                AML_Read_Button
+                0x08000c60       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x08000c60                AML_Read_Button
  .text.AML_IRSensor_Setup
-                0x08000fa8       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x08000fa8                AML_IRSensor_Setup
+                0x08000c80       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x08000c80                AML_IRSensor_Setup
  .text.HAL_ADC_ConvCpltCallback
-                0x08000fc0      0x12c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x08000fc0                HAL_ADC_ConvCpltCallback
+                0x08000c98      0x12c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x08000c98                HAL_ADC_ConvCpltCallback
  .text.AML_IRSensor_GetDistance
-                0x080010ec       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x080010ec                AML_IRSensor_GetDistance
+                0x08000dc4       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x08000dc4                AML_IRSensor_GetDistance
  .text.SystemClock_Config
-                0x080010fc      0x108 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x080010fc                SystemClock_Config
- *fill*         0x08001204        0x4 
+                0x08000dd4      0x108 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x08000dd4                SystemClock_Config
+ *fill*         0x08000edc        0x4 
  .text.startup.main
-                0x08001208      0x798 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x08001208                main
+                0x08000ee0      0x798 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x08000ee0                main
  .text.Error_Handler
-                0x080019a0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x080019a0                Error_Handler
+                0x08001678        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x08001678                Error_Handler
  .text.HAL_MspInit
-                0x080019a4       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x080019a4                HAL_MspInit
+                0x0800167c       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x0800167c                HAL_MspInit
  .text.HAL_ADC_MspInit
-                0x080019c8      0x12c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x080019c8                HAL_ADC_MspInit
- *fill*         0x08001af4        0x4 
+                0x080016a0      0x12c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x080016a0                HAL_ADC_MspInit
+ *fill*         0x080017cc        0x4 
  .text.HAL_I2C_MspInit
-                0x08001af8       0xa4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x08001af8                HAL_I2C_MspInit
+                0x080017d0       0xa4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x080017d0                HAL_I2C_MspInit
  .text.HAL_TIM_Base_MspInit
-                0x08001b9c       0x98 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x08001b9c                HAL_TIM_Base_MspInit
- *fill*         0x08001c34        0x4 
+                0x08001874       0x98 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x08001874                HAL_TIM_Base_MspInit
+ *fill*         0x0800190c        0x4 
  .text.HAL_TIM_Encoder_MspInit
-                0x08001c38      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x08001c38                HAL_TIM_Encoder_MspInit
+                0x08001910      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x08001910                HAL_TIM_Encoder_MspInit
  .text.HAL_TIM_MspPostInit
-                0x08001d38       0xac CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x08001d38                HAL_TIM_MspPostInit
+                0x08001a10       0xac CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x08001a10                HAL_TIM_MspPostInit
  .text.HAL_UART_MspInit
-                0x08001de4       0xec CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
-                0x08001de4                HAL_UART_MspInit
+                0x08001abc       0xec CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj
+                0x08001abc                HAL_UART_MspInit
  .text.NMI_Handler
-                0x08001ed0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ed0                NMI_Handler
+                0x08001ba8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001ba8                NMI_Handler
  .text.HardFault_Handler
-                0x08001ed4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ed4                HardFault_Handler
+                0x08001bac        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bac                HardFault_Handler
  .text.MemManage_Handler
-                0x08001ed8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ed8                MemManage_Handler
+                0x08001bb0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bb0                MemManage_Handler
  .text.BusFault_Handler
-                0x08001edc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001edc                BusFault_Handler
+                0x08001bb4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bb4                BusFault_Handler
  .text.UsageFault_Handler
-                0x08001ee0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ee0                UsageFault_Handler
+                0x08001bb8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bb8                UsageFault_Handler
  .text.SVC_Handler
-                0x08001ee4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ee4                SVC_Handler
+                0x08001bbc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bbc                SVC_Handler
  .text.DebugMon_Handler
-                0x08001ee8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ee8                DebugMon_Handler
+                0x08001bc0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bc0                DebugMon_Handler
  .text.PendSV_Handler
-                0x08001eec        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001eec                PendSV_Handler
+                0x08001bc4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bc4                PendSV_Handler
  .text.SysTick_Handler
-                0x08001ef0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ef0                SysTick_Handler
+                0x08001bc8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bc8                SysTick_Handler
  .text.DMA1_Stream0_IRQHandler
-                0x08001ef4        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001ef4                DMA1_Stream0_IRQHandler
+                0x08001bcc        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bcc                DMA1_Stream0_IRQHandler
  .text.ADC_IRQHandler
-                0x08001f00        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001f00                ADC_IRQHandler
+                0x08001bd8        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bd8                ADC_IRQHandler
  .text.USART3_IRQHandler
-                0x08001f0c        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001f0c                USART3_IRQHandler
+                0x08001be4        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001be4                USART3_IRQHandler
  .text.TIM7_IRQHandler
-                0x08001f18        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
-                0x08001f18                TIM7_IRQHandler
+                0x08001bf0        0xc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj
+                0x08001bf0                TIM7_IRQHandler
  .text.SystemInit
-                0x08001f24       0xcc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
-                0x08001f24                SystemInit
+                0x08001bfc       0xcc CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
+                0x08001bfc                SystemInit
  .text.HAL_ADC_GetValue
-                0x08001ff0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08001ff0                HAL_ADC_GetValue
+                0x08001cc8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08001cc8                HAL_ADC_GetValue
  .text.HAL_ADC_LevelOutOfWindowCallback
-                0x08001ff8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08001ff8                HAL_ADC_LevelOutOfWindowCallback
+                0x08001cd0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08001cd0                HAL_ADC_LevelOutOfWindowCallback
  .text.HAL_ADC_ErrorCallback
-                0x08001ffc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08001ffc                HAL_ADC_ErrorCallback
+                0x08001cd4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08001cd4                HAL_ADC_ErrorCallback
  .text.HAL_ADC_IRQHandler
-                0x08002000      0x278 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08002000                HAL_ADC_IRQHandler
+                0x08001cd8      0x278 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08001cd8                HAL_ADC_IRQHandler
  .text.HAL_ADC_ConfigChannel
-                0x08002278      0x430 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08002278                HAL_ADC_ConfigChannel
+                0x08001f50      0x430 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08001f50                HAL_ADC_ConfigChannel
  .text.ADC_Enable
-                0x080026a8       0xb0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x080026a8                ADC_Enable
+                0x08002380       0xb0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08002380                ADC_Enable
  .text.HAL_ADC_Start_IT
-                0x08002758      0x168 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08002758                HAL_ADC_Start_IT
+                0x08002430      0x168 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08002430                HAL_ADC_Start_IT
  .text.ADC_ConfigureBoostMode
-                0x080028c0      0x178 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x080028c0                ADC_ConfigureBoostMode
+                0x08002598      0x178 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08002598                ADC_ConfigureBoostMode
  .text.HAL_ADC_Init
-                0x08002a38      0x218 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
-                0x08002a38                HAL_ADC_Init
+                0x08002710      0x218 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj
+                0x08002710                HAL_ADC_Init
  .text.HAL_ADCEx_InjectedConvCpltCallback
-                0x08002c50        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c50                HAL_ADCEx_InjectedConvCpltCallback
+                0x08002928        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x08002928                HAL_ADCEx_InjectedConvCpltCallback
  .text.HAL_ADCEx_InjectedQueueOverflowCallback
-                0x08002c54        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c54                HAL_ADCEx_InjectedQueueOverflowCallback
+                0x0800292c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x0800292c                HAL_ADCEx_InjectedQueueOverflowCallback
  .text.HAL_ADCEx_LevelOutOfWindow2Callback
-                0x08002c58        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c58                HAL_ADCEx_LevelOutOfWindow2Callback
+                0x08002930        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x08002930                HAL_ADCEx_LevelOutOfWindow2Callback
  .text.HAL_ADCEx_LevelOutOfWindow3Callback
-                0x08002c5c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c5c                HAL_ADCEx_LevelOutOfWindow3Callback
+                0x08002934        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x08002934                HAL_ADCEx_LevelOutOfWindow3Callback
  .text.HAL_ADCEx_EndOfSamplingCallback
-                0x08002c60        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c60                HAL_ADCEx_EndOfSamplingCallback
+                0x08002938        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x08002938                HAL_ADCEx_EndOfSamplingCallback
  .text.HAL_ADCEx_MultiModeConfigChannel
-                0x08002c64       0xc4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
-                0x08002c64                HAL_ADCEx_MultiModeConfigChannel
+                0x0800293c       0xc4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj
+                0x0800293c                HAL_ADCEx_MultiModeConfigChannel
  .text.HAL_RCC_GetSysClockFreq.part.0
-                0x08002d28       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x08002a00       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
  .text.HAL_RCC_OscConfig
-                0x08002e0c      0x5e4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x08002e0c                HAL_RCC_OscConfig
+                0x08002ae4      0x5e4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x08002ae4                HAL_RCC_OscConfig
  .text.HAL_RCC_GetSysClockFreq
-                0x080033f0      0x11c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x080033f0                HAL_RCC_GetSysClockFreq
+                0x080030c8      0x11c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x080030c8                HAL_RCC_GetSysClockFreq
  .text.HAL_RCC_ClockConfig
-                0x0800350c      0x254 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x0800350c                HAL_RCC_ClockConfig
+                0x080031e4      0x254 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x080031e4                HAL_RCC_ClockConfig
  .text.HAL_RCC_GetHCLKFreq
-                0x08003760       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x08003760                HAL_RCC_GetHCLKFreq
+                0x08003438       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x08003438                HAL_RCC_GetHCLKFreq
  .text.HAL_RCC_GetPCLK1Freq
-                0x080037e0       0x90 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x080037e0                HAL_RCC_GetPCLK1Freq
+                0x080034b8       0x90 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x080034b8                HAL_RCC_GetPCLK1Freq
  .text.HAL_RCC_GetPCLK2Freq
-                0x08003870       0x90 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
-                0x08003870                HAL_RCC_GetPCLK2Freq
+                0x08003548       0x90 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj
+                0x08003548                HAL_RCC_GetPCLK2Freq
  .text.RCCEx_PLL2_Config.part.0
-                0x08003900       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x080035d8       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
  .text.RCCEx_PLL3_Config.part.0
-                0x080039e4       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x080036bc       0xe4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
  .text.HAL_RCCEx_PeriphCLKConfig
-                0x08003ac8      0xeb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x08003ac8                HAL_RCCEx_PeriphCLKConfig
+                0x080037a0      0xeb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x080037a0                HAL_RCCEx_PeriphCLKConfig
  .text.HAL_RCCEx_GetD3PCLK1Freq
-                0x0800497c       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x0800497c                HAL_RCCEx_GetD3PCLK1Freq
+                0x08004654       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x08004654                HAL_RCCEx_GetD3PCLK1Freq
  .text.HAL_RCCEx_GetPLL2ClockFreq
-                0x080049a0      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x080049a0                HAL_RCCEx_GetPLL2ClockFreq
+                0x08004678      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x08004678                HAL_RCCEx_GetPLL2ClockFreq
  .text.HAL_RCCEx_GetPLL3ClockFreq
-                0x08004ad4      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x08004ad4                HAL_RCCEx_GetPLL3ClockFreq
+                0x080047ac      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x080047ac                HAL_RCCEx_GetPLL3ClockFreq
  .text.HAL_RCCEx_GetPLL1ClockFreq
-                0x08004c08      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x08004c08                HAL_RCCEx_GetPLL1ClockFreq
+                0x080048e0      0x134 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x080048e0                HAL_RCCEx_GetPLL1ClockFreq
  .text.HAL_RCCEx_GetPeriphCLKFreq
-                0x08004d3c      0x390 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
-                0x08004d3c                HAL_RCCEx_GetPeriphCLKFreq
+                0x08004a14      0x390 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj
+                0x08004a14                HAL_RCCEx_GetPeriphCLKFreq
  .text.HAL_GPIO_Init
-                0x080050cc      0x284 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
-                0x080050cc                HAL_GPIO_Init
+                0x08004da4      0x284 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+                0x08004da4                HAL_GPIO_Init
  .text.HAL_GPIO_ReadPin
-                0x08005350        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
-                0x08005350                HAL_GPIO_ReadPin
+                0x08005028        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+                0x08005028                HAL_GPIO_ReadPin
  .text.HAL_GPIO_WritePin
-                0x0800535c        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
-                0x0800535c                HAL_GPIO_WritePin
+                0x08005034        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+                0x08005034                HAL_GPIO_WritePin
  .text.HAL_GPIO_TogglePin
-                0x08005364       0x14 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
-                0x08005364                HAL_GPIO_TogglePin
+                0x0800503c       0x14 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj
+                0x0800503c                HAL_GPIO_TogglePin
  .text.DMA_CalcBaseAndBitshift
-                0x08005378      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x08005050      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .text.DMA_CalcDMAMUXChannelBaseAndMask
-                0x08005478       0xd0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x08005150       0xd0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .text.HAL_DMA_Init
-                0x08005548      0x50c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x08005548                HAL_DMA_Init
+                0x08005220      0x50c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x08005220                HAL_DMA_Init
  .text.HAL_DMA_Start_IT
-                0x08005a54      0x814 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x08005a54                HAL_DMA_Start_IT
+                0x0800572c      0x814 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x0800572c                HAL_DMA_Start_IT
  .text.HAL_DMA_Abort
-                0x08006268      0x364 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x08006268                HAL_DMA_Abort
+                0x08005f40      0x364 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x08005f40                HAL_DMA_Abort
  .text.HAL_DMA_Abort_IT
-                0x080065cc      0x150 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x080065cc                HAL_DMA_Abort_IT
+                0x080062a4      0x150 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x080062a4                HAL_DMA_Abort_IT
  .text.HAL_DMA_IRQHandler
-                0x0800671c      0x6a8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x0800671c                HAL_DMA_IRQHandler
+                0x080063f4      0x6a8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x080063f4                HAL_DMA_IRQHandler
  .text.HAL_DMA_GetError
-                0x08006dc4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
-                0x08006dc4                HAL_DMA_GetError
+                0x08006a9c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x08006a9c                HAL_DMA_GetError
  .text.HAL_PWREx_ConfigSupply
-                0x08006dc8       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
-                0x08006dc8                HAL_PWREx_ConfigSupply
+                0x08006aa0       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj
+                0x08006aa0                HAL_PWREx_ConfigSupply
  .text.HAL_NVIC_SetPriorityGrouping
-                0x08006e10       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006e10                HAL_NVIC_SetPriorityGrouping
+                0x08006ae8       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006ae8                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08006e34       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006e34                HAL_NVIC_SetPriority
+                0x08006b0c       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006b0c                HAL_NVIC_SetPriority
  .text.HAL_NVIC_EnableIRQ
-                0x08006eac       0x1c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006eac                HAL_NVIC_EnableIRQ
+                0x08006b84       0x1c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006b84                HAL_NVIC_EnableIRQ
  .text.HAL_SYSTICK_Config
-                0x08006ec8       0x2c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006ec8                HAL_SYSTICK_Config
+                0x08006ba0       0x2c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006ba0                HAL_SYSTICK_Config
  .text.HAL_MPU_Disable
-                0x08006ef4       0x1c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006ef4                HAL_MPU_Disable
+                0x08006bcc       0x1c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006bcc                HAL_MPU_Disable
  .text.HAL_MPU_Enable
-                0x08006f10       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006f10                HAL_MPU_Enable
+                0x08006be8       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006be8                HAL_MPU_Enable
  .text.HAL_MPU_ConfigRegion
-                0x08006f30       0x60 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
-                0x08006f30                HAL_MPU_ConfigRegion
+                0x08006c08       0x60 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj
+                0x08006c08                HAL_MPU_ConfigRegion
  .text.HAL_InitTick
-                0x08006f90       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x08006f90                HAL_InitTick
+                0x08006c68       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006c68                HAL_InitTick
  .text.HAL_Init
-                0x08006fdc       0x60 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x08006fdc                HAL_Init
+                0x08006cb4       0x60 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006cb4                HAL_Init
  .text.HAL_IncTick
-                0x0800703c       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x0800703c                HAL_IncTick
+                0x08006d14       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006d14                HAL_IncTick
  .text.HAL_GetTick
-                0x08007054        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x08007054                HAL_GetTick
+                0x08006d2c        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006d2c                HAL_GetTick
  .text.HAL_Delay
-                0x08007060       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x08007060                HAL_Delay
+                0x08006d38       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006d38                HAL_Delay
  .text.HAL_GetREVID
-                0x08007084        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x08007084                HAL_GetREVID
+                0x08006d5c        0xc CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x08006d5c                HAL_GetREVID
  .text.HAL_I2C_Init
-                0x08007090       0xb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
-                0x08007090                HAL_I2C_Init
+                0x08006d68       0xb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj
+                0x08006d68                HAL_I2C_Init
  .text.HAL_I2CEx_ConfigAnalogFilter
-                0x08007144       0x54 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
-                0x08007144                HAL_I2CEx_ConfigAnalogFilter
+                0x08006e1c       0x54 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
+                0x08006e1c                HAL_I2CEx_ConfigAnalogFilter
  .text.HAL_I2CEx_ConfigDigitalFilter
-                0x08007198       0x58 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
-                0x08007198                HAL_I2CEx_ConfigDigitalFilter
+                0x08006e70       0x58 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj
+                0x08006e70                HAL_I2CEx_ConfigDigitalFilter
  .text.HAL_RAMECC_Init
-                0x080071f0       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ramecc.c.obj
-                0x080071f0                HAL_RAMECC_Init
+                0x08006ec8       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ramecc.c.obj
+                0x08006ec8                HAL_RAMECC_Init
  .text.TIM_OC1_SetConfig
-                0x08007238       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08006f10       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
  .text.TIM_OC3_SetConfig
-                0x080072b0       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08006f88       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
  .text.HAL_TIM_Base_Init
-                0x08007330      0x14c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007330                HAL_TIM_Base_Init
+                0x08007008      0x14c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007008                HAL_TIM_Base_Init
  .text.HAL_TIM_Base_Start
-                0x0800747c       0x9c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x0800747c                HAL_TIM_Base_Start
+                0x08007154       0x9c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007154                HAL_TIM_Base_Start
  .text.HAL_TIM_PWM_MspInit
-                0x08007518        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007518                HAL_TIM_PWM_MspInit
+                0x080071f0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x080071f0                HAL_TIM_PWM_MspInit
  .text.HAL_TIM_PWM_Init
-                0x0800751c      0x14c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x0800751c                HAL_TIM_PWM_Init
+                0x080071f4      0x14c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x080071f4                HAL_TIM_PWM_Init
  .text.HAL_TIM_PWM_Start
-                0x08007668      0x140 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007668                HAL_TIM_PWM_Start
+                0x08007340      0x140 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007340                HAL_TIM_PWM_Start
  .text.HAL_TIM_PWM_Stop
-                0x080077a8      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x080077a8                HAL_TIM_PWM_Stop
+                0x08007480      0x100 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007480                HAL_TIM_PWM_Stop
  .text.HAL_TIM_Encoder_Init
-                0x080078a8      0x1a0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x080078a8                HAL_TIM_Encoder_Init
+                0x08007580      0x1a0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007580                HAL_TIM_Encoder_Init
  .text.HAL_TIM_Encoder_Start
-                0x08007a48       0xc4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007a48                HAL_TIM_Encoder_Start
+                0x08007720       0xc4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007720                HAL_TIM_Encoder_Start
  .text.HAL_TIM_ConfigClockSource
-                0x08007b0c      0x18c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007b0c                HAL_TIM_ConfigClockSource
+                0x080077e4      0x18c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x080077e4                HAL_TIM_ConfigClockSource
  .text.HAL_TIM_OC_DelayElapsedCallback
-                0x08007c98        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007c98                HAL_TIM_OC_DelayElapsedCallback
+                0x08007970        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007970                HAL_TIM_OC_DelayElapsedCallback
  .text.HAL_TIM_IC_CaptureCallback
-                0x08007c9c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007c9c                HAL_TIM_IC_CaptureCallback
+                0x08007974        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007974                HAL_TIM_IC_CaptureCallback
  .text.HAL_TIM_PWM_PulseFinishedCallback
-                0x08007ca0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007ca0                HAL_TIM_PWM_PulseFinishedCallback
+                0x08007978        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007978                HAL_TIM_PWM_PulseFinishedCallback
  .text.HAL_TIM_TriggerCallback
-                0x08007ca4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007ca4                HAL_TIM_TriggerCallback
+                0x0800797c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x0800797c                HAL_TIM_TriggerCallback
  .text.HAL_TIM_IRQHandler
-                0x08007ca8      0x158 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007ca8                HAL_TIM_IRQHandler
+                0x08007980      0x158 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007980                HAL_TIM_IRQHandler
  .text.TIM_OC2_SetConfig
-                0x08007e00       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007e00                TIM_OC2_SetConfig
+                0x08007ad8       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007ad8                TIM_OC2_SetConfig
  .text.HAL_TIM_PWM_ConfigChannel
-                0x08007e84      0x234 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
-                0x08007e84                HAL_TIM_PWM_ConfigChannel
+                0x08007b5c      0x234 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj
+                0x08007b5c                HAL_TIM_PWM_ConfigChannel
  .text.HAL_TIMEx_MasterConfigSynchronization
-                0x080080b8       0xb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
-                0x080080b8                HAL_TIMEx_MasterConfigSynchronization
+                0x08007d90       0xb4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+                0x08007d90                HAL_TIMEx_MasterConfigSynchronization
  .text.HAL_TIMEx_ConfigBreakDeadTime
-                0x0800816c       0x8c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
-                0x0800816c                HAL_TIMEx_ConfigBreakDeadTime
+                0x08007e44       0x8c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+                0x08007e44                HAL_TIMEx_ConfigBreakDeadTime
  .text.HAL_TIMEx_CommutCallback
-                0x080081f8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
-                0x080081f8                HAL_TIMEx_CommutCallback
+                0x08007ed0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+                0x08007ed0                HAL_TIMEx_CommutCallback
  .text.HAL_TIMEx_BreakCallback
-                0x080081fc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
-                0x080081fc                HAL_TIMEx_BreakCallback
+                0x08007ed4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+                0x08007ed4                HAL_TIMEx_BreakCallback
  .text.HAL_TIMEx_Break2Callback
-                0x08008200        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
-                0x08008200                HAL_TIMEx_Break2Callback
+                0x08007ed8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj
+                0x08007ed8                HAL_TIMEx_Break2Callback
  .text.HAL_UART_Transmit
-                0x08008204       0xf4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008204                HAL_UART_Transmit
+                0x08007edc       0xf4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08007edc                HAL_UART_Transmit
  .text.HAL_UART_Receive
-                0x080082f8      0x1e0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080082f8                HAL_UART_Receive
+                0x08007fd0      0x1e0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08007fd0                HAL_UART_Receive
  .text.HAL_UART_DMAStop
-                0x080084d8      0x128 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080084d8                HAL_UART_DMAStop
+                0x080081b0      0x128 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080081b0                HAL_UART_DMAStop
  .text.HAL_UART_TxCpltCallback
-                0x08008600        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008600                HAL_UART_TxCpltCallback
+                0x080082d8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080082d8                HAL_UART_TxCpltCallback
  .text.HAL_UART_RxHalfCpltCallback
-                0x08008604        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008604                HAL_UART_RxHalfCpltCallback
+                0x080082dc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080082dc                HAL_UART_RxHalfCpltCallback
  .text.HAL_UART_ErrorCallback
-                0x08008608        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008608                HAL_UART_ErrorCallback
+                0x080082e0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080082e0                HAL_UART_ErrorCallback
  .text.UART_DMAError
-                0x0800860c       0xd4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080082e4       0xd4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
  .text.UART_DMAAbortOnError
-                0x080086e0       0x14 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080083b8       0x14 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
  .text.HAL_UARTEx_RxEventCallback
-                0x080086f4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080086f4                HAL_UARTEx_RxEventCallback
+                0x080083cc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080083cc                HAL_UARTEx_RxEventCallback
  .text.HAL_UART_IRQHandler
-                0x080086f8      0x38c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080086f8                HAL_UART_IRQHandler
+                0x080083d0      0x38c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080083d0                HAL_UART_IRQHandler
  .text.UART_DMARxHalfCplt
-                0x08008a84       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x0800875c       0x20 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
  .text.UART_DMAReceiveCplt
-                0x08008aa4       0x9c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x0800877c       0x9c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
  .text.UART_SetConfig
-                0x08008b40      0x378 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008b40                UART_SetConfig
+                0x08008818      0x378 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008818                UART_SetConfig
  .text.UART_AdvFeatureConfig
-                0x08008eb8       0xb0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008eb8                UART_AdvFeatureConfig
+                0x08008b90       0xb0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008b90                UART_AdvFeatureConfig
  .text.UART_CheckIdleState
-                0x08008f68      0x258 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08008f68                UART_CheckIdleState
+                0x08008c40      0x258 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008c40                UART_CheckIdleState
  .text.HAL_UART_Init
-                0x080091c0       0x68 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080091c0                HAL_UART_Init
+                0x08008e98       0x68 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008e98                HAL_UART_Init
  .text.UART_Start_Receive_DMA
-                0x08009228       0xa0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08009228                UART_Start_Receive_DMA
+                0x08008f00       0xa0 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008f00                UART_Start_Receive_DMA
  .text.HAL_UART_Receive_DMA
-                0x080092c8       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x080092c8                HAL_UART_Receive_DMA
+                0x08008fa0       0x48 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x08008fa0                HAL_UART_Receive_DMA
  .text.HAL_UARTEx_WakeupCallback
-                0x08009310        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x08009310                HAL_UARTEx_WakeupCallback
+                0x08008fe8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x08008fe8                HAL_UARTEx_WakeupCallback
  .text.HAL_UARTEx_RxFifoFullCallback
-                0x08009314        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x08009314                HAL_UARTEx_RxFifoFullCallback
+                0x08008fec        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x08008fec                HAL_UARTEx_RxFifoFullCallback
  .text.HAL_UARTEx_TxFifoEmptyCallback
-                0x08009318        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x08009318                HAL_UARTEx_TxFifoEmptyCallback
+                0x08008ff0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x08008ff0                HAL_UARTEx_TxFifoEmptyCallback
  .text.HAL_UARTEx_DisableFifoMode
-                0x0800931c       0x3c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x0800931c                HAL_UARTEx_DisableFifoMode
+                0x08008ff4       0x3c CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x08008ff4                HAL_UARTEx_DisableFifoMode
  .text.HAL_UARTEx_SetTxFifoThreshold
-                0x08009358       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x08009358                HAL_UARTEx_SetTxFifoThreshold
+                0x08009030       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x08009030                HAL_UARTEx_SetTxFifoThreshold
  .text.HAL_UARTEx_SetRxFifoThreshold
-                0x080093dc       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
-                0x080093dc                HAL_UARTEx_SetRxFifoThreshold
+                0x080090b4       0x84 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x080090b4                HAL_UARTEx_SetRxFifoThreshold
  .text.Reset_Handler
-                0x08009460       0x50 CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
-                0x08009460                Reset_Handler
+                0x08009138       0x50 CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
+                0x08009138                Reset_Handler
  .text.Default_Handler
-                0x080094b0        0x2 CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
-                0x080094b0                RTC_Alarm_IRQHandler
-                0x080094b0                EXTI2_IRQHandler
-                0x080094b0                TIM8_CC_IRQHandler
-                0x080094b0                HRTIM1_Master_IRQHandler
-                0x080094b0                UART8_IRQHandler
-                0x080094b0                SPI4_IRQHandler
-                0x080094b0                TIM1_CC_IRQHandler
-                0x080094b0                BDMA_Channel6_IRQHandler
-                0x080094b0                DMA2_Stream5_IRQHandler
-                0x080094b0                HRTIM1_FLT_IRQHandler
-                0x080094b0                JPEG_IRQHandler
-                0x080094b0                DMA1_Stream5_IRQHandler
-                0x080094b0                BDMA_Channel1_IRQHandler
-                0x080094b0                HRTIM1_TIMD_IRQHandler
-                0x080094b0                TAMP_STAMP_IRQHandler
-                0x080094b0                EXTI3_IRQHandler
-                0x080094b0                LPTIM4_IRQHandler
-                0x080094b0                TIM8_TRG_COM_TIM14_IRQHandler
-                0x080094b0                LPTIM2_IRQHandler
-                0x080094b0                DFSDM1_FLT1_IRQHandler
-                0x080094b0                DMAMUX2_OVR_IRQHandler
-                0x080094b0                TIM8_UP_TIM13_IRQHandler
-                0x080094b0                I2C3_ER_IRQHandler
-                0x080094b0                DFSDM1_FLT2_IRQHandler
-                0x080094b0                MDMA_IRQHandler
-                0x080094b0                LPTIM3_IRQHandler
-                0x080094b0                HSEM1_IRQHandler
-                0x080094b0                EXTI0_IRQHandler
-                0x080094b0                I2C2_EV_IRQHandler
-                0x080094b0                DMA1_Stream2_IRQHandler
-                0x080094b0                FPU_IRQHandler
-                0x080094b0                OTG_HS_WKUP_IRQHandler
-                0x080094b0                FDCAN1_IT1_IRQHandler
-                0x080094b0                LTDC_ER_IRQHandler
-                0x080094b0                DMA2_Stream2_IRQHandler
-                0x080094b0                HRTIM1_TIME_IRQHandler
-                0x080094b0                SPI1_IRQHandler
-                0x080094b0                TIM6_DAC_IRQHandler
-                0x080094b0                DCMI_IRQHandler
-                0x080094b0                HRTIM1_TIMC_IRQHandler
-                0x080094b0                DMA2_Stream3_IRQHandler
-                0x080094b0                SAI2_IRQHandler
-                0x080094b0                DFSDM1_FLT3_IRQHandler
-                0x080094b0                USART6_IRQHandler
-                0x080094b0                TIM17_IRQHandler
-                0x080094b0                BDMA_Channel7_IRQHandler
-                0x080094b0                LPTIM5_IRQHandler
-                0x080094b0                UART5_IRQHandler
-                0x080094b0                ADC3_IRQHandler
-                0x080094b0                DMA2_Stream0_IRQHandler
-                0x080094b0                TIM4_IRQHandler
-                0x080094b0                BDMA_Channel2_IRQHandler
-                0x080094b0                QUADSPI_IRQHandler
-                0x080094b0                I2C1_EV_IRQHandler
-                0x080094b0                DMA1_Stream6_IRQHandler
-                0x080094b0                DMAMUX1_OVR_IRQHandler
-                0x080094b0                DMA1_Stream1_IRQHandler
-                0x080094b0                TIM16_IRQHandler
-                0x080094b0                UART4_IRQHandler
-                0x080094b0                BDMA_Channel5_IRQHandler
-                0x080094b0                TIM3_IRQHandler
-                0x080094b0                RCC_IRQHandler
-                0x080094b0                TIM8_BRK_TIM12_IRQHandler
-                0x080094b0                TIM1_TRG_COM_IRQHandler
-                0x080094b0                Default_Handler
-                0x080094b0                ECC_IRQHandler
-                0x080094b0                CEC_IRQHandler
-                0x080094b0                EXTI15_10_IRQHandler
-                0x080094b0                BDMA_Channel0_IRQHandler
-                0x080094b0                DMA1_Stream7_IRQHandler
-                0x080094b0                HRTIM1_TIMA_IRQHandler
-                0x080094b0                SPI5_IRQHandler
-                0x080094b0                SDMMC1_IRQHandler
-                0x080094b0                TIM5_IRQHandler
-                0x080094b0                DMA2_Stream7_IRQHandler
-                0x080094b0                TIM15_IRQHandler
-                0x080094b0                PVD_AVD_IRQHandler
-                0x080094b0                I2C3_EV_IRQHandler
-                0x080094b0                EXTI9_5_IRQHandler
-                0x080094b0                RTC_WKUP_IRQHandler
-                0x080094b0                LTDC_IRQHandler
-                0x080094b0                SAI3_IRQHandler
-                0x080094b0                ETH_WKUP_IRQHandler
-                0x080094b0                SPDIF_RX_IRQHandler
-                0x080094b0                SPI2_IRQHandler
-                0x080094b0                OTG_HS_EP1_IN_IRQHandler
-                0x080094b0                CRS_IRQHandler
-                0x080094b0                EXTI4_IRQHandler
-                0x080094b0                RNG_IRQHandler
-                0x080094b0                HRTIM1_TIMB_IRQHandler
-                0x080094b0                FDCAN2_IT1_IRQHandler
-                0x080094b0                ETH_IRQHandler
-                0x080094b0                TIM1_UP_IRQHandler
-                0x080094b0                BDMA_Channel4_IRQHandler
-                0x080094b0                OTG_HS_EP1_OUT_IRQHandler
-                0x080094b0                WWDG_IRQHandler
-                0x080094b0                SPI6_IRQHandler
-                0x080094b0                MDIOS_IRQHandler
-                0x080094b0                I2C4_EV_IRQHandler
-                0x080094b0                FDCAN2_IT0_IRQHandler
-                0x080094b0                LPUART1_IRQHandler
-                0x080094b0                FDCAN1_IT0_IRQHandler
-                0x080094b0                TIM2_IRQHandler
-                0x080094b0                OTG_FS_WKUP_IRQHandler
-                0x080094b0                OTG_HS_IRQHandler
-                0x080094b0                DMA2D_IRQHandler
-                0x080094b0                TIM1_BRK_IRQHandler
-                0x080094b0                EXTI1_IRQHandler
-                0x080094b0                SDMMC2_IRQHandler
-                0x080094b0                OTG_FS_EP1_OUT_IRQHandler
-                0x080094b0                BDMA_Channel3_IRQHandler
-                0x080094b0                UART7_IRQHandler
-                0x080094b0                MDIOS_WKUP_IRQHandler
-                0x080094b0                USART2_IRQHandler
-                0x080094b0                DFSDM1_FLT0_IRQHandler
-                0x080094b0                SAI4_IRQHandler
-                0x080094b0                I2C2_ER_IRQHandler
-                0x080094b0                DMA2_Stream1_IRQHandler
-                0x080094b0                FLASH_IRQHandler
-                0x080094b0                DMA2_Stream4_IRQHandler
-                0x080094b0                USART1_IRQHandler
-                0x080094b0                OTG_FS_IRQHandler
-                0x080094b0                SPI3_IRQHandler
-                0x080094b0                WAKEUP_PIN_IRQHandler
-                0x080094b0                DMA1_Stream4_IRQHandler
-                0x080094b0                OTG_FS_EP1_IN_IRQHandler
-                0x080094b0                I2C1_ER_IRQHandler
-                0x080094b0                FMC_IRQHandler
-                0x080094b0                FDCAN_CAL_IRQHandler
-                0x080094b0                SWPMI1_IRQHandler
-                0x080094b0                COMP1_IRQHandler
-                0x080094b0                LPTIM1_IRQHandler
-                0x080094b0                I2C4_ER_IRQHandler
-                0x080094b0                DMA2_Stream6_IRQHandler
-                0x080094b0                SAI1_IRQHandler
-                0x080094b0                DMA1_Stream3_IRQHandler
- *fill*         0x080094b2        0x2 
- .text.__errno  0x080094b4        0xc C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libg_nano.a(libc_a-errno.o)
-                0x080094b4                __errno
+                0x08009188        0x2 CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
+                0x08009188                RTC_Alarm_IRQHandler
+                0x08009188                EXTI2_IRQHandler
+                0x08009188                TIM8_CC_IRQHandler
+                0x08009188                HRTIM1_Master_IRQHandler
+                0x08009188                UART8_IRQHandler
+                0x08009188                SPI4_IRQHandler
+                0x08009188                TIM1_CC_IRQHandler
+                0x08009188                BDMA_Channel6_IRQHandler
+                0x08009188                DMA2_Stream5_IRQHandler
+                0x08009188                HRTIM1_FLT_IRQHandler
+                0x08009188                JPEG_IRQHandler
+                0x08009188                DMA1_Stream5_IRQHandler
+                0x08009188                BDMA_Channel1_IRQHandler
+                0x08009188                HRTIM1_TIMD_IRQHandler
+                0x08009188                TAMP_STAMP_IRQHandler
+                0x08009188                EXTI3_IRQHandler
+                0x08009188                LPTIM4_IRQHandler
+                0x08009188                TIM8_TRG_COM_TIM14_IRQHandler
+                0x08009188                LPTIM2_IRQHandler
+                0x08009188                DFSDM1_FLT1_IRQHandler
+                0x08009188                DMAMUX2_OVR_IRQHandler
+                0x08009188                TIM8_UP_TIM13_IRQHandler
+                0x08009188                I2C3_ER_IRQHandler
+                0x08009188                DFSDM1_FLT2_IRQHandler
+                0x08009188                MDMA_IRQHandler
+                0x08009188                LPTIM3_IRQHandler
+                0x08009188                HSEM1_IRQHandler
+                0x08009188                EXTI0_IRQHandler
+                0x08009188                I2C2_EV_IRQHandler
+                0x08009188                DMA1_Stream2_IRQHandler
+                0x08009188                FPU_IRQHandler
+                0x08009188                OTG_HS_WKUP_IRQHandler
+                0x08009188                FDCAN1_IT1_IRQHandler
+                0x08009188                LTDC_ER_IRQHandler
+                0x08009188                DMA2_Stream2_IRQHandler
+                0x08009188                HRTIM1_TIME_IRQHandler
+                0x08009188                SPI1_IRQHandler
+                0x08009188                TIM6_DAC_IRQHandler
+                0x08009188                DCMI_IRQHandler
+                0x08009188                HRTIM1_TIMC_IRQHandler
+                0x08009188                DMA2_Stream3_IRQHandler
+                0x08009188                SAI2_IRQHandler
+                0x08009188                DFSDM1_FLT3_IRQHandler
+                0x08009188                USART6_IRQHandler
+                0x08009188                TIM17_IRQHandler
+                0x08009188                BDMA_Channel7_IRQHandler
+                0x08009188                LPTIM5_IRQHandler
+                0x08009188                UART5_IRQHandler
+                0x08009188                ADC3_IRQHandler
+                0x08009188                DMA2_Stream0_IRQHandler
+                0x08009188                TIM4_IRQHandler
+                0x08009188                BDMA_Channel2_IRQHandler
+                0x08009188                QUADSPI_IRQHandler
+                0x08009188                I2C1_EV_IRQHandler
+                0x08009188                DMA1_Stream6_IRQHandler
+                0x08009188                DMAMUX1_OVR_IRQHandler
+                0x08009188                DMA1_Stream1_IRQHandler
+                0x08009188                TIM16_IRQHandler
+                0x08009188                UART4_IRQHandler
+                0x08009188                BDMA_Channel5_IRQHandler
+                0x08009188                TIM3_IRQHandler
+                0x08009188                RCC_IRQHandler
+                0x08009188                TIM8_BRK_TIM12_IRQHandler
+                0x08009188                TIM1_TRG_COM_IRQHandler
+                0x08009188                Default_Handler
+                0x08009188                ECC_IRQHandler
+                0x08009188                CEC_IRQHandler
+                0x08009188                EXTI15_10_IRQHandler
+                0x08009188                BDMA_Channel0_IRQHandler
+                0x08009188                DMA1_Stream7_IRQHandler
+                0x08009188                HRTIM1_TIMA_IRQHandler
+                0x08009188                SPI5_IRQHandler
+                0x08009188                SDMMC1_IRQHandler
+                0x08009188                TIM5_IRQHandler
+                0x08009188                DMA2_Stream7_IRQHandler
+                0x08009188                TIM15_IRQHandler
+                0x08009188                PVD_AVD_IRQHandler
+                0x08009188                I2C3_EV_IRQHandler
+                0x08009188                EXTI9_5_IRQHandler
+                0x08009188                RTC_WKUP_IRQHandler
+                0x08009188                LTDC_IRQHandler
+                0x08009188                SAI3_IRQHandler
+                0x08009188                ETH_WKUP_IRQHandler
+                0x08009188                SPDIF_RX_IRQHandler
+                0x08009188                SPI2_IRQHandler
+                0x08009188                OTG_HS_EP1_IN_IRQHandler
+                0x08009188                CRS_IRQHandler
+                0x08009188                EXTI4_IRQHandler
+                0x08009188                RNG_IRQHandler
+                0x08009188                HRTIM1_TIMB_IRQHandler
+                0x08009188                FDCAN2_IT1_IRQHandler
+                0x08009188                ETH_IRQHandler
+                0x08009188                TIM1_UP_IRQHandler
+                0x08009188                BDMA_Channel4_IRQHandler
+                0x08009188                OTG_HS_EP1_OUT_IRQHandler
+                0x08009188                WWDG_IRQHandler
+                0x08009188                SPI6_IRQHandler
+                0x08009188                MDIOS_IRQHandler
+                0x08009188                I2C4_EV_IRQHandler
+                0x08009188                FDCAN2_IT0_IRQHandler
+                0x08009188                LPUART1_IRQHandler
+                0x08009188                FDCAN1_IT0_IRQHandler
+                0x08009188                TIM2_IRQHandler
+                0x08009188                OTG_FS_WKUP_IRQHandler
+                0x08009188                OTG_HS_IRQHandler
+                0x08009188                DMA2D_IRQHandler
+                0x08009188                TIM1_BRK_IRQHandler
+                0x08009188                EXTI1_IRQHandler
+                0x08009188                SDMMC2_IRQHandler
+                0x08009188                OTG_FS_EP1_OUT_IRQHandler
+                0x08009188                BDMA_Channel3_IRQHandler
+                0x08009188                UART7_IRQHandler
+                0x08009188                MDIOS_WKUP_IRQHandler
+                0x08009188                USART2_IRQHandler
+                0x08009188                DFSDM1_FLT0_IRQHandler
+                0x08009188                SAI4_IRQHandler
+                0x08009188                I2C2_ER_IRQHandler
+                0x08009188                DMA2_Stream1_IRQHandler
+                0x08009188                FLASH_IRQHandler
+                0x08009188                DMA2_Stream4_IRQHandler
+                0x08009188                USART1_IRQHandler
+                0x08009188                OTG_FS_IRQHandler
+                0x08009188                SPI3_IRQHandler
+                0x08009188                WAKEUP_PIN_IRQHandler
+                0x08009188                DMA1_Stream4_IRQHandler
+                0x08009188                OTG_FS_EP1_IN_IRQHandler
+                0x08009188                I2C1_ER_IRQHandler
+                0x08009188                FMC_IRQHandler
+                0x08009188                FDCAN_CAL_IRQHandler
+                0x08009188                SWPMI1_IRQHandler
+                0x08009188                COMP1_IRQHandler
+                0x08009188                LPTIM1_IRQHandler
+                0x08009188                I2C4_ER_IRQHandler
+                0x08009188                DMA2_Stream6_IRQHandler
+                0x08009188                SAI1_IRQHandler
+                0x08009188                DMA1_Stream3_IRQHandler
+ *fill*         0x0800918a        0x2 
+ .text.__errno  0x0800918c        0xc C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libg_nano.a(libc_a-errno.o)
+                0x0800918c                __errno
  .text.checkint
-                0x080094c0       0x68 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow.o)
- .text.pow      0x08009528      0x4a0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow.o)
-                0x08009528                pow
+                0x08009198       0x68 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow.o)
+ .text.pow      0x08009200      0x4a0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow.o)
+                0x08009200                pow
  .text.with_errno
-                0x080099c8       0x1c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
- .text.xflow    0x080099e4       0x22 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
- *fill*         0x08009a06        0x2 
+                0x080096a0       0x1c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+ .text.xflow    0x080096bc       0x22 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+ *fill*         0x080096de        0x2 
  .text.__math_uflow
-                0x08009a08       0x10 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a08                __math_uflow
+                0x080096e0       0x10 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x080096e0                __math_uflow
  .text.__math_oflow
-                0x08009a18       0x10 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a18                __math_oflow
+                0x080096f0       0x10 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x080096f0                __math_oflow
  .text.__math_divzero
-                0x08009a28       0x30 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a28                __math_divzero
+                0x08009700       0x30 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x08009700                __math_divzero
  .text.__math_invalid
-                0x08009a58       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a58                __math_invalid
+                0x08009730       0x1e C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x08009730                __math_invalid
  .text.__math_check_uflow
-                0x08009a76       0x12 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a76                __math_check_uflow
+                0x0800974e       0x12 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x0800974e                __math_check_uflow
  .text.__math_check_oflow
-                0x08009a88       0x28 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
-                0x08009a88                __math_check_oflow
+                0x08009760       0x28 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-math_err.o)
+                0x08009760                __math_check_oflow
  *(.glue_7)
- .glue_7        0x08009ab0        0x0 linker stubs
+ .glue_7        0x08009788        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08009ab0        0x0 linker stubs
+ .glue_7t       0x08009788        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08009ab0        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+ .eh_frame      0x08009788        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
  *(.init)
- .init          0x08009ab0        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crti.o
-                0x08009ab0                _init
- .init          0x08009ab4        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtn.o
+ .init          0x08009788        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crti.o
+                0x08009788                _init
+ .init          0x0800978c        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtn.o
  *(.fini)
- .fini          0x08009abc        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crti.o
-                0x08009abc                _fini
- .fini          0x08009ac0        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtn.o
-                0x08009ac8                        . = ALIGN (0x4)
-                0x08009ac8                        _etext = .
+ .fini          0x08009794        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crti.o
+                0x08009794                _fini
+ .fini          0x08009798        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtn.o
+                0x080097a0                        . = ALIGN (0x4)
+                0x080097a0                        _etext = .
 
-.vfp11_veneer   0x08009ac8        0x0
- .vfp11_veneer  0x08009ac8        0x0 linker stubs
+.vfp11_veneer   0x080097a0        0x0
+ .vfp11_veneer  0x080097a0        0x0 linker stubs
 
-.v4_bx          0x08009ac8        0x0
- .v4_bx         0x08009ac8        0x0 linker stubs
+.v4_bx          0x080097a0        0x0
+ .v4_bx         0x080097a0        0x0 linker stubs
 
-.iplt           0x08009ac8        0x0
- .iplt          0x08009ac8        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+.iplt           0x080097a0        0x0
+ .iplt          0x080097a0        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
 
-.rodata         0x08009ac8     0x18f8
-                0x08009ac8                        . = ALIGN (0x4)
+.rodata         0x080097a0     0x18f8
+                0x080097a0                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
  .rodata.D1CorePrescTable
-                0x08009ac8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
-                0x08009ac8                D1CorePrescTable
+                0x080097a0       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
+                0x080097a0                D1CorePrescTable
  .rodata.flagBitshiftOffset.0
-                0x08009ad8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
+                0x080097b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj
  .rodata.UARTPrescTable
-                0x08009ae0       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
-                0x08009ae0                UARTPrescTable
+                0x080097b8       0x18 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj
+                0x080097b8                UARTPrescTable
  .rodata.denominator.0
-                0x08009af8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x080097d0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
  .rodata.numerator.1
-                0x08009b00        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
+                0x080097d8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj
  .rodata.__pow_log_data
-                0x08009b08     0x1048 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow_log_data.o)
-                0x08009b08                __pow_log_data
+                0x080097e0     0x1048 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-pow_log_data.o)
+                0x080097e0                __pow_log_data
  .rodata.__exp_data
-                0x0800ab50      0x870 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-exp_data.o)
-                0x0800ab50                __exp_data
-                0x0800b3c0                        . = ALIGN (0x4)
+                0x0800a828      0x870 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libm.a(libm_a-exp_data.o)
+                0x0800a828                __exp_data
+                0x0800b098                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0800b3c0        0x8
-                0x0800b3c0                        __exidx_start = .
+.ARM            0x0800b098        0x8
+                0x0800b098                        __exidx_start = .
  *(.ARM.exidx*)
- .ARM.exidx     0x0800b3c0        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
-                0x0800b3c8                        __exidx_end = .
+ .ARM.exidx     0x0800b098        0x8 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard\libgcc.a(_udivmoddi4.o)
+                0x0800b0a0                        __exidx_end = .
 
-.rel.dyn        0x0800b3c8        0x0
- .rel.iplt      0x0800b3c8        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+.rel.dyn        0x0800b0a0        0x0
+ .rel.iplt      0x0800b0a0        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
 
-.preinit_array  0x0800b3c8        0x0
-                0x0800b3c8                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0800b0a0        0x0
+                0x0800b0a0                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x0800b3c8                        PROVIDE (__preinit_array_end = .)
+                0x0800b0a0                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x0800b3c8        0x4
-                0x0800b3c8                        PROVIDE (__init_array_start = .)
+.init_array     0x0800b0a0        0x4
+                0x0800b0a0                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0800b3c8        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
-                0x0800b3cc                        PROVIDE (__init_array_end = .)
+ .init_array    0x0800b0a0        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+                0x0800b0a4                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x0800b3cc        0x4
+.fini_array     0x0800b0a4        0x4
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0800b3cc        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+ .fini_array    0x0800b0a4        0x4 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x0800b3d0                        _sidata = LOADADDR (.data)
+                0x0800b0a8                        _sidata = LOADADDR (.data)
 
-.data           0x20000000       0xf0 load address 0x0800b3d0
+.data           0x20000000      0x118 load address 0x0800b0a8
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -3253,338 +3271,172 @@ LOAD C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x20000060        0x3 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
                 0x20000060                ResetCommand
  *fill*         0x20000063        0x5 
- .data.PID_RightWallFollow_Kp
-                0x20000068        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000068                PID_RightWallFollow_Kp
- .data.PID_LeftWallFollow_Kp
-                0x20000070        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000070                PID_LeftWallFollow_Kp
- .data.PID_MPUFollow_Ki
-                0x20000078        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000078                PID_MPUFollow_Ki
- .data.PID_MPUFollow_Kp
-                0x20000080        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000080                PID_MPUFollow_Kp
- .data.PID_TurnRight_Kp
-                0x20000088        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000088                PID_TurnRight_Kp
- .data.PID_TurnLeft_Kp
-                0x20000090        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000090                PID_TurnLeft_Kp
- .data.PID_RightMotor_Kp
-                0x20000098        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000098                PID_RightMotor_Kp
- .data.PID_LeftMotor_Tau
-                0x200000a0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000a0                PID_LeftMotor_Tau
- .data.PID_LeftMotor_Kd
-                0x200000a8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000a8                PID_LeftMotor_Kd
- .data.PID_LeftMotor_Ki
-                0x200000b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000b0                PID_LeftMotor_Ki
- .data.PID_LeftMotor_Kp
-                0x200000b8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000b8                PID_LeftMotor_Kp
+ .data.PID_MPUFollow
+                0x20000068       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x20000068                PID_MPUFollow
  .data.MotorDirectionBPort
-                0x200000c0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000c0                MotorDirectionBPort
+                0x200000e8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x200000e8                MotorDirectionBPort
  .data.MotorDirectionAPort
-                0x200000c4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200000c4                MotorDirectionAPort
+                0x200000ec        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
+                0x200000ec                MotorDirectionAPort
  .data.ButtonPinArray
-                0x200000c8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x200000c8                ButtonPinArray
+                0x200000f0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x200000f0                ButtonPinArray
  .data.ButtonPort
-                0x200000cc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x200000cc                ButtonPort
+                0x200000f4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x200000f4                ButtonPort
  .data.BitSwitchPinArray
-                0x200000d0        0xa CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x200000d0                BitSwitchPinArray
- *fill*         0x200000da        0x2 
+                0x200000f8        0xa CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x200000f8                BitSwitchPinArray
+ *fill*         0x20000102        0x2 
  .data.BitSwitchPort
-                0x200000dc        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x200000dc                BitSwitchPort
+                0x20000104        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x20000104                BitSwitchPort
  .data.SystemD2Clock
-                0x200000e0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
-                0x200000e0                SystemD2Clock
+                0x20000108        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
+                0x20000108                SystemD2Clock
  .data.SystemCoreClock
-                0x200000e4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
-                0x200000e4                SystemCoreClock
+                0x2000010c        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj
+                0x2000010c                SystemCoreClock
  .data.uwTickFreq
-                0x200000e8        0x1 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x200000e8                uwTickFreq
- *fill*         0x200000e9        0x3 
+                0x20000110        0x1 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x20000110                uwTickFreq
+ *fill*         0x20000111        0x3 
  .data.uwTickPrio
-                0x200000ec        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x200000ec                uwTickPrio
-                0x200000f0                        . = ALIGN (0x4)
-                0x200000f0                        _edata = .
+                0x20000114        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x20000114                uwTickPrio
+                0x20000118                        . = ALIGN (0x4)
+                0x20000118                        _edata = .
 
-.igot.plt       0x200000f0        0x0 load address 0x0800b4c0
- .igot.plt      0x200000f0        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
-                0x200000f0                        . = ALIGN (0x4)
+.igot.plt       0x20000118        0x0 load address 0x0800b1c0
+ .igot.plt      0x20000118        0x0 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+                0x20000118                        . = ALIGN (0x4)
 
-.bss            0x200000f0      0xad4 load address 0x0800b4c0
-                0x200000f0                        _sbss = .
-                0x200000f0                        __bss_start__ = _sbss
+.bss            0x20000118      0x61c load address 0x0800b1c0
+                0x20000118                        _sbss = .
+                0x20000118                        __bss_start__ = _sbss
  *(.bss)
- .bss           0x200000f0       0x1c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
+ .bss           0x20000118       0x1c C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v7e-m+dp/hard/crtbegin.o
  *(.bss*)
- .bss.__sf      0x2000010c      0x138 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-findfp.o)
-                0x2000010c                __sf
- *fill*         0x20000244        0x4 
+ .bss.__sf      0x20000134      0x138 C:/ST/STM32CubeCLT_1.16.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/12.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard\libc_nano.a(libc_a-findfp.o)
+                0x20000134                __sf
+ *fill*         0x2000026c        0x4 
  .bss.SaveAngle
-                0x20000248        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
-                0x20000248                SaveAngle
+                0x20000270        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
+                0x20000270                SaveAngle
  .bss.PreviousAngle
-                0x20000250        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
-                0x20000250                PreviousAngle
- .bss.Angle     0x20000258        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
-                0x20000258                Angle
- .bss.MPUData   0x20000260       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
-                0x20000260                MPUData
- *fill*         0x20000284        0x4 
- .bss.PID_RightWallFollow_Setpoint
-                0x20000288        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000288                PID_RightWallFollow_Setpoint
- .bss.PID_RightWallFollow_Output
-                0x20000290        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000290                PID_RightWallFollow_Output
- .bss.PID_RightWallFollow_Input
-                0x20000298        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000298                PID_RightWallFollow_Input
- .bss.PID_RightWallFollow_Tau
-                0x200002a0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200002a0                PID_RightWallFollow_Tau
- .bss.PID_RightWallFollow_Kd
-                0x200002a8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200002a8                PID_RightWallFollow_Kd
- .bss.PID_RightWallFollow_Ki
-                0x200002b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200002b0                PID_RightWallFollow_Ki
- .bss.PID_RightWallFollow
-                0x200002b8       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200002b8                PID_RightWallFollow
- .bss.PID_LeftWallFollow_Setpoint
-                0x20000338        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000338                PID_LeftWallFollow_Setpoint
- .bss.PID_LeftWallFollow_Output
-                0x20000340        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000340                PID_LeftWallFollow_Output
- .bss.PID_LeftWallFollow_Input
-                0x20000348        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000348                PID_LeftWallFollow_Input
- .bss.PID_LeftWallFollow_Tau
-                0x20000350        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000350                PID_LeftWallFollow_Tau
- .bss.PID_LeftWallFollow_Kd
-                0x20000358        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000358                PID_LeftWallFollow_Kd
- .bss.PID_LeftWallFollow_Ki
-                0x20000360        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000360                PID_LeftWallFollow_Ki
- .bss.PID_LeftWallFollow
-                0x20000368       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000368                PID_LeftWallFollow
- .bss.PID_MPUFollow_Setpoint
-                0x200003e8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200003e8                PID_MPUFollow_Setpoint
- .bss.PID_MPUFollow_Output
-                0x200003f0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200003f0                PID_MPUFollow_Output
- .bss.PID_MPUFollow_Input
-                0x200003f8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200003f8                PID_MPUFollow_Input
- .bss.PID_MPUFollow_Tau
-                0x20000400        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000400                PID_MPUFollow_Tau
- .bss.PID_MPUFollow_Kd
-                0x20000408        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000408                PID_MPUFollow_Kd
- .bss.PID_MPUFollow
-                0x20000410       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000410                PID_MPUFollow
- .bss.PID_TurnRight_Setpoint
-                0x20000490        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000490                PID_TurnRight_Setpoint
- .bss.PID_TurnRight_Output
-                0x20000498        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000498                PID_TurnRight_Output
- .bss.PID_TurnRight_Input
-                0x200004a0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200004a0                PID_TurnRight_Input
- .bss.PID_TurnRight_Tau
-                0x200004a8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200004a8                PID_TurnRight_Tau
- .bss.PID_TurnRight_Kd
-                0x200004b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200004b0                PID_TurnRight_Kd
- .bss.PID_TurnRight_Ki
-                0x200004b8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200004b8                PID_TurnRight_Ki
- .bss.PID_TurnRight
-                0x200004c0       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200004c0                PID_TurnRight
- .bss.PID_TurnLeft_Setpoint
-                0x20000540        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000540                PID_TurnLeft_Setpoint
- .bss.PID_TurnLeft_Output
-                0x20000548        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000548                PID_TurnLeft_Output
- .bss.PID_TurnLeft_Input
-                0x20000550        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000550                PID_TurnLeft_Input
- .bss.PID_TurnLeft_Tau
-                0x20000558        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000558                PID_TurnLeft_Tau
- .bss.PID_TurnLeft_Kd
-                0x20000560        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000560                PID_TurnLeft_Kd
- .bss.PID_TurnLeft_Ki
-                0x20000568        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000568                PID_TurnLeft_Ki
- .bss.PID_TurnLeft
-                0x20000570       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000570                PID_TurnLeft
- .bss.PID_RightMotor_Setpoint
-                0x200005f0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200005f0                PID_RightMotor_Setpoint
- .bss.PID_RightMotor_Output
-                0x200005f8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200005f8                PID_RightMotor_Output
- .bss.PID_RightMotor_Input
-                0x20000600        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000600                PID_RightMotor_Input
- .bss.PID_RightMotor_Tau
-                0x20000608        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000608                PID_RightMotor_Tau
- .bss.PID_RightMotor_Kd
-                0x20000610        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000610                PID_RightMotor_Kd
- .bss.PID_RightMotor_Ki
-                0x20000618        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000618                PID_RightMotor_Ki
- .bss.PID_RightMotor
-                0x20000620       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x20000620                PID_RightMotor
- .bss.PID_LeftMotor_Setpoint
-                0x200006a0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200006a0                PID_LeftMotor_Setpoint
- .bss.PID_LeftMotor_Output
-                0x200006a8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200006a8                PID_LeftMotor_Output
- .bss.PID_LeftMotor_Input
-                0x200006b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200006b0                PID_LeftMotor_Input
- .bss.PID_LeftMotor
-                0x200006b8       0x80 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj
-                0x200006b8                PID_LeftMotor
+                0x20000278        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
+                0x20000278                PreviousAngle
+ .bss.Angle     0x20000280        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
+                0x20000280                Angle
+ .bss.MPUData   0x20000288       0x24 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj
+                0x20000288                MPUData
  .bss.ButtonState
-                0x20000738        0x2 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x20000738                ButtonState
- *fill*         0x2000073a        0x2 
+                0x200002ac        0x2 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x200002ac                ButtonState
+ *fill*         0x200002ae        0x2 
  .bss.BitSwitchState
-                0x2000073c        0x5 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
-                0x2000073c                BitSwitchState
- .bss.ADCIndex  0x20000741        0x1 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x20000741                ADCIndex
- *fill*         0x20000742        0x6 
+                0x200002b0        0x5 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj
+                0x200002b0                BitSwitchState
+ .bss.ADCIndex  0x200002b5        0x1 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x200002b5                ADCIndex
+ *fill*         0x200002b6        0x2 
  .bss.IRSensorDistanceValue
-                0x20000748       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x20000748                IRSensorDistanceValue
+                0x200002b8       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x200002b8                IRSensorDistanceValue
  .bss.IRSensorVoltageValue
-                0x20000770       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x20000770                IRSensorVoltageValue
+                0x200002e0       0x28 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x200002e0                IRSensorVoltageValue
  .bss.IRSensorADCValue
-                0x20000798        0xa CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
-                0x20000798                IRSensorADCValue
- *fill*         0x200007a2        0x2 
+                0x20000308        0xa CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj
+                0x20000308                IRSensorADCValue
+ *fill*         0x20000312        0x2 
  .bss.EncoderGetLeftValue
-                0x200007a4        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200007a4                EncoderGetLeftValue
+                0x20000314        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000314                EncoderGetLeftValue
  .bss.EncoderGetRightValue
-                0x200007a8        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200007a8                EncoderGetRightValue
- *fill*         0x200007ac        0x4 
- .bss.test      0x200007b0        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200007b0                test
+                0x20000318        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000318                EncoderGetRightValue
+ *fill*         0x2000031c        0x4 
+ .bss.test      0x20000320        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000320                test
  .bss.CurrentAngle
-                0x200007b8        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200007b8                CurrentAngle
+                0x20000328        0x8 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000328                CurrentAngle
  .bss.hdma_usart3_rx
-                0x200007c0       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200007c0                hdma_usart3_rx
- .bss.huart3    0x20000838       0x94 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000838                huart3
- .bss.htim7     0x200008cc       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200008cc                htim7
- .bss.htim5     0x20000918       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000918                htim5
- .bss.htim4     0x20000964       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000964                htim4
- .bss.htim2     0x200009b0       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200009b0                htim2
- .bss.htim1     0x200009fc       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x200009fc                htim1
+                0x20000330       0x78 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000330                hdma_usart3_rx
+ .bss.huart3    0x200003a8       0x94 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200003a8                huart3
+ .bss.htim7     0x2000043c       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x2000043c                htim7
+ .bss.htim5     0x20000488       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000488                htim5
+ .bss.htim4     0x200004d4       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200004d4                htim4
+ .bss.htim2     0x20000520       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000520                htim2
+ .bss.htim1     0x2000056c       0x4c CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x2000056c                htim1
  .bss.hramecc3_m2
-                0x20000a48       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a48                hramecc3_m2
+                0x200005b8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200005b8                hramecc3_m2
  .bss.hramecc3_m1
-                0x20000a58       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a58                hramecc3_m1
+                0x200005c8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200005c8                hramecc3_m1
  .bss.hramecc2_m5
-                0x20000a68       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a68                hramecc2_m5
+                0x200005d8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200005d8                hramecc2_m5
  .bss.hramecc2_m4
-                0x20000a78       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a78                hramecc2_m4
+                0x200005e8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200005e8                hramecc2_m4
  .bss.hramecc2_m3
-                0x20000a88       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a88                hramecc2_m3
+                0x200005f8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200005f8                hramecc2_m3
  .bss.hramecc2_m2
-                0x20000a98       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000a98                hramecc2_m2
+                0x20000608       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000608                hramecc2_m2
  .bss.hramecc2_m1
-                0x20000aa8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000aa8                hramecc2_m1
+                0x20000618       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000618                hramecc2_m1
  .bss.hramecc1_m5
-                0x20000ab8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000ab8                hramecc1_m5
+                0x20000628       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000628                hramecc1_m5
  .bss.hramecc1_m4
-                0x20000ac8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000ac8                hramecc1_m4
+                0x20000638       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000638                hramecc1_m4
  .bss.hramecc1_m3
-                0x20000ad8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000ad8                hramecc1_m3
+                0x20000648       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000648                hramecc1_m3
  .bss.hramecc1_m2
-                0x20000ae8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000ae8                hramecc1_m2
+                0x20000658       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000658                hramecc1_m2
  .bss.hramecc1_m1
-                0x20000af8       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000af8                hramecc1_m1
- .bss.hi2c2     0x20000b08       0x54 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000b08                hi2c2
- .bss.hadc1     0x20000b5c       0x64 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
-                0x20000b5c                hadc1
- .bss.uwTick    0x20000bc0        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
-                0x20000bc0                uwTick
+                0x20000668       0x10 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000668                hramecc1_m1
+ .bss.hi2c2     0x20000678       0x54 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x20000678                hi2c2
+ .bss.hadc1     0x200006cc       0x64 CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj
+                0x200006cc                hadc1
+ .bss.uwTick    0x20000730        0x4 CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj
+                0x20000730                uwTick
  *(COMMON)
-                0x20000bc4                        . = ALIGN (0x4)
-                0x20000bc4                        _ebss = .
-                0x20000bc4                        __bss_end__ = _ebss
+                0x20000734                        . = ALIGN (0x4)
+                0x20000734                        _ebss = .
+                0x20000734                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000bc4      0x604 load address 0x0800b4c0
-                0x20000bc8                        . = ALIGN (0x8)
- *fill*         0x20000bc4        0x4 
+                0x20000734      0x604 load address 0x0800b1c0
+                0x20000738                        . = ALIGN (0x8)
+ *fill*         0x20000734        0x4 
                 [!provide]                        PROVIDE (end = .)
-                0x20000bc8                        PROVIDE (_end = .)
-                0x20000dc8                        . = (. + _Min_Heap_Size)
- *fill*         0x20000bc8      0x200 
-                0x200011c8                        . = (. + _Min_Stack_Size)
- *fill*         0x20000dc8      0x400 
-                0x200011c8                        . = ALIGN (0x8)
+                0x20000738                        PROVIDE (_end = .)
+                0x20000938                        . = (. + _Min_Heap_Size)
+ *fill*         0x20000738      0x200 
+                0x20000d38                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000938      0x400 
+                0x20000d38                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)

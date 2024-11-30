@@ -21,10 +21,10 @@
 
 #define IR_SENSOR_FF 0
 #define IR_SENSOR_FL 1
-#define IR_SENSOR_RL 2
+#define IR_SENSOR_L 2
 // #define IR_SENSOR_BL 3
 // #define IR_SENSOR_BR 4
-#define IR_SENSOR_RR 3
+#define IR_SENSOR_R 3
 #define IR_SENSOR_FR 4
 
 // DEFINE FOR MOTOR CONTROL-------------------------------------------------------------------------------------------------------//

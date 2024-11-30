@@ -2,34 +2,9 @@
 
 //-------------------------------------------------------------------------------------------------------//
 
-void AML_PID_Init(AML_PID_Struct *pid, double *input, double *output, double *setpoint, double kp, double ki, double kd, double tau, double limMin, double limMax, double linMinInt, double linMaxInt, uint32_t sampleTime);
-
 double AML_PID_Compute(AML_PID_Struct *pid);
 
 //-------------------------------------------------------------------------------------------------------//
-
-void AML_PID_Init(AML_PID_Struct *pid, double *input, double *output, double *setpoint, double kp, double ki, double kd, double tau, double limMin, double limMax, double linMinInt, double linMaxInt, uint32_t sampleTime)
-{
-    pid->MyInput = input;
-    pid->MyOutput = output;
-    pid->MySetpoint = setpoint;
-
-    pid->Kp = kp;
-    pid->Ki = ki;
-    pid->Kd = kd;
-    pid->tau = tau;
-
-    pid->limMin = limMin;
-    pid->limMax = limMax;
-
-    pid->sampleTime = sampleTime;
-
-    pid->integratol = 0;
-    pid->prevError = 0;
-
-    pid->differentiator = 0;
-    pid->prevMeasurement = 0;
-}
 
 double AML_PID_Compute(AML_PID_Struct *pid)
 {
@@ -40,13 +15,13 @@ double AML_PID_Compute(AML_PID_Struct *pid)
     {
         // Compute PID output value for given reference input and feedback
 
-        double error = *pid->MySetpoint - *pid->MyInput;
+        double error = pid->Setpoint - pid->Input;
 
         double pTerm = pid->Kp * error;
 
-        pid->integratol += error * pid->sampleTime;
+        pid->integratol += error * timeChange;
 
-        pid->integratol += 0.5f * pid->Ki * pid->sampleTime * (error + pid->prevError);
+        pid->integratol += 0.5f * pid->Ki * timeChange * (error + pid->prevError);
 
         if (pid->integratol > pid->linMaxInt)
         {
@@ -59,30 +34,29 @@ double AML_PID_Compute(AML_PID_Struct *pid)
 
         double iTerm = pid->Ki * pid->integratol;
 
-        pid->differentiator = -(2.0f * pid->Kd * (*pid->MyInput - pid->prevMeasurement) + (2.0f * pid->tau - pid->sampleTime) * pid->differentiator) / (2.0f * pid->tau + pid->sampleTime);
+        pid->differentiator = -(2.0f * pid->Kd * (pid->Input - pid->prevMeasurement) + (2.0f * pid->tau - timeChange) * pid->differentiator) / (2.0f * pid->tau + timeChange);
 
         double dTerm = pid->Kd * pid->differentiator;
 
-        *pid->MyOutput = pTerm + iTerm + dTerm;
+        pid->Output = pTerm + iTerm + dTerm;
 
-        if (*pid->MyOutput > pid->limMax)
+        if (pid->Output > pid->limMax)
         {
-            *pid->MyOutput = pid->limMax;
+            pid->Output = pid->limMax;
         }
-        else if (*pid->MyOutput < pid->limMin)
+        else if (pid->Output < pid->limMin)
         {
-            *pid->MyOutput = pid->limMin;
+            pid->Output = pid->limMin;
         }
 
-        pid->prevMeasurement = *pid->MyInput;
+        pid->prevMeasurement = pid->Input;
         pid->prevError = error;
 
         // Remember last time for next calculation
         pid->lastTime = now;
     }
 
-    pid->out = *pid->MyOutput;
-    return *pid->MyOutput;
+    return pid->Output;
 }
 
 void AML_PID_SetOutputLimits(AML_PID_Struct *pid, double min, double max)

@@ -320,3 +320,69 @@ void AML_MotorControl_FollowWallRight(void)
     PID_RightWallFollow.Setpoint = WALL_IN_RIGHT;
     AML_PID_Compute(&PID_RightWallFollow);
 }
+void AML_MotorControl_GoStraight(void)
+{
+    if (AML_IRSensor_GetDistance(IR_SENSOR_L) > WALL_NOT_IN_LEFT && AML_IRSensor_GetDistance(IR_SENSOR_R) > WALL_NOT_IN_RIGHT)
+    {
+        AML_MotorControl_GoStraghtWithMPU(TempSetPoint);
+    }
+    else if (AML_IRSensor_GetDistance(IR_SENSOR_L) < WALL_IN_LEFT)
+    {
+        AML_MotorControl_FollowWallLeft();
+        AML_MotorControl_GoStraghtWithMPU(TempSetPoint - PID_LeftWallFollow.Output);
+    }
+    else if (AML_IRSensor_GetDistance(IR_SENSOR_R) < WALL_IN_RIGHT)
+    {
+        AML_MotorControl_FollowWallRight();
+        AML_MotorControl_GoStraghtWithMPU(TempSetPoint + PID_RightWallFollow.Output);
+    }
+}
+void AML_MotorControl_TurnRight(void)
+{
+    uint32_t WatingTime = HAL_GetTick();
+    PID_TurnLeft.Setpoint = -90;
+    uint32_t InitTime = HAL_GetTick();
+    uint32_t CurrentTime = HAL_GetTick();
+    uint32_t PrevTime = CurrentTime;
+    while ((CurrentTime - PrevTime) < 200 && (HAL_GetTick() - InitTime < WatingTime))
+    {
+        PID_TurnRight.Input = AML_MPUSensor_GetAngle();
+        AML_PID_Compute(&PID_TurnRight);
+        AML_MotorControl_Move((int32_t)PID_TurnLeft.Output, -(int32_t)PID_TurnRight.Output);
+        if (ABS(PID_TurnRight.Input - PID_TurnLeft.Setpoint) < 2.0f)
+        {
+            CurrentTime = HAL_GetTick();
+        }
+        else
+        {
+            CurrentTime = HAL_GetTick();
+            PrevTime = CurrentTime;
+        }
+    }
+    AML_MotorControl_Stop();
+}
+
+void AML_MotorControl_TurnLeft(void)
+{
+    uint32_t WatingTime = HAL_GetTick();
+    PID_TurnRight.Setpoint = 90;
+    uint32_t InitTime = HAL_GetTick();
+    uint32_t CurrentTime = HAL_GetTick();
+    uint32_t PrevTime = CurrentTime;
+    while ((CurrentTime - PrevTime) < 200 && (HAL_GetTick() - InitTime < WatingTime))
+    {
+        PID_TurnLeft.Input = AML_MPUSensor_GetAngle();
+        AML_PID_Compute(&PID_TurnLeft);
+        AML_MotorControl_Move(-(int32_t)PID_TurnLeft.Output, (int32_t)PID_TurnRight.Output);
+        if (ABS(PID_TurnLeft.Input - PID_TurnRight.Setpoint) < 2.0f)
+        {
+            CurrentTime = HAL_GetTick();
+        }
+        else
+        {
+            CurrentTime = HAL_GetTick();
+            PrevTime = CurrentTime;
+        }
+    }
+    AML_MotorControl_Stop();
+}
