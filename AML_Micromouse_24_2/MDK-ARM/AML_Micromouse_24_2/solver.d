@@ -48,9 +48,9 @@ aml_micromouse_24_2\solver.o: ../Core/Inc/AML_GlobalVariable.h
 aml_micromouse_24_2\solver.o: ../Core/Inc/AML_Buzzer.h
 aml_micromouse_24_2\solver.o: ../Core/Inc/AML_LedDebug.h
 aml_micromouse_24_2\solver.o: ../Core/Inc/AML_Switch.h
-aml_micromouse_24_2\solver.o: ../Core/Inc/AML_MPUSensor.h
-aml_micromouse_24_2\solver.o: ../Core/Inc/SenSor.h
-aml_micromouse_24_2\solver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
-aml_micromouse_24_2\solver.o: ../Core/Inc/AML_Encoder.h
 aml_micromouse_24_2\solver.o: ../Core/Inc/AML_MotorControl.h
 aml_micromouse_24_2\solver.o: ../Core/Inc/AML_PID.h
+aml_micromouse_24_2\solver.o: ../Core/Inc/SenSor.h
+aml_micromouse_24_2\solver.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
+aml_micromouse_24_2\solver.o: ../Core/Inc/AML_MPUSensor.h
+aml_micromouse_24_2\solver.o: ../Core/Inc/AML_Encoder.h

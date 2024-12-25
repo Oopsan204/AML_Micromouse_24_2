@@ -8,13 +8,15 @@ GPIO_TypeDef *ButtonPort = GPIOA;
 uint16_t ButtonPinArray[2] = {BUTTON_0_Pin, BUTTON_1_Pin};
 uint8_t ButtonState[2] = {0, 0};
 
+
 //-------------------------------------------------------------------------------------------------------//
 
 void AML_ReadAll_BitSwitch(void);
 uint8_t AML_Read_BitSwitch(uint8_t index);
 
 void AML_ReadAll_Button(void);
-uint8_t AML_Read_Button(uint8_t index);
+void ButtonController(void);
+    uint8_t AML_Read_Button(uint8_t index);
 
 //-------------------------------------------------------------------------------------------------------//
 // Function of Bit Switch

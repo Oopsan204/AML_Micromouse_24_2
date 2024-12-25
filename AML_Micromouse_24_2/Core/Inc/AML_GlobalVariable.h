@@ -37,22 +37,31 @@
 #define WheelDiameter 21  // mm
 #define TransmissionRatio 1     // ratio between wheel and encoder
 #define EncoderPulsePerRound 1420 // 720 pulse per round encoder
-#define MouseSpeed 30 // % of duty cycle
+#define MouseSpeed 100 // % of duty cycle
+#define MouseTurnSpeed 100 // % of duty cycle
 
 // define parameter for PID control
 
-#define SampleTime 20 // time per second
-#define PIDMode 1 // automatic mode
+// define parameter for PID control
+#define SampleTime 20            // time (ms) for each sample
+#define PIDMode 1                // automatic mode
 #define PIDOutputMin -MouseSpeed // minimum output of PID (duty cycle)
-#define PIDOutputMax MouseSpeed // maximum output of PID (duty cycle)
+#define PIDOutputMax MouseSpeed  // maximum output of PID (duty cycle)
 
 #define PIDSpeedOutputMin 0  // minimum output of PID (duty cycle)
 #define PIDSpeedOutputMax 50 // maximum output of PID (duty cycle)
-#define LINMININT -100
-#define LINMAXINT 100
 
+// define parameter for turn left and right
+#define TurnLeftSpeed 50   // % of duty cycle
+#define TurnRightSpeed 50  // % of duty cycle
+#define TuneLeft90Angle 90 // degree
+#define TuneRight90Angle 90
+#define TuneLeft180Angle 180
+#define TuneRight180Angle 180
+#define ErrorAngle 3 // degree
 
 // DEFINE FOR IRSensor -------------------------------------------------------------------------------------------------------//
+#define TICKS_ONE_CELL 1000
 #define WALL_IN_FRONT 155
 #define WALL_IN_LEFT 55         // 121
 #define WALL_IN_RIGHT 55        // 100

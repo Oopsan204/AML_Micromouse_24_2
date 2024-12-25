@@ -7,7 +7,8 @@
         "aml_pid.h": "c",
         "aml_encoder.h": "c",
         "sensor.h": "c",
-        "aml_globalvariable.h": "c"
+        "aml_globalvariable.h": "c",
+        "aml_switch.h": "c"
     },
     "files.autoSave": "afterDelay",
     "editor.inlineSuggest.syntaxHighlightingEnabled": true,

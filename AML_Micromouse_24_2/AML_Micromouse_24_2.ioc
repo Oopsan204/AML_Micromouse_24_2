@@ -1,9 +1,9 @@
 #MicroXplorer Configuration settings - do not modify
 ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_3
-ADC1.Channel-1\#ChannelRegularConversion=ADC_CHANNEL_4
-ADC1.Channel-2\#ChannelRegularConversion=ADC_CHANNEL_5
+ADC1.Channel-1\#ChannelRegularConversion=ADC_CHANNEL_7
+ADC1.Channel-2\#ChannelRegularConversion=ADC_CHANNEL_4
 ADC1.Channel-3\#ChannelRegularConversion=ADC_CHANNEL_8
-ADC1.Channel-4\#ChannelRegularConversion=ADC_CHANNEL_7
+ADC1.Channel-4\#ChannelRegularConversion=ADC_CHANNEL_5
 ADC1.ClockPrescaler=ADC_CLOCK_ASYNC_DIV16
 ADC1.ContinuousConvMode=ENABLE
 ADC1.ConversionDataManagement=ADC_CONVERSIONDATA_DFSDM
@@ -448,6 +448,9 @@ TIM1.ClockDivision=TIM_CLOCKDIVISION_DIV1
 TIM1.IPParameters=Channel-PWM Generation2 CH2,Channel-PWM Generation1 CH1,AutoReloadPreload,ClockDivision,Prescaler,Period
 TIM1.Period=999
 TIM1.Prescaler=24
+TIM2.IC1Polarity=TIM_ICPOLARITY_RISING
+TIM2.IC2Polarity=TIM_ICPOLARITY_RISING
+TIM2.IPParameters=IC1Polarity,IC2Polarity
 TIM4.AutoReloadPreload=TIM_AUTORELOAD_PRELOAD_ENABLE
 TIM4.Channel-PWM\ Generation3\ CH3=TIM_CHANNEL_3
 TIM4.ClockDivision=TIM_CLOCKDIVISION_DIV2

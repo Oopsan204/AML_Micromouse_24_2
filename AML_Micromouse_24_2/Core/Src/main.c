@@ -81,12 +81,14 @@ double CurrentAngle = 0;
 uint32_t frequency_test = 1000;
 uint32_t leftEncoder = 0;
 uint32_t rightEncoder = 0;
-double test = 0;
 uint32_t pwm = 50;
 uint32_t ADCrawbuffer[5];
 int32_t EncoderGetRightValue = 0;
 int32_t EncoderGetLeftValue = 0;
 uint32_t debug[100];
+uint8_t flagButton1 = 0;
+uint8_t flagButton2 = 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -109,6 +111,33 @@ static void MX_TIM7_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void StartSolver()
+{
+  // debug_log("Running...");
+  initialize();
+  while (1)
+  {
+    Action nextMove = solver();
+
+    switch (nextMove)
+    {
+    case FORWARD:
+      // API_moveForward();
+      MOVE_FORWARD_FUNCTION;
+      break;
+    case LEFT:
+      // API_turnLeft();
+      TURN_LEFT_FUNCTION;
+      break;
+    case RIGHT:
+      // API_turnRight();
+      TURN_RIGHT_FUNCTION;
+      break;
+    case IDLE:
+      break;
+    }
+  }
+}
 
 /* USER CODE END 0 */
 
@@ -163,7 +192,7 @@ int main(void)
   AML_Buzzer_TurnOn();
   // AML_Buzzer_Beep();
   AML_LedDebug_SetAllLED(GPIO_PIN_SET);
-
+  pwm = AML_MPUSensor_GetAngle();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -173,29 +202,30 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    CurrentAngle = AML_MPUSensor_GetAngle();
-    test = AML_IRSensor_GetDistance(0);
+    // AML_ReadAll_BitSwitch();
+    // AML_ReadAll_Button();
+    if (AML_Read_Button(SW_0))
+    {
+      AML_Buzzer_Beep();
+      // AML_MotorControl_Move(100,100);
+      // AML_MotorControl_TurnLeft();
+      // AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle());
+      AML_MotorControl_TurnOnWallFollow();
+      // flagButton1 = 1;
+    }
+    else if (AML_Read_Button(SW_1))
+
+    {
+      AML_Buzzer_Beep();
+      AML_MotorControl_TurnOffWallFollow();
+      AML_MotorControl_Stop();
+      // flagButton1 = 0;
+    }
+    CurrentAngle = AML_MPUSensor_GetAngle();	
     AML_LedDebug_ToggleAllLED();
-    // AML_MotorControl_Move(pwm, -50);
     EncoderGetLeftValue = AML_Encoder_GetLeftValue();
     EncoderGetRightValue = AML_Encoder_GetRightValue();
-    
-    if (AML_Read_Button(0)==1)
-    {
-      AML_MotorControl_GoStraghtWithMPU(0);
-      AML_Buzzer_Beep();
-    }
-    
-    else if (AML_Read_Button(1) == 1)
-    {
-      AML_Buzzer_TurnOff();
-      AML_MotorControl_Stop();
-    }
-   
-
-    AML_ReadAll_BitSwitch();
-    AML_ReadAll_Button();
-    HAL_Delay(40);
+    HAL_Delay(5);
   }
   /* USER CODE END 3 */
 }
@@ -333,7 +363,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_4;
+  sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -342,7 +372,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_5;
+  sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -360,7 +390,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_7;
+  sConfig.Channel = ADC_CHANNEL_5;
   sConfig.Rank = ADC_REGULAR_RANK_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {

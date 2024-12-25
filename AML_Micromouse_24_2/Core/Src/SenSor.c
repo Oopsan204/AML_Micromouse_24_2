@@ -28,9 +28,13 @@ uint8_t ADCIndex = 0;
 void AML_IRSensor_Setup(void);
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 double AML_IRSensor_GetDistance(uint8_t sensor);
-uint8_t AML_IRSensor_IsFrontWall(void);
-uint8_t AML_IRSensor_IsRightWall(void);
-uint8_t AML_IRSensor_IsLeftWall(void);
+bool AML_IRSensor_IsFrontWall(void);
+bool AML_IRSensor_IsLeftWall(void);
+bool AML_IRSensor_IsRightWall(void);
+
+bool AML_IRSensor_IsNoFrontWall(void);
+bool AML_IRSensor_IsNoLeftWall(void);
+bool AML_IRSensor_IsNoRightWall(void);
 
 //-------------------------------------------------------------------------------------------------------//
 
@@ -68,17 +72,35 @@ double AML_IRSensor_GetDistance(uint8_t sensor)
     return IRSensorDistanceValue[sensor];
 }
 
-uint8_t AML_IRSensor_IsFrontWall(void)
+//-------------------------------------------------------------------------------------------------------//
+
+bool AML_IRSensor_IsFrontWall(void)
 {
     return (IRSensorDistanceValue[IR_SENSOR_FF] < WALL_IN_FRONT) ? 1 : 0;
 }
-uint8_t AML_IRSensor_IsLeftWall(void)
+
+bool AML_IRSensor_IsLeftWall(void)
 {
-    return (IRSensorDistanceValue[IR_SENSOR_FL] < WALL_IN_LEFT) ? 1 : 0;
-}
-uint8_t AML_IRSensor_IsRightWall(void)
-{
-    return (IRSensorDistanceValue[IR_SENSOR_FR] < WALL_IN_RIGHT) ? 1 : 0;
+    return (IRSensorDistanceValue[IR_SENSOR_L] < WALL_IN_LEFT) ? 1 : 0;
 }
 
+bool AML_IRSensor_IsRightWall(void)
+{
+    return (IRSensorDistanceValue[IR_SENSOR_R] < WALL_IN_RIGHT) ? 1 : 0;
+}
+
+bool AML_IRSensor_IsNoFrontWall(void)
+{
+    return (IRSensorDistanceValue[IR_SENSOR_FF] > WALL_NOT_IN_FRONT) ? 1 : 0;
+}
+
+bool AML_IRSensor_IsNoLeftWall(void)
+{
+    return (IRSensorDistanceValue[IR_SENSOR_L] > WALL_NOT_IN_LEFT) ? 1 : 0;
+}
+
+bool AML_IRSensor_IsNoRightWall(void)
+{
+    return (IRSensorDistanceValue[IR_SENSOR_R] > WALL_NOT_IN_RIGHT) ? 1 : 0;
+}
 //-------------------------------------------------------------------------------------------------------//
