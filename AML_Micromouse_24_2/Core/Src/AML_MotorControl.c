@@ -11,6 +11,9 @@ GPIO_TypeDef *MotorDirectionBPort = GPIOD;
 #define PULSE_TO_RPM(x) (double)(x / EncoderPulsePerRound) * ((60 * 1000) / SampleTime) // convert pulse to rpm
 
 #define DISTANCE_TO_PULSE(x) (int32_t)(((x) * EncoderPulsePerRound) / (WheelDiameter * Pi)) // convert distance to pulse
+// low pass fillter for PID input
+#define LOW_PASS_FILTER_ALPHA 0.1
+#define LOW_PASS_FILTER(x, y) ((x) * LOW_PASS_FILTER_ALPHA + (y) * (1 - LOW_PASS_FILTER_ALPHA))
 
 // PID struct-------------------------------------------------------------------------------------------------------//
 
@@ -86,9 +89,9 @@ AML_PID_Struct PID_TurnLeft =
 
 AML_PID_Struct PID_TurnRight =
     {
-        .Kp = 1,
-        .Ki = 0,
-        .Kd = 0,
+        .Kp = 5,
+        .Ki = 0.1,
+        .Kd = 0.01,
         .tau = 0,
         .limMin = -MouseSpeed,
         .limMax = MouseSpeed,
@@ -369,7 +372,7 @@ void AML_MotorControl_GoStraight(void)
 
 void AML_MotorControl_TurnLeft(void)
 {
-    uint16_t WaitingTime = 100000000;
+    uint16_t WaitingTime = 1700;
 
     PID_TurnLeft.Setpoint = AML_MPUSensor_GetAngle() + TuneLeft90Angle;
 
@@ -402,7 +405,7 @@ void AML_MotorControl_TurnLeft(void)
 
 void AML_MotorControl_TurnRight(void)
 {
-    uint16_t WaitingTime = 1500;
+    uint16_t WaitingTime = 1700;
 
     PID_TurnRight.Setpoint = AML_MPUSensor_GetAngle() - TuneRight90Angle;
 

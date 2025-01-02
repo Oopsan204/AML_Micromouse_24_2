@@ -61,7 +61,7 @@
 #define ErrorAngle 3 // degree
 
 // DEFINE FOR IRSensor -------------------------------------------------------------------------------------------------------//
-#define TICKS_ONE_CELL 1000
+#define TICKS_ONE_CELL 10000
 #define WALL_IN_FRONT 155
 #define WALL_IN_LEFT 55         // 121
 #define WALL_IN_RIGHT 55        // 100
@@ -81,9 +81,9 @@
 #define CHECK_WALL_LEFT AML_IRSensor_IsLeftWall()
 #define CHECK_WALL_RIGHT AML_IRSensor_IsRightWall()
 
-#define MOVE_FORWARD_FUNCTION AML_MotorControl_Stop()
-#define TURN_LEFT_FUNCTION AML_MotorControl_Stop()
-#define TURN_RIGHT_FUNCTION AML_MotorControl_Stop()
+#define MOVE_FORWARD_FUNCTION AML_MotorControl_MoveForwardOneCell()
+#define TURN_LEFT_FUNCTION AML_MotorControl_TurnLeft()
+#define TURN_RIGHT_FUNCTION AML_MotorControl_TurnRight()
 
 //-----------------------------------------------------------------------------------------------//
 

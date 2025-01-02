@@ -8,7 +8,9 @@
         "aml_encoder.h": "c",
         "sensor.h": "c",
         "aml_globalvariable.h": "c",
-        "aml_switch.h": "c"
+        "aml_switch.h": "c",
+        "solver.h": "c",
+        "ringbuffer.h": "c"
     },
     "files.autoSave": "afterDelay",
     "editor.inlineSuggest.syntaxHighlightingEnabled": true,

@@ -31,6 +31,7 @@
 #include "AML_Encoder.h"
 #include "AML_PID.h"
 #include "solver.h"
+#include "HC_SR04.h"
 
 /* USER CODE END Includes */
 
@@ -72,6 +73,7 @@ TIM_HandleTypeDef htim2;
 TIM_HandleTypeDef htim4;
 TIM_HandleTypeDef htim5;
 TIM_HandleTypeDef htim7;
+TIM_HandleTypeDef htim8;
 
 UART_HandleTypeDef huart3;
 DMA_HandleTypeDef hdma_usart3_rx;
@@ -89,6 +91,7 @@ uint32_t debug[100];
 uint8_t flagButton1 = 0;
 uint8_t flagButton2 = 0;
 
+uint8_t khoang;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,6 +108,7 @@ static void MX_USART3_UART_Init(void);
 static void MX_I2C2_Init(void);
 static void MX_TIM4_Init(void);
 static void MX_TIM7_Init(void);
+static void MX_TIM8_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -113,29 +117,35 @@ static void MX_TIM7_Init(void);
 /* USER CODE BEGIN 0 */
 void StartSolver()
 {
-  // debug_log("Running...");
+  // set the priority heading
+  setPriorityHeading(EAST);
+
+  // initialize the maze
   initialize();
+
+  // start the search
+  searchRun();
+
+  // reached the center, now calculate the shortest path
+  markCenterWall();
+  calculateShortestPathDistances();
+
+  // use hand to move the mouse to the start position, and find the shortest path
+  setPosition(0, 0, NORTH);
+
+  // run the shortest path
+  fastRunWithVariableVelocity();
+
   while (1)
   {
-    Action nextMove = solver();
+    // run from the center to the start
+    searchCenterToStart();
 
-    switch (nextMove)
-    {
-    case FORWARD:
-      // API_moveForward();
-      MOVE_FORWARD_FUNCTION;
-      break;
-    case LEFT:
-      // API_turnLeft();
-      TURN_LEFT_FUNCTION;
-      break;
-    case RIGHT:
-      // API_turnRight();
-      TURN_RIGHT_FUNCTION;
-      break;
-    case IDLE:
-      break;
-    }
+    // calculate the shortest path again
+    calculateShortestPathDistances();
+
+    // run the shortest path
+    fastRunWithVariableVelocity();
   }
 }
 
@@ -146,7 +156,7 @@ void StartSolver()
   * @retval int
   */
 int main(void)
-{
+	{
 
   /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
@@ -183,6 +193,7 @@ int main(void)
   MX_I2C2_Init();
   MX_TIM4_Init();
   MX_TIM7_Init();
+  MX_TIM8_Init();
   /* USER CODE BEGIN 2 */
   AML_MPUSensor_ResetAngle();
   AML_MPUSensor_Setup();
@@ -190,9 +201,10 @@ int main(void)
   AML_IRSensor_Setup();
   AML_MotorControl_Setup();
   AML_Buzzer_TurnOn();
+  HCSR04_Init();
   // AML_Buzzer_Beep();
   AML_LedDebug_SetAllLED(GPIO_PIN_SET);
-  pwm = AML_MPUSensor_GetAngle();
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -202,26 +214,24 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // AML_ReadAll_BitSwitch();
-    // AML_ReadAll_Button();
+    debug[0] = HCSR04_GetDis();
     if (AML_Read_Button(SW_0))
     {
       AML_Buzzer_Beep();
-      // AML_MotorControl_Move(100,100);
-      // AML_MotorControl_TurnLeft();
-      // AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle());
-      AML_MotorControl_TurnOnWallFollow();
+      // StartSolver();
+      AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle());
+      // AML_MotorControl_TurnOnWallFollow();
       // flagButton1 = 1;
     }
     else if (AML_Read_Button(SW_1))
 
     {
       AML_Buzzer_Beep();
-      AML_MotorControl_TurnOffWallFollow();
+      // AML_MotorControl_TurnOffWallFollow();
       AML_MotorControl_Stop();
       // flagButton1 = 0;
     }
-    CurrentAngle = AML_MPUSensor_GetAngle();	
+    CurrentAngle = AML_MPUSensor_GetAngle();
     AML_LedDebug_ToggleAllLED();
     EncoderGetLeftValue = AML_Encoder_GetLeftValue();
     EncoderGetRightValue = AML_Encoder_GetRightValue();
@@ -319,7 +329,7 @@ static void MX_ADC1_Init(void)
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
   hadc1.Init.LowPowerAutoWait = DISABLE;
   hadc1.Init.ContinuousConvMode = ENABLE;
-  hadc1.Init.NbrOfConversion = 5;
+  hadc1.Init.NbrOfConversion = 4;
   hadc1.Init.DiscontinuousConvMode = DISABLE;
   hadc1.Init.ExternalTrigConv = ADC_SOFTWARE_START;
   hadc1.Init.ExternalTrigConvEdge = ADC_EXTERNALTRIGCONVEDGE_NONE;
@@ -349,7 +359,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_3;
+  sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_64CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
@@ -363,7 +373,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_7;
+  sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -372,7 +382,7 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_4;
+  sConfig.Channel = ADC_CHANNEL_8;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
@@ -381,17 +391,8 @@ static void MX_ADC1_Init(void)
 
   /** Configure Regular Channel
   */
-  sConfig.Channel = ADC_CHANNEL_8;
-  sConfig.Rank = ADC_REGULAR_RANK_4;
-  if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
-  {
-    Error_Handler();
-  }
-
-  /** Configure Regular Channel
-  */
   sConfig.Channel = ADC_CHANNEL_5;
-  sConfig.Rank = ADC_REGULAR_RANK_5;
+  sConfig.Rank = ADC_REGULAR_RANK_4;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
   {
     Error_Handler();
@@ -847,6 +848,66 @@ static void MX_TIM7_Init(void)
 }
 
 /**
+  * @brief TIM8 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM8_Init(void)
+{
+
+  /* USER CODE BEGIN TIM8_Init 0 */
+
+  /* USER CODE END TIM8_Init 0 */
+
+  TIM_ClockConfigTypeDef sClockSourceConfig = {0};
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+  TIM_IC_InitTypeDef sConfigIC = {0};
+
+  /* USER CODE BEGIN TIM8_Init 1 */
+
+  /* USER CODE END TIM8_Init 1 */
+  htim8.Instance = TIM8;
+  htim8.Init.Prescaler = 480-1;
+  htim8.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim8.Init.Period = 0xffff-1;
+  htim8.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim8.Init.RepetitionCounter = 0;
+  htim8.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sClockSourceConfig.ClockSource = TIM_CLOCKSOURCE_INTERNAL;
+  if (HAL_TIM_ConfigClockSource(&htim8, &sClockSourceConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  if (HAL_TIM_IC_Init(&htim8) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim8, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sConfigIC.ICPolarity = TIM_INPUTCHANNELPOLARITY_RISING;
+  sConfigIC.ICSelection = TIM_ICSELECTION_DIRECTTI;
+  sConfigIC.ICPrescaler = TIM_ICPSC_DIV1;
+  sConfigIC.ICFilter = 3;
+  if (HAL_TIM_IC_ConfigChannel(&htim8, &sConfigIC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM8_Init 2 */
+
+  /* USER CODE END TIM8_Init 2 */
+
+}
+
+/**
   * @brief USART3 Initialization Function
   * @param None
   * @retval None
@@ -930,10 +991,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_6, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOD, LED_0_Pin|BIN2_Pin|BIN1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, AIN1_Pin|AIN2_Pin, GPIO_PIN_RESET);
@@ -952,6 +1016,13 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
+  /*Configure GPIO pin : PA6 */
+  GPIO_InitStruct.Pin = GPIO_PIN_6;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
   /*Configure GPIO pins : LED_0_Pin BIN2_Pin BIN1_Pin */
   GPIO_InitStruct.Pin = LED_0_Pin|BIN2_Pin|BIN1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
@@ -959,8 +1030,8 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_1_Pin LED_2_Pin LED_3_Pin LED_4_Pin */
-  GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin;
+  /*Configure GPIO pins : LED_1_Pin LED_2_Pin LED_3_Pin */
+  GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin|LED_3_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

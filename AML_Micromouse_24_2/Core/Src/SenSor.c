@@ -1,33 +1,37 @@
 #include "SenSor.h"
+#include "RingBuffer.h"
+#include "MedianFilter.h"
+
 /*
     distance low range: y = 33,9 + -69,5x + 62,3x^2 + -25,4x^3 + 3,83x^4
-    distance high range: y = 55.38 - 77.99x + 54.73x^2 - 18.33x^3 + 2.29x^4
+    distance high range: y = 12.08 * x^(-1.058)
 */
 
-#define ADC_RESOLUTION_BIT 16
-#define ADC_MAX (1 << ADC_RESOLUTION_BIT) // 1x2^16
+#define ADC_RESOLUTION_BIT 14
+#define ADC_MAX (1 << ADC_RESOLUTION_BIT) // 2^14 = 16384
 #define ADC_VREF 3.3
 
 #define GET_VOLTAGE(adcValue) ((adcValue * ADC_VREF) / ADC_MAX)
-#define GET_DISTANCE_2_15(voltage) (33.9 + (-69.5 * voltage) + (62.3 * pow(voltage, 2)) + (-25.4 * pow(voltage, 3)) + (3.83 * pow(voltage, 4))) // mm
-#define GET_DISTANCE_4_30(voltage) (120.8 * pow(voltage, -1.058))
-// mm
+#define GET_DISTANCE_2_15(voltage) (33.9 + (-69.5 * voltage) + (62.3 * pow(voltage, 2)) + (-25.4 * pow(voltage, 3)) + (3.83 * pow(voltage, 4))) * 10 // mm
+#define GET_DISTANCE_4_30(voltage) (12.08 * pow(voltage, -1.058)) * 10                                                                               // mm
+
 #define GET_DISTANCE(voltage, index) (index > 0) ? GET_DISTANCE_2_15(voltage) : GET_DISTANCE_4_30(voltage)
 
 extern debug[100];
 
 extern ADC_HandleTypeDef hadc1;
 
-uint16_t IRSensorADCValue[5];
-double IRSensorVoltageValue[5];
-double IRSensorDistanceValue[5];
-
-uint8_t ADCIndex = 0;
+int IRSensorADCValue[5];
+int IRSensorDistanceValue[5];
+int ADCIndex = 0;
+RingBuffer adcBuffer;
+MedianFilter filter;
 
 //-------------------------------------------------------------------------------------------------------//
 void AML_IRSensor_Setup(void);
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc);
 double AML_IRSensor_GetDistance(uint8_t sensor);
+
 bool AML_IRSensor_IsFrontWall(void);
 bool AML_IRSensor_IsLeftWall(void);
 bool AML_IRSensor_IsRightWall(void);
@@ -41,26 +45,33 @@ bool AML_IRSensor_IsNoRightWall(void);
 void AML_IRSensor_Setup(void)
 {
     memset(IRSensorADCValue, 0, sizeof(IRSensorADCValue));
-    // HAL_ADCEx_Calibration_Start(&hadc1, ADC_CALIB_OFFSET_LINEARITY, ADC_SINGLE_ENDED);
+    memset(IRSensorDistanceValue, 0, sizeof(IRSensorDistanceValue));
+    RingBuffer_Init(&adcBuffer);
+    MedianFilter_Init(&filter, 5, 10);
 
-    // HAL_ADC_Start_DMA(&hadc2, IRSensorValue, 7);
+    // HAL_ADC_Start_DMA(&hadc2, (uint32_t *)IRSensorADCValue, 7);
     HAL_ADC_Start_IT(&hadc1);
 }
 
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 {
     UNUSED(hadc);
+
     if (hadc->Instance == ADC1)
     {
-        IRSensorADCValue[ADCIndex] = HAL_ADC_GetValue(hadc);
-        IRSensorVoltageValue[ADCIndex] = GET_VOLTAGE(IRSensorADCValue[ADCIndex]);
-        IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(IRSensorVoltageValue[ADCIndex], ADCIndex);
-        // debug[20] = HAL_ADCEx_Calibration_GetValue(&hadc1, ADC_SINGLE_ENDED);
+        uint16_t adcValue = HAL_ADC_GetValue(hadc);
+        RingBuffer_Put(&adcBuffer, adcValue);
+        
+        // Apply median filter
+        int filteredValue = MedianFilter_AddValue(&filter, adcValue);
+        
+        IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(filteredValue), ADCIndex);
+    
         ADCIndex++;
-
-        if (ADCIndex == 5)
+        if (ADCIndex == 4)
         {
             ADCIndex = 0;
+            // HAL_ADC_Start_IT(&hadc2);
         }
     }
 }
