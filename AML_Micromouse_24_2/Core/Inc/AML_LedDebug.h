@@ -9,18 +9,19 @@
 
 typedef enum
 {
-    YELLOW,
-    GREEN,
-    BLUE,
-    RED,
-    PURPLE
-} COLOR;
+    N_R,
+    N_FR,
+    N_FF,
+    N_FL,
+    N_L,
+} Name_SS;
 
-void AML_LedDebug_TurnOnLED(COLOR color);
-void AML_LedDebug_TurnOffLED(COLOR color);
-void AML_LedDebug_ToggleLED(COLOR color);
-void AML_LedDebug_SetLED(COLOR color, GPIO_PinState state);
+void AML_LedDebug_TurnOnLED(Name_SS name);
+void AML_LedDebug_TurnOffLED(Name_SS name);
+void AML_LedDebug_ToggleLED(Name_SS name);
+void AML_LedDebug_SetLED(Name_SS name, GPIO_PinState state);
 void AML_LedDebug_SetAllLED(GPIO_PinState state);
 void AML_LedDebug_ToggleAllLED(void);
+
 
 #endif // AML_DEBUGDEVICE_H

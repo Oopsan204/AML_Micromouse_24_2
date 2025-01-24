@@ -4,10 +4,8 @@
 #include "stm32h7xx_hal.h"
 #include <stdbool.h>
 #include <AML_GlobalVariable.h>
-#include <HC_SR04.h>
-#include <RingBuffer.h>
-#include <MedianFilter.h>
 #include "math.h"
+#include "AML_LedDebug.h"
 
 
 void AML_IRSensor_Setup(void);
@@ -19,4 +17,5 @@ bool AML_IRSensor_IsRightWall(void);
 bool AML_IRSensor_IsNoFrontWall(void);
 bool AML_IRSensor_IsNoLeftWall(void);
 bool AML_IRSensor_IsNoRightWall(void);
+void LedDebug(void);
 #endif

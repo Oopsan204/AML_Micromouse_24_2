@@ -1,100 +1,67 @@
 #include "queue.h"
 
-queue queue_create() {
-queue q = (queue) malloc(sizeof(struct _queue));
-    if (q == NULL) {
-        fprintf(stderr, "Insufficient memory to \
-        initialize queue.\n");
-        abort();
+struct _queue squares_queue;
+
+void queue_reset()
+{
+    for (int i = 0; i < 256; i++)
+    {
+        squares_queue.data[i] = 0;
     }
-    q->head = NULL;
-    q->tail = NULL;
-    q->size = 0;
-    return q;
+
+    squares_queue.head = 0;
+    squares_queue.tail = 0;
+    squares_queue.size = 0;
 }
 
-void queue_destroy(queue q) {
-    if (q == NULL) {
-        fprintf(stderr, "Cannot destroy queue\n");
-        abort();
+void queue_push(int32_t elem)
+{
+    if (squares_queue.size == QUEUE_MAX_SIZE)
+    {
+        // Hàng đợi đầy
+        return;
     }
-    queue_clear(q);
-    free(q);
+    squares_queue.data[squares_queue.tail] = elem;
+    squares_queue.tail = (squares_queue.tail + 1) % QUEUE_MAX_SIZE;
+    squares_queue.size++;
 }
 
-void queue_push(queue q, int elem) {
-    struct node* n;
-    n = (struct node*) malloc(sizeof(struct node));
-    if (n == NULL) {
-        fprintf(stderr, "Insufficient memory to \
-        create node.\n");
-        abort();
+int32_t queue_pop()
+{
+    if (squares_queue.size == 0)
+    {
+        // Hàng đợi rỗng
+        return -1; // Hoặc giá trị đặc biệt để biểu thị lỗi
     }
-    n->data = elem;
-    n->next = NULL;
-    if (q->head == NULL) {
-        q->head = q->tail = n;
-    } else {
-        q->tail->next = n;
-        q->tail = n;
-    }
-    q->size += 1;
+    int32_t elem = squares_queue.data[squares_queue.head];
+    squares_queue.head = (squares_queue.head + 1) % QUEUE_MAX_SIZE;
+    squares_queue.size--;
+    return elem;
 }
 
-int queue_pop(queue q) {
-    if (queue_is_empty(q)) {
-    fprintf(stderr, "Can't pop element from queue: \
-    queue is empty.\n");
-    abort();
+int32_t queue_first()
+{
+    if (squares_queue.size == 0)
+    {
+        // Hàng đợi rỗng
+        return -1; // Hoặc giá trị đặc biệt để biểu thị lỗi
     }
-    struct node* head = q->head;
-    if (q->head == q->tail) {
-        q->head = NULL;
-        q->tail = NULL;
-    } else {
-        q->head = q->head->next;
-    }
-    q->size -= 1;
-    int data = head->data;
-    free(head);
-    return data;
+    return squares_queue.data[squares_queue.head];
 }
 
-int queue_first(queue q) {
-    if (queue_is_empty(q)) {
-        fprintf(stderr, "Can't return element from queue: \
-        queue is empty.\n");
-        abort();
-    }
-    return q->head->data;
+int32_t queue_is_empty()
+{
+    return squares_queue.size == 0;
 }
 
-int queue_is_empty(queue q) {
-    if (q==NULL) {
-        fprintf(stderr, "Cannot work with NULL queue.\n");
-        abort();
-    }
-    return q->head == NULL;
+int32_t queue_size()
+{
+    return squares_queue.size;
 }
 
-int queue_size(queue q) {
-    if (q==NULL) {
-        fprintf(stderr, "Cannot work with NULL queue.\n");
-        abort();
-    }
-    return q->size;
-}
-
-void queue_clear(queue q) {
-    if (q==NULL) {
-        fprintf(stderr, "Cannot work with NULL queue.\n");
-        abort();
-    }
-    while(q->head != NULL) {
-        struct node* tmp = q->head;
-        q->head = q->head->next;
-        free(tmp);
-    }
-    q->tail = NULL;
-    q->size = 0;
+void queue_clear()
+{
+    squares_queue.head = 0;
+    squares_queue.tail = 0;
+    squares_queue.size = 0;
 }

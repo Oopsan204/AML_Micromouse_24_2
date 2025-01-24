@@ -1,5 +1,9 @@
 #include "MedianFilter.h"
 
+void MedianFilter_Init(MedianFilter *filter, int size, int seed);
+int MedianFilter_AddValue(MedianFilter *filter, int value);
+int MedianFilter_GetMedian(MedianFilter *filter);
+
 static int constrain(int value, int min, int max) {
     if (value < min) return min;
     if (value > max) return max;

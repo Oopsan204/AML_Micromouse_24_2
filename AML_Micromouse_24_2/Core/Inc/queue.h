@@ -3,26 +3,25 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
-typedef struct _queue* queue;
-queue queue_create();
-void queue_destroy(queue q);
-void queue_push(queue q, int elem);
-int queue_pop(queue q);
-int queue_first(queue q);
-int queue_is_empty(queue q);
-int queue_size(queue q);
-void queue_clear(queue q);
+#define QUEUE_MAX_SIZE 256
 
-struct node {
-    int data;
-    struct node* next;
-};
+typedef struct _queue *queue;
+void queue_reset();
+void queue_push(int32_t elem);
+int32_t queue_pop();
+int32_t queue_first();
+int32_t queue_is_empty();
+int32_t queue_size();
+void queue_clear();
 
-struct _queue {
-    struct node* head;
-    struct node* tail;
-    int size;
+struct _queue
+{
+    int32_t data[QUEUE_MAX_SIZE];
+    int32_t head;
+    int32_t tail;
+    int32_t size;
 };
 
 #endif

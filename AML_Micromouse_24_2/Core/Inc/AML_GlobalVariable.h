@@ -20,12 +20,12 @@
 #define LED_3 3
 
 #define IR_SENSOR_FF 0
-#define IR_SENSOR_FL 1
-#define IR_SENSOR_L 2
+#define IR_SENSOR_FL 2
+#define IR_SENSOR_L 4
 // #define IR_SENSOR_BL 3
 // #define IR_SENSOR_BR 4
 #define IR_SENSOR_R 3
-#define IR_SENSOR_FR 4
+#define IR_SENSOR_FR 1
 
 // DEFINE FOR MOTOR CONTROL-------------------------------------------------------------------------------------------------------//
 #define MotorDirection 0 // use for change direction of motor
@@ -36,9 +36,9 @@
 #define Pi 3.14159265359  // Pi number
 #define WheelDiameter 21  // mm
 #define TransmissionRatio 1     // ratio between wheel and encoder
-#define EncoderPulsePerRound 1420 // 720 pulse per round encoder
-#define MouseSpeed 100 // % of duty cycle
-#define MouseTurnSpeed 100 // % of duty cycle
+#define EncoderPulsePerRound 140 // 720 pulse per round encoder
+#define MouseSpeed 30 // % of duty cycle
+#define MouseTurnSpeed 70 // % of duty cycle
 
 // define parameter for PID control
 
@@ -52,8 +52,7 @@
 #define PIDSpeedOutputMax 50 // maximum output of PID (duty cycle)
 
 // define parameter for turn left and right
-#define TurnLeftSpeed 50   // % of duty cycle
-#define TurnRightSpeed 50  // % of duty cycle
+
 #define TuneLeft90Angle 90 // degree
 #define TuneRight90Angle 90
 #define TuneLeft180Angle 180
@@ -61,10 +60,10 @@
 #define ErrorAngle 3 // degree
 
 // DEFINE FOR IRSensor -------------------------------------------------------------------------------------------------------//
-#define TICKS_ONE_CELL 10000
-#define WALL_IN_FRONT 155
-#define WALL_IN_LEFT 55         // 121
-#define WALL_IN_RIGHT 55        // 100
+#define TICKS_ONE_CELL 350
+#define WALL_IN_FRONT 145
+#define WALL_IN_LEFT 60         // 121
+#define WALL_IN_RIGHT 60        // 100
 #define WALL_IN_FRONT_LEFT 130  // 60
 #define WALL_IN_FRONT_RIGHT 130 // 50
 

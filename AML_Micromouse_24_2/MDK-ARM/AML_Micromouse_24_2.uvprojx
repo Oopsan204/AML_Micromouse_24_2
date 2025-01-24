@@ -458,21 +458,6 @@
               <FileType>1</FileType>
               <FilePath>..\Core\Src\AML_PID.c</FilePath>
             </File>
-            <File>
-              <FileName>HC_SR04.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\HC_SR04.c</FilePath>
-            </File>
-            <File>
-              <FileName>RingBuffer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Core\Src\RingBuffer.c</FilePath>
-            </File>
-            <File>
-              <FileName>MedianFilter.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>..\Core\Src\MedianFilter.cpp</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>

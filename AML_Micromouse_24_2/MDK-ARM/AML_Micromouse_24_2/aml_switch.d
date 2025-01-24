@@ -46,8 +46,7 @@ aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_MotorControl.h
 aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_PID.h
 aml_micromouse_24_2\aml_switch.o: ../Core/Inc/SenSor.h
 aml_micromouse_24_2\aml_switch.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdbool.h
-aml_micromouse_24_2\aml_switch.o: ../Core/Inc/HC_SR04.h
-aml_micromouse_24_2\aml_switch.o: ../Core/Inc/RingBuffer.h
+aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_LedDebug.h
 aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_Buzzer.h
 aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_MPUSensor.h
 aml_micromouse_24_2\aml_switch.o: ../Core/Inc/AML_Encoder.h

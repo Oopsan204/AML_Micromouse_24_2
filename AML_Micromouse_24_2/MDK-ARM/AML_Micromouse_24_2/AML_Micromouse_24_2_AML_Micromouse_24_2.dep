@@ -1,8 +1,8 @@
 Dependencies for Project 'AML_Micromouse_24_2', Target 'AML_Micromouse_24_2': (DO NOT MODIFY !)
 CompilerVersion: 5060750::V5.06 update 6 (build 750)::.\ARMCC
 F (startup_stm32h743xx.s)(0x672AFC1F)(--cpu Cortex-M7.fp.dp -g --apcs=interwork -I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include--pd "__UVISION_VERSION SETA 531" --pd "_RTE_ SETA 1" --pd "STM32H743xx SETA 1" --pd "_RTE_ SETA 1"--list startup_stm32h743xx.lst --xref -o aml_micromouse_24_2\startup_stm32h743xx.o --depend aml_micromouse_24_2\startup_stm32h743xx.d)
-F (..\Core\Src\AML_Buzzer .c)(0x674B3588)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o "aml_micromouse_24_2\aml_buzzer .o" --depend "aml_micromouse_24_2\aml_buzzer .d")
-I (../Core/Inc/AML_Buzzer.h)(0x674B3588)
+F (..\Core\Src\AML_Buzzer .c)(0x67765CD7)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o "aml_micromouse_24_2\aml_buzzer .o" --depend "aml_micromouse_24_2\aml_buzzer .d")
+I (../Core/Inc/AML_Buzzer.h)(0x67765CD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -42,9 +42,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/main.h)(0x676C1C77)
-F (..\Core\Src\AML_Encoder.c)(0x674B3588)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_encoder.o --depend aml_micromouse_24_2\aml_encoder.d)
-I (../Core/Inc/AML_Encoder.h)(0x674B3588)
+I (../Core/Inc/main.h)(0x677804D3)
+F (..\Core\Src\AML_Encoder.c)(0x67765CD7)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_encoder.o --depend aml_micromouse_24_2\aml_encoder.d)
+I (../Core/Inc/AML_Encoder.h)(0x67765CD7)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
@@ -53,7 +53,7 @@ I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
 I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
-I (../Core/Inc/main.h)(0x676C1C77)
+I (../Core/Inc/main.h)(0x677804D3)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -85,50 +85,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-F (..\Core\Src\AML_MPUSensor.c)(0x674B3588)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_mpusensor.o --depend aml_micromouse_24_2\aml_mpusensor.d)
-I (../Core/Inc/AML_MPUSensor.h)(0x674B3588)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
-I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-F (..\Core\Src\AML_Switch.c)(0x6761A3AD)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_switch.o --depend aml_micromouse_24_2\aml_switch.d)
-I (../Core/Inc/AML_Switch.h)(0x6761348C)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
+F (..\Core\Src\AML_MPUSensor.c)(0x67765CD7)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_mpusensor.o --depend aml_micromouse_24_2\aml_mpusensor.d)
+I (../Core/Inc/AML_MPUSensor.h)(0x67765CD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -168,19 +127,59 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/main.h)(0x676C1C77)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-I (../Core/Inc/AML_MotorControl.h)(0x676BD956)
-I (../Core/Inc/AML_PID.h)(0x674B3588)
-I (../Core/Inc/SenSor.h)(0x6771179A)
+F (..\Core\Src\AML_Switch.c)(0x67765CD7)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_switch.o --depend aml_micromouse_24_2\aml_switch.d)
+I (../Core/Inc/AML_Switch.h)(0x67765CD7)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
+I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
+I (../Core/Inc/main.h)(0x677804D3)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
+I (../Core/Inc/AML_MotorControl.h)(0x67765CD7)
+I (../Core/Inc/AML_PID.h)(0x67765CD7)
+I (../Core/Inc/SenSor.h)(0x67911B60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5EC78406)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-I (../Core/Inc/AML_Buzzer.h)(0x674B3588)
-I (../Core/Inc/AML_MPUSensor.h)(0x674B3588)
-I (../Core/Inc/AML_Encoder.h)(0x674B3588)
-F (..\Core\Src\AML_LedDebug.c)(0x674B3588)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_leddebug.o --depend aml_micromouse_24_2\aml_leddebug.d)
-I (../Core/Inc/AML_LedDebug.h)(0x674B3588)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
+I (../Core/Inc/AML_Buzzer.h)(0x67765CD7)
+I (../Core/Inc/AML_MPUSensor.h)(0x67765CD7)
+I (../Core/Inc/AML_Encoder.h)(0x67765CD7)
+F (..\Core\Src\AML_LedDebug.c)(0x6791195B)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_leddebug.o --depend aml_micromouse_24_2\aml_leddebug.d)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -220,9 +219,9 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/main.h)(0x676C1C77)
-F (..\Core\Src\SenSor.c)(0x67762A84)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\sensor.o --depend aml_micromouse_24_2\sensor.d)
-I (../Core/Inc/SenSor.h)(0x6771179A)
+I (../Core/Inc/main.h)(0x677804D3)
+F (..\Core\Src\SenSor.c)(0x67911C20)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\sensor.o --depend aml_micromouse_24_2\sensor.d)
+I (../Core/Inc/SenSor.h)(0x67911B60)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -263,11 +262,11 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5EC78406)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-F (..\Core\Src\AML_MotorControl.c)(0x676D2876)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_motorcontrol.o --depend aml_micromouse_24_2\aml_motorcontrol.d)
-I (../Core/Inc/AML_MotorControl.h)(0x676BD956)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
+I (../Core/Inc/main.h)(0x677804D3)
+F (..\Core\Src\AML_MotorControl.c)(0x67924D01)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_motorcontrol.o --depend aml_micromouse_24_2\aml_motorcontrol.d)
+I (../Core/Inc/AML_MotorControl.h)(0x67765CD7)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -307,18 +306,17 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/main.h)(0x676C1C77)
-I (../Core/Inc/AML_PID.h)(0x674B3588)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-I (../Core/Inc/SenSor.h)(0x6771179A)
+I (../Core/Inc/main.h)(0x677804D3)
+I (../Core/Inc/AML_PID.h)(0x67765CD7)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
+I (../Core/Inc/SenSor.h)(0x67911B60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5EC78406)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-I (../Core/Inc/AML_Buzzer.h)(0x674B3588)
-I (../Core/Inc/AML_MPUSensor.h)(0x674B3588)
-I (../Core/Inc/AML_Encoder.h)(0x674B3588)
-F (../Core/Src/main.c)(0x676E6E18)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\main.o --depend aml_micromouse_24_2\main.d)
-I (../Core/Inc/main.h)(0x676C1C77)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
+I (../Core/Inc/AML_Buzzer.h)(0x67765CD7)
+I (../Core/Inc/AML_MPUSensor.h)(0x67765CD7)
+I (../Core/Inc/AML_Encoder.h)(0x67765CD7)
+F (../Core/Src/main.c)(0x67924CDF)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\main.o --depend aml_micromouse_24_2\main.d)
+I (../Core/Inc/main.h)(0x677804D3)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -358,112 +356,113 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/SenSor.h)(0x6771179A)
+I (../Core/Inc/SenSor.h)(0x67911B60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5EC78406)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-I (../Core/Inc/AML_MPUSensor.h)(0x674B3588)
-I (../Core/Inc/AML_Buzzer.h)(0x674B3588)
-I (../Core/Inc/AML_LedDebug.h)(0x674B3588)
-I (../Core/Inc/AML_Switch.h)(0x6761348C)
-I (../Core/Inc/AML_MotorControl.h)(0x676BD956)
-I (../Core/Inc/AML_PID.h)(0x674B3588)
-I (../Core/Inc/AML_Encoder.h)(0x674B3588)
-I (../Core/Inc/solver.h)(0x674B3588)
-I (../Core/Inc/queue.h)(0x66C0C2A4)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
+I (../Core/Inc/AML_MPUSensor.h)(0x67765CD7)
+I (../Core/Inc/AML_Buzzer.h)(0x67765CD7)
+I (../Core/Inc/AML_Switch.h)(0x67765CD7)
+I (../Core/Inc/AML_MotorControl.h)(0x67765CD7)
+I (../Core/Inc/AML_PID.h)(0x67765CD7)
+I (../Core/Inc/AML_Encoder.h)(0x67765CD7)
+I (../Core/Inc/solver.h)(0x678CF9C2)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+F (../Core/Src/stm32h7xx_it.c)(0x677804D2)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\stm32h7xx_it.o --depend aml_micromouse_24_2\stm32h7xx_it.d)
+I (../Core/Inc/main.h)(0x677804D3)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
+I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
+I (../Core/Inc/stm32h7xx_it.h)(0x677804D2)
+F (../Core/Src/stm32h7xx_hal_msp.c)(0x677804D3)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\stm32h7xx_hal_msp.o --depend aml_micromouse_24_2\stm32h7xx_hal_msp.d)
+I (../Core/Inc/main.h)(0x677804D3)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
+I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
+I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
+I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
+I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
+I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
+I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
+F (..\Core\Src\queue.c)(0x678CF95D)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\queue.o --depend aml_micromouse_24_2\queue.d)
+I (../Core/Inc/queue.h)(0x678CF99C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
-F (../Core/Src/stm32h7xx_it.c)(0x676C1F0A)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\stm32h7xx_it.o --depend aml_micromouse_24_2\stm32h7xx_it.d)
-I (../Core/Inc/main.h)(0x676C1C77)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
-I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/stm32h7xx_it.h)(0x676C1F0A)
-F (../Core/Src/stm32h7xx_hal_msp.c)(0x676CCECC)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\stm32h7xx_hal_msp.o --depend aml_micromouse_24_2\stm32h7xx_hal_msp.d)
-I (../Core/Inc/main.h)(0x676C1C77)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
-I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
+F (..\Core\Src\solver.c)(0x679120E6)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\solver.o --depend aml_micromouse_24_2\solver.d)
+I (../Core/Inc/solver.h)(0x678CF9C2)
 I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-F (..\Core\Src\queue.c)(0x66B5E0BB)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\queue.o --depend aml_micromouse_24_2\queue.d)
-I (../Core/Inc/queue.h)(0x66C0C2A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
 I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
-F (..\Core\Src\solver.c)(0x676C216D)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\solver.o --depend aml_micromouse_24_2\solver.d)
-I (../Core/Inc/solver.h)(0x674B3588)
-I (../Core/Inc/main.h)(0x676C1C77)
+I (../Core/Inc/queue.h)(0x678CF99C)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
+I (../Core/Inc/AML_GlobalVariable.h)(0x67911D72)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
@@ -471,7 +470,6 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
 I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
 I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
 I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
@@ -503,23 +501,17 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/queue.h)(0x66C0C2A4)
-I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
-I (../Core/Inc/AML_GlobalVariable.h)(0x676D2B9A)
-I (../Core/Inc/AML_Buzzer.h)(0x674B3588)
-I (../Core/Inc/AML_LedDebug.h)(0x674B3588)
-I (../Core/Inc/AML_Switch.h)(0x6761348C)
-I (../Core/Inc/AML_MotorControl.h)(0x676BD956)
-I (../Core/Inc/AML_PID.h)(0x674B3588)
-I (../Core/Inc/SenSor.h)(0x6771179A)
+I (../Core/Inc/AML_MotorControl.h)(0x67765CD7)
+I (../Core/Inc/main.h)(0x677804D3)
+I (../Core/Inc/AML_PID.h)(0x67765CD7)
+I (../Core/Inc/SenSor.h)(0x67911B60)
 I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x5EC78406)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-I (../Core/Inc/AML_MPUSensor.h)(0x674B3588)
-I (../Core/Inc/AML_Encoder.h)(0x674B3588)
-F (..\Core\Src\AML_PID.c)(0x676C205B)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_pid.o --depend aml_micromouse_24_2\aml_pid.d)
-I (../Core/Inc/AML_PID.h)(0x674B3588)
+I (../Core/Inc/AML_LedDebug.h)(0x67911C8F)
+I (../Core/Inc/AML_Buzzer.h)(0x67765CD7)
+I (../Core/Inc/AML_MPUSensor.h)(0x67765CD7)
+I (../Core/Inc/AML_Encoder.h)(0x67765CD7)
+F (..\Core\Src\AML_PID.c)(0x67765CD7)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\aml_pid.o --depend aml_micromouse_24_2\aml_pid.d)
+I (../Core/Inc/AML_PID.h)(0x67765CD7)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
 I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
@@ -559,55 +551,7 @@ I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-I (../Core/Inc/main.h)(0x676C1C77)
-F (..\Core\Src\HC_SR04.c)(0x676D0E13)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\hc_sr04.o --depend aml_micromouse_24_2\hc_sr04.d)
-I (../Core/Inc/HC_SR04.h)(0x676D0A2E)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
-I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_def.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/stm32h743xx.h)(0x66B5D70B)
-I (../Drivers/CMSIS/Include/core_cm7.h)(0x66B5D5D7)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-I (../Drivers/CMSIS/Include/cmsis_version.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_compiler.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/cmsis_armcc.h)(0x66B5D5D6)
-I (../Drivers/CMSIS/Include/mpu_armv7.h)(0x66B5D5D7)
-I (../Drivers/CMSIS/Device/ST/STM32H7xx/Include/system_stm32h7xx.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h)(0x66B5D70B)
-I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x5EC78414)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_rcc_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_gpio_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_dma_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_mdma.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_exti.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_cortex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_ll_adc.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_adc_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_flash_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_hsem.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_ramecc.h)(0x66B5D70B)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_tim_ex.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h)(0x66B5D70C)
-I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h)(0x66B5D70C)
-F (..\Core\Src\RingBuffer.c)(0x677254B5)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\ringbuffer.o --depend aml_micromouse_24_2\ringbuffer.d)
-I (../Core/Inc/RingBuffer.h)(0x677254AB)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-F (..\Core\Src\MedianFilter.cpp)(0x67762BCF)(--cpp -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\medianfilter.o --depend aml_micromouse_24_2\medianfilter.d)
-I (../Core/Inc/MedianFilter.h)(0x67762B77)
-I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x5EC7840C)
-I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x5EC7840C)
+I (../Core/Inc/main.h)(0x677804D3)
 F (../Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c)(0x66B5D70C)(--c99 --gnu -c --cpu Cortex-M7.fp.dp -g -O3 --apcs=interwork --split_sections -I ../Core/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc -I ../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I ../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I ../Drivers/CMSIS/Include-I.\RTE\_AML_Micromouse_24_2-IC:\Users\Lenovo\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include-IC:\Users\Lenovo\AppData\Local\Arm\Packs\Keil\STM32H7xx_DFP\3.1.1\Drivers\CMSIS\Device\ST\STM32H7xx\Include-D__UVISION_VERSION="531" -D_RTE_ -DSTM32H743xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32H743xx-o aml_micromouse_24_2\stm32h7xx_hal_adc.o --depend aml_micromouse_24_2\stm32h7xx_hal_adc.d)
 I (../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h)(0x66B5D70B)
 I (../Core/Inc/stm32h7xx_hal_conf.h)(0x6729AD20)

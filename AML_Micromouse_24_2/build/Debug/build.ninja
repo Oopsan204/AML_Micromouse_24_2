@@ -49,9 +49,113 @@ cmake_ninja_workdir = E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micro
 
 build cmake_object_order_depends_target_AML_Micromouse_24_2: phony || CMakeFiles/AML_Micromouse_24_2.dir
 
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Buzzer_.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_Buzzer$ .c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_Buzzer_.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Encoder.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_Encoder.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_Encoder.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_LedDebug.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_LedDebug.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_LedDebug.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_MPUSensor.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_MPUSensor.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_MotorControl.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_MotorControl.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_PID.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_PID.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/AML_Switch.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\AML_Switch.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/MedianFilter.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/MedianFilter.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\MedianFilter.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/RingBuffer.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/RingBuffer.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\RingBuffer.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/SenSor.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\SenSor.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
 build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/main.c || cmake_object_order_depends_target_AML_Micromouse_24_2
   DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\main.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/queue.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/queue.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\queue.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/solver.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/solver.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\solver.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/stm32h7xx_hal_msp.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\stm32h7xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
@@ -65,9 +169,25 @@ build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj: C_COMPILER
   OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
   OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
 
-build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/stm32h7xx_hal_msp.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/syscalls.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/syscalls.c || cmake_object_order_depends_target_AML_Micromouse_24_2
   DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\stm32h7xx_hal_msp.c.obj.d
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\syscalls.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/sysmem.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/sysmem.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\sysmem.c.obj.d
+  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
+  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
+  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
+
+build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/system_stm32h7xx.c || cmake_object_order_depends_target_AML_Micromouse_24_2
+  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
+  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\system_stm32h7xx.c.obj.d
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
   INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
   OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
@@ -257,30 +377,6 @@ build CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h
   OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
   OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Drivers\STM32H7xx_HAL_Driver\Src
 
-build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/system_stm32h7xx.c || cmake_object_order_depends_target_AML_Micromouse_24_2
-  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\system_stm32h7xx.c.obj.d
-  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
-  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
-
-build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/sysmem.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/sysmem.c || cmake_object_order_depends_target_AML_Micromouse_24_2
-  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\sysmem.c.obj.d
-  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
-  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
-
-build CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/syscalls.c.obj: C_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Src/syscalls.c || cmake_object_order_depends_target_AML_Micromouse_24_2
-  DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src\syscalls.c.obj.d
-  FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g -std=gnu11
-  INCLUDES = -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Core/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -IE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
-  OBJECT_FILE_DIR = CMakeFiles\AML_Micromouse_24_2.dir\Core\Src
-
 build CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj: ASM_COMPILER__AML_Micromouse_24_2_unscanned_Debug E$:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/startup_stm32h743xx.s || cmake_object_order_depends_target_AML_Micromouse_24_2
   DEFINES = -DDEBUG -DSTM32H743xx -DUSE_HAL_DRIVER
   DEP_FILE = CMakeFiles\AML_Micromouse_24_2.dir\startup_stm32h743xx.s.obj.d
@@ -297,10 +393,11 @@ build CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj: ASM_COMPILER
 #############################################
 # Link the executable AML_Micromouse_24_2.elf
 
-build AML_Micromouse_24_2.elf: C_EXECUTABLE_LINKER__AML_Micromouse_24_2_Debug CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ramecc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/sysmem.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/syscalls.c.obj CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
+build AML_Micromouse_24_2.elf: C_EXECUTABLE_LINKER__AML_Micromouse_24_2_Debug CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Buzzer_.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Encoder.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_LedDebug.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MPUSensor.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_MotorControl.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_PID.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/AML_Switch.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/MedianFilter.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/RingBuffer.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/SenSor.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/main.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/queue.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/solver.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_hal_msp.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/stm32h7xx_it.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/syscalls.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/sysmem.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Core/Src/system_stm32h7xx.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_adc_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_ramecc.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c.obj CMakeFiles/AML_Micromouse_24_2.dir/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c.obj CMakeFiles/AML_Micromouse_24_2.dir/startup_stm32h743xx.s.obj
   FLAGS = -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard  -Wall -Wextra -Wpedantic -fdata-sections -ffunction-sections -O0 -g3 -g
+  LINK_PATH = -LE:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/Core/Inc
   OBJECT_DIR = CMakeFiles\AML_Micromouse_24_2.dir
-  POST_BUILD = cd .
+  POST_BUILD = C:\WINDOWS\system32\cmd.exe /C "cd /D E:\code\micromouse2024\AML_Micromouse_24_2_code\AML_Micromouse_24_2\build\Debug && arm-none-eabi-objcopy -O ihex E:/code/micromouse2024/AML_Micromouse_24_2_code/AML_Micromouse_24_2/build/Debug/AML_Micromouse_24_2.elf AML_Micromouse_24_2.hex"
   PRE_LINK = cd .
   TARGET_FILE = AML_Micromouse_24_2.elf
   TARGET_PDB = AML_Micromouse_24_2.elf.dbg

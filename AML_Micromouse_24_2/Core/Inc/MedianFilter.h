@@ -1,6 +1,7 @@
 #ifndef MEDIANFILTER_H
 #define MEDIANFILTER_H
 
+#include "stm32h7xx_hal.h"
 #include <stdint.h>
 #include <stdlib.h>
 

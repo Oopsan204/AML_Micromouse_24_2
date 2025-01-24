@@ -1,13 +1,12 @@
 #include "SenSor.h"
-#include "RingBuffer.h"
-#include "MedianFilter.h"
+
 
 /*
     distance low range: y = 33,9 + -69,5x + 62,3x^2 + -25,4x^3 + 3,83x^4
     distance high range: y = 12.08 * x^(-1.058)
 */
 
-#define ADC_RESOLUTION_BIT 14
+#define ADC_RESOLUTION_BIT 16
 #define ADC_MAX (1 << ADC_RESOLUTION_BIT) // 2^14 = 16384
 #define ADC_VREF 3.3
 
@@ -24,8 +23,7 @@ extern ADC_HandleTypeDef hadc1;
 int IRSensorADCValue[5];
 int IRSensorDistanceValue[5];
 int ADCIndex = 0;
-RingBuffer adcBuffer;
-MedianFilter filter;
+
 
 //-------------------------------------------------------------------------------------------------------//
 void AML_IRSensor_Setup(void);
@@ -40,14 +38,15 @@ bool AML_IRSensor_IsNoFrontWall(void);
 bool AML_IRSensor_IsNoLeftWall(void);
 bool AML_IRSensor_IsNoRightWall(void);
 
+void LedDebug(void);
+
 //-------------------------------------------------------------------------------------------------------//
 
 void AML_IRSensor_Setup(void)
 {
     memset(IRSensorADCValue, 0, sizeof(IRSensorADCValue));
     memset(IRSensorDistanceValue, 0, sizeof(IRSensorDistanceValue));
-    RingBuffer_Init(&adcBuffer);
-    MedianFilter_Init(&filter, 5, 10);
+
 
     // HAL_ADC_Start_DMA(&hadc2, (uint32_t *)IRSensorADCValue, 7);
     HAL_ADC_Start_IT(&hadc1);
@@ -59,16 +58,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
 
     if (hadc->Instance == ADC1)
     {
-        uint16_t adcValue = HAL_ADC_GetValue(hadc);
-        RingBuffer_Put(&adcBuffer, adcValue);
-        
-        // Apply median filter
-        int filteredValue = MedianFilter_AddValue(&filter, adcValue);
-        
-        IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(filteredValue), ADCIndex);
-    
+        // IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(filteredValue), ADCIndex);
+        IRSensorADCValue[ADCIndex] = HAL_ADC_GetValue(hadc);
+        IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(IRSensorADCValue[ADCIndex]), ADCIndex);
         ADCIndex++;
-        if (ADCIndex == 4)
+        if (ADCIndex == 5)
         {
             ADCIndex = 0;
             // HAL_ADC_Start_IT(&hadc2);
@@ -115,3 +109,32 @@ bool AML_IRSensor_IsNoRightWall(void)
     return (IRSensorDistanceValue[IR_SENSOR_R] > WALL_NOT_IN_RIGHT) ? 1 : 0;
 }
 //-------------------------------------------------------------------------------------------------------//
+void LedDebug(void)
+{
+    if (AML_IRSensor_IsFrontWall())
+    {
+        AML_LedDebug_TurnOnLED(N_FF);
+    }
+    else 
+    {
+        AML_LedDebug_TurnOffLED(N_FF);
+    }
+    if (AML_IRSensor_IsLeftWall())
+    {
+        AML_LedDebug_TurnOnLED(N_L);
+    }
+    else 
+    {
+        AML_LedDebug_TurnOffLED(N_L);
+    }
+    if (AML_IRSensor_IsRightWall())
+    {
+        AML_LedDebug_TurnOnLED(N_R);
+    }
+    else 
+    {
+        AML_LedDebug_TurnOffLED(N_R);
+    }
+   
+}
+ 

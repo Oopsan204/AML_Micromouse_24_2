@@ -77,6 +77,8 @@ void Error_Handler(void);
 #define BUTTON_0_GPIO_Port GPIOA
 #define BUTTON_1_Pin GPIO_PIN_3
 #define BUTTON_1_GPIO_Port GPIOA
+#define SS_FF_Pin GPIO_PIN_6
+#define SS_FF_GPIO_Port GPIOA
 #define SS_FR_Pin GPIO_PIN_7
 #define SS_FR_GPIO_Port GPIOA
 #define SS_FL_Pin GPIO_PIN_4
@@ -95,6 +97,8 @@ void Error_Handler(void);
 #define LED_2_GPIO_Port GPIOC
 #define LED_3_Pin GPIO_PIN_8
 #define LED_3_GPIO_Port GPIOC
+#define LED_4_Pin GPIO_PIN_9
+#define LED_4_GPIO_Port GPIOC
 #define PWMA_Pin GPIO_PIN_8
 #define PWMA_GPIO_Port GPIOA
 #define PWMB_Pin GPIO_PIN_9

@@ -10,7 +10,10 @@
         "aml_globalvariable.h": "c",
         "aml_switch.h": "c",
         "solver.h": "c",
-        "ringbuffer.h": "c"
+        "ringbuffer.h": "c",
+        "medianfilter.h": "c",
+        "stdint.h": "c",
+        "aml_leddebug.h": "c"
     },
     "files.autoSave": "afterDelay",
     "editor.inlineSuggest.syntaxHighlightingEnabled": true,
