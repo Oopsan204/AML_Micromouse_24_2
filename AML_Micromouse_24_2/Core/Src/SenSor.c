@@ -15,14 +15,20 @@
 #define GET_DISTANCE_4_30(voltage) (12.08 * pow(voltage, -1.058)) * 10                                                                               // mm
 
 #define GET_DISTANCE(voltage, index) (index > 0) ? GET_DISTANCE_2_15(voltage) : GET_DISTANCE_4_30(voltage)
+// low pass fillter for ADC input
+#define LOW_PASS_FILTER_ALPHA 0.01
+#define LOW_PASS_FILTER(x, y) ((x)*LOW_PASS_FILTER_ALPHA + (y) * (1 - LOW_PASS_FILTER_ALPHA))
+
 
 extern debug[100];
 
 extern ADC_HandleTypeDef hadc1;
 
-int IRSensorADCValue[5];
-int IRSensorDistanceValue[5];
-int ADCIndex = 0;
+double IRSensorADCValue[5];
+double IRSensorDistanceValue[5];
+double IRSensorDistanceValueFillter[5];
+double IRSensorDistanceValueFillterPre[5];
+int8_t ADCIndex = 0;
 
 
 //-------------------------------------------------------------------------------------------------------//
@@ -61,7 +67,11 @@ void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
         // IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(filteredValue), ADCIndex);
         IRSensorADCValue[ADCIndex] = HAL_ADC_GetValue(hadc);
         IRSensorDistanceValue[ADCIndex] = GET_DISTANCE(GET_VOLTAGE(IRSensorADCValue[ADCIndex]), ADCIndex);
+        IRSensorDistanceValueFillter[ADCIndex] = LOW_PASS_FILTER(IRSensorDistanceValue[ADCIndex], IRSensorDistanceValueFillterPre[ADCIndex]);
+        IRSensorDistanceValueFillterPre[ADCIndex] = IRSensorDistanceValueFillter[ADCIndex];
+
         ADCIndex++;
+
         if (ADCIndex == 5)
         {
             ADCIndex = 0;
@@ -81,17 +91,17 @@ double AML_IRSensor_GetDistance(uint8_t sensor)
 
 bool AML_IRSensor_IsFrontWall(void)
 {
-    return (IRSensorDistanceValue[IR_SENSOR_FF] < WALL_IN_FRONT) ? 1 : 0;
+    return (IRSensorDistanceValueFillter[IR_SENSOR_FF] < WALL_IN_FRONT) ? 1 : 0;
 }
 
 bool AML_IRSensor_IsLeftWall(void)
 {
-    return (IRSensorDistanceValue[IR_SENSOR_L] < WALL_IN_LEFT) ? 1 : 0;
+    return (IRSensorDistanceValueFillter[IR_SENSOR_L] < WALL_IN_LEFT) ? 1 : 0;
 }
 
 bool AML_IRSensor_IsRightWall(void)
 {
-    return (IRSensorDistanceValue[IR_SENSOR_R] < WALL_IN_RIGHT) ? 1 : 0;
+    return (IRSensorDistanceValueFillter[IR_SENSOR_R] < WALL_IN_RIGHT) ? 1 : 0;
 }
 
 bool AML_IRSensor_IsNoFrontWall(void)

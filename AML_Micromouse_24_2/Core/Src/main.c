@@ -156,7 +156,7 @@ void RunNewAlgorithm()
 
 /* USER CODE END 0 */
 
-/*5
+/**
  * @brief  The application entry point.
  * @retval int
  */
@@ -206,14 +206,15 @@ int main(void)
   AML_MotorControl_Setup();
   AML_Buzzer_TurnOn();
   AML_Buzzer_Beep();
-  for (int8_t i = 0; i < 5; i++)
+  for (int8_t i = 0; i < 2; i++)
   {
-    AML_LedDebug_TurnOnLED(i);
-    HAL_Delay(100);
-    AML_LedDebug_TurnOffLED(i);
+    for (int8_t j = 0; j < 5; j++)
+    {
+      AML_LedDebug_TurnOnLED(j);
+      HAL_Delay(100);
+      AML_LedDebug_TurnOffLED(j);
+    }
   }
-
-  
 
   /* USER CODE END 2 */
 
@@ -224,14 +225,13 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    LedDebug();
+    // LedDebug()
     if (AML_Read_Button(SW_0))
     {
-      AML_Buzzer_Beep();
-      // RunNewAlgorithm();
       // AML_MotorControl_MoveForwardOneCell();
       // AML_MotorControl_TurnLeft();
-      AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle());
+      RunNewAlgorithm();
+      // AML_MotorControl_TurnOnWallFollow();
     }
     else if (AML_Read_Button(SW_1))
 
@@ -239,13 +239,14 @@ int main(void)
       AML_Buzzer_Beep();
       // AML_MotorControl_TurnRight();
       // AML_MotorControl_Stop();
+      // AML_MotorControl_TurnOffWallFollow();
       // flagButton1 = 0;
     }
     CurrentAngle = AML_MPUSensor_GetAngle();
 
     EncoderGetLeftValue = AML_Encoder_GetLeftValue();
     EncoderGetRightValue = AML_Encoder_GetRightValue();
-    HAL_Delay(10);
+    HAL_Delay(50);
   }
   /* USER CODE END 3 */
 }
@@ -354,7 +355,7 @@ static void MX_ADC1_Init(void)
   {
     Error_Handler();
   }
-  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV16;
+  hadc1.Init.ClockPrescaler = ADC_CLOCK_ASYNC_DIV256;
   hadc1.Init.Resolution = ADC_RESOLUTION_16B;
   if (HAL_ADC_Init(&hadc1) != HAL_OK)
   {
@@ -610,7 +611,7 @@ static void MX_TIM1_Init(void)
   htim1.Init.Prescaler = 24;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim1.Init.Period = 999;
-  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+  htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV2;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
@@ -841,9 +842,9 @@ static void MX_TIM7_Init(void)
 
   /* USER CODE END TIM7_Init 1 */
   htim7.Instance = TIM7;
-  htim7.Init.Prescaler = 0;
+  htim7.Init.Prescaler = 24000;
   htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim7.Init.Period = 65535;
+  htim7.Init.Period = 199;
   htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
   {

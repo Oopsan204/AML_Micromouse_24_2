@@ -90,21 +90,14 @@ void searchRun()
         {
         case FORWARD:
             MOVE_FORWARD_FUNCTION;
-            AML_LedDebug_SetLED(N_FF, GPIO_PIN_SET);
-            AML_LedDebug_SetAllLED(GPIO_PIN_RESET);
             break;
         case LEFT:
             TURN_LEFT_FUNCTION;
-            AML_LedDebug_SetLED(N_L, GPIO_PIN_SET);
-            AML_LedDebug_SetAllLED(GPIO_PIN_RESET);
             break;
         case RIGHT:
             TURN_RIGHT_FUNCTION;
-            AML_LedDebug_SetLED(N_R, GPIO_PIN_SET);
-            AML_LedDebug_SetAllLED(GPIO_PIN_RESET);
             break;
         case IDLE:
-            AML_LedDebug_SetAllLED(GPIO_PIN_RESET);
             break;
         }
     }
