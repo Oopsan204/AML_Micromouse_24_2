@@ -5,6 +5,7 @@
 #include <stm32h743xx.h>
 // #include "stm32f4xx_hal_uart.h"
 
+void AML_MPUSensor_HardReset(void);
 void AML_MPUSensor_Setup(void);
 void AML_MPUSensor_ResetAngle(void);
 double AML_MPUSensor_GetAngle(void);

@@ -117,7 +117,7 @@ void RunNewAlgorithm()
 {
   // debug_log("Running...");
 
-  setPriorityHeading(EAST);
+  // setPriorityHeading(EAST);
 
   // setPosition(0, 0, NORTH);
   initialize();
@@ -129,10 +129,12 @@ void RunNewAlgorithm()
   markCenterWall();
   calculateShortestPathDistances();
 
-  // while (ReadButton != 8)
+  // while (AML_Read_BitSwitch(BIT_SW_2) == 0)
   // {
+  //   // Wait until the switch is turned on
   // }
-  // ReadButton = 8;
+  // // ReadButton = 8;
+  // AML_Read_BitSwitch(BIT_SW_2) == 1;
 
   // use hand to move the mouse to the start position, and find the shortest path
   // API_ackReset();
@@ -199,7 +201,8 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-  AML_MPUSensor_ResetAngle();
+  // AML_MPUSensor_ResetAngle();
+  AML_MPUSensor_HardReset();
   AML_MPUSensor_Setup();
   AML_Encoder_Setup();
   AML_IRSensor_Setup();
