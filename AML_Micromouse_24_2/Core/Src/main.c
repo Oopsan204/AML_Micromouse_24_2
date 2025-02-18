@@ -117,7 +117,7 @@ void RunNewAlgorithm()
 {
   // debug_log("Running...");
 
-  // setPriorityHeading(NORTH);
+  setPriorityHeading(EAST);
 
   // setPosition(0, 0, NORTH);
   initialize();
@@ -157,11 +157,11 @@ void RunNewAlgorithm()
 /* USER CODE END 0 */
 
 /**
- * @brief  The application entry point.
- * @retval int
- */
+  * @brief  The application entry point.
+  * @retval int
+  */
 int main(void)
-{
+	{
 
   /* USER CODE BEGIN 1 */
   /* USER CODE END 1 */
@@ -225,19 +225,23 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    // LedDebug()
-    if (AML_Read_Button(SW_0))
+    if (AML_Read_BitSwitch(BIT_SW_0))
     {
-      // AML_MotorControl_MoveForwardOneCell();
+      AML_MotorControl_MoveForwardOneCell();
       // AML_MotorControl_TurnLeft();
-      RunNewAlgorithm();
       // AML_MotorControl_TurnOnWallFollow();
+      // AML_MotorControl_TurnRight();
     }
-    else if (AML_Read_Button(SW_1))
+    else if (AML_Read_BitSwitch(BIT_SW_1))
+    {
+      LedDebug();
+      // AML_MotorControl_GoStraghtWithMPU(0);
+    }
 
+    if (AML_Read_Button(SW_1))
     {
       AML_Buzzer_Beep();
-      // AML_MotorControl_TurnRight();
+      RunNewAlgorithm();
       // AML_MotorControl_Stop();
       // AML_MotorControl_TurnOffWallFollow();
       // flagButton1 = 0;
@@ -252,36 +256,32 @@ int main(void)
 }
 
 /**
- * @brief System Clock Configuration
- * @retval None
- */
+  * @brief System Clock Configuration
+  * @retval None
+  */
 void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
   /** Supply configuration update enable
-   */
+  */
   HAL_PWREx_ConfigSupply(PWR_LDO_SUPPLY);
 
   /** Configure the main internal regulator output voltage
-   */
+  */
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
 
-  while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY))
-  {
-  }
+  while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
 
   __HAL_RCC_SYSCFG_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
-  while (!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY))
-  {
-  }
+  while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
 
   /** Initializes the RCC Oscillators according to the specified parameters
-   * in the RCC_OscInitTypeDef structure.
-   */
+  * in the RCC_OscInitTypeDef structure.
+  */
   RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSE;
   RCC_OscInitStruct.HSEState = RCC_HSE_ON;
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
@@ -300,8 +300,10 @@ void SystemClock_Config(void)
   }
 
   /** Initializes the CPU, AHB and APB buses clocks
-   */
-  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK | RCC_CLOCKTYPE_SYSCLK | RCC_CLOCKTYPE_PCLK1 | RCC_CLOCKTYPE_PCLK2 | RCC_CLOCKTYPE_D3PCLK1 | RCC_CLOCKTYPE_D1PCLK1;
+  */
+  RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
+                              |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2
+                              |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
@@ -317,10 +319,10 @@ void SystemClock_Config(void)
 }
 
 /**
- * @brief ADC1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief ADC1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_ADC1_Init(void)
 {
 
@@ -336,7 +338,7 @@ static void MX_ADC1_Init(void)
   /* USER CODE END ADC1_Init 1 */
 
   /** Common config
-   */
+  */
   hadc1.Instance = ADC1;
   hadc1.Init.ScanConvMode = ADC_SCAN_ENABLE;
   hadc1.Init.EOCSelection = ADC_EOC_SINGLE_CONV;
@@ -363,7 +365,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure the ADC multi-mode
-   */
+  */
   multimode.Mode = ADC_MODE_INDEPENDENT;
   if (HAL_ADCEx_MultiModeConfigChannel(&hadc1, &multimode) != HAL_OK)
   {
@@ -371,7 +373,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_3;
   sConfig.Rank = ADC_REGULAR_RANK_1;
   sConfig.SamplingTime = ADC_SAMPLETIME_64CYCLES_5;
@@ -385,7 +387,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_7;
   sConfig.Rank = ADC_REGULAR_RANK_2;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -394,7 +396,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_4;
   sConfig.Rank = ADC_REGULAR_RANK_3;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -403,7 +405,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_8;
   sConfig.Rank = ADC_REGULAR_RANK_4;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -412,7 +414,7 @@ static void MX_ADC1_Init(void)
   }
 
   /** Configure Regular Channel
-   */
+  */
   sConfig.Channel = ADC_CHANNEL_5;
   sConfig.Rank = ADC_REGULAR_RANK_5;
   if (HAL_ADC_ConfigChannel(&hadc1, &sConfig) != HAL_OK)
@@ -422,13 +424,14 @@ static void MX_ADC1_Init(void)
   /* USER CODE BEGIN ADC1_Init 2 */
 
   /* USER CODE END ADC1_Init 2 */
+
 }
 
 /**
- * @brief I2C2 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief I2C2 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_I2C2_Init(void)
 {
 
@@ -454,14 +457,14 @@ static void MX_I2C2_Init(void)
   }
 
   /** Configure Analogue filter
-   */
+  */
   if (HAL_I2CEx_ConfigAnalogFilter(&hi2c2, I2C_ANALOGFILTER_ENABLE) != HAL_OK)
   {
     Error_Handler();
   }
 
   /** Configure Digital filter
-   */
+  */
   if (HAL_I2CEx_ConfigDigitalFilter(&hi2c2, 0) != HAL_OK)
   {
     Error_Handler();
@@ -469,13 +472,14 @@ static void MX_I2C2_Init(void)
   /* USER CODE BEGIN I2C2_Init 2 */
 
   /* USER CODE END I2C2_Init 2 */
+
 }
 
 /**
- * @brief RAMECC Initialization Function
- * @param None
- * @retval None
- */
+  * @brief RAMECC Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_RAMECC_Init(void)
 {
 
@@ -488,7 +492,7 @@ static void MX_RAMECC_Init(void)
   /* USER CODE END RAMECC_Init 1 */
 
   /** Initialize RAMECC1 M1 : AXI SRAM
-   */
+  */
   hramecc1_m1.Instance = RAMECC1_Monitor1;
   if (HAL_RAMECC_Init(&hramecc1_m1) != HAL_OK)
   {
@@ -496,7 +500,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC1 M2 : ITCM-RAM
-   */
+  */
   hramecc1_m2.Instance = RAMECC1_Monitor2;
   if (HAL_RAMECC_Init(&hramecc1_m2) != HAL_OK)
   {
@@ -504,7 +508,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC1 M3 : D0TCM-RAM
-   */
+  */
   hramecc1_m3.Instance = RAMECC1_Monitor3;
   if (HAL_RAMECC_Init(&hramecc1_m3) != HAL_OK)
   {
@@ -512,7 +516,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC1 M4 : D1TCM-RAM
-   */
+  */
   hramecc1_m4.Instance = RAMECC1_Monitor4;
   if (HAL_RAMECC_Init(&hramecc1_m4) != HAL_OK)
   {
@@ -520,7 +524,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC1 M5 : ETM RAM
-   */
+  */
   hramecc1_m5.Instance = RAMECC1_Monitor5;
   if (HAL_RAMECC_Init(&hramecc1_m5) != HAL_OK)
   {
@@ -528,7 +532,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC2 M1 : SRAM1_0
-   */
+  */
   hramecc2_m1.Instance = RAMECC2_Monitor1;
   if (HAL_RAMECC_Init(&hramecc2_m1) != HAL_OK)
   {
@@ -536,7 +540,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC2 M2 SRAM1_1
-   */
+  */
   hramecc2_m2.Instance = RAMECC2_Monitor2;
   if (HAL_RAMECC_Init(&hramecc2_m2) != HAL_OK)
   {
@@ -544,7 +548,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC2 M3 : SRAM2_0
-   */
+  */
   hramecc2_m3.Instance = RAMECC2_Monitor3;
   if (HAL_RAMECC_Init(&hramecc2_m3) != HAL_OK)
   {
@@ -552,7 +556,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC2 M4 : SRAM2_1
-   */
+  */
   hramecc2_m4.Instance = RAMECC2_Monitor4;
   if (HAL_RAMECC_Init(&hramecc2_m4) != HAL_OK)
   {
@@ -560,7 +564,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC2 M5 : SRAM3
-   */
+  */
   hramecc2_m5.Instance = RAMECC2_Monitor5;
   if (HAL_RAMECC_Init(&hramecc2_m5) != HAL_OK)
   {
@@ -568,7 +572,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC3 M1 : SRAM4
-   */
+  */
   hramecc3_m1.Instance = RAMECC3_Monitor1;
   if (HAL_RAMECC_Init(&hramecc3_m1) != HAL_OK)
   {
@@ -576,7 +580,7 @@ static void MX_RAMECC_Init(void)
   }
 
   /** Initialize RAMECC3 M2 : Backup RAM
-   */
+  */
   hramecc3_m2.Instance = RAMECC3_Monitor2;
   if (HAL_RAMECC_Init(&hramecc3_m2) != HAL_OK)
   {
@@ -585,13 +589,14 @@ static void MX_RAMECC_Init(void)
   /* USER CODE BEGIN RAMECC_Init 2 */
 
   /* USER CODE END RAMECC_Init 2 */
+
 }
 
 /**
- * @brief TIM1 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM1 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM1_Init(void)
 {
 
@@ -668,13 +673,14 @@ static void MX_TIM1_Init(void)
 
   /* USER CODE END TIM1_Init 2 */
   HAL_TIM_MspPostInit(&htim1);
+
 }
 
 /**
- * @brief TIM2 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM2 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM2_Init(void)
 {
 
@@ -716,13 +722,14 @@ static void MX_TIM2_Init(void)
   /* USER CODE BEGIN TIM2_Init 2 */
 
   /* USER CODE END TIM2_Init 2 */
+
 }
 
 /**
- * @brief TIM4 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM4 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM4_Init(void)
 {
 
@@ -774,13 +781,14 @@ static void MX_TIM4_Init(void)
 
   /* USER CODE END TIM4_Init 2 */
   HAL_TIM_MspPostInit(&htim4);
+
 }
 
 /**
- * @brief TIM5 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM5 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM5_Init(void)
 {
 
@@ -822,13 +830,14 @@ static void MX_TIM5_Init(void)
   /* USER CODE BEGIN TIM5_Init 2 */
 
   /* USER CODE END TIM5_Init 2 */
+
 }
 
 /**
- * @brief TIM7 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief TIM7 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_TIM7_Init(void)
 {
 
@@ -859,13 +868,14 @@ static void MX_TIM7_Init(void)
   /* USER CODE BEGIN TIM7_Init 2 */
 
   /* USER CODE END TIM7_Init 2 */
+
 }
 
 /**
- * @brief USART3 Initialization Function
- * @param None
- * @retval None
- */
+  * @brief USART3 Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_USART3_UART_Init(void)
 {
 
@@ -906,11 +916,12 @@ static void MX_USART3_UART_Init(void)
   /* USER CODE BEGIN USART3_Init 2 */
 
   /* USER CODE END USART3_Init 2 */
+
 }
 
 /**
- * Enable DMA controller clock
- */
+  * Enable DMA controller clock
+  */
 static void MX_DMA_Init(void)
 {
 
@@ -921,18 +932,19 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 1, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+
 }
 
 /**
- * @brief GPIO Initialization Function
- * @param None
- * @retval None
- */
+  * @brief GPIO Initialization Function
+  * @param None
+  * @retval None
+  */
 static void MX_GPIO_Init(void)
 {
   GPIO_InitTypeDef GPIO_InitStruct = {0};
-  /* USER CODE BEGIN MX_GPIO_Init_1 */
-  /* USER CODE END MX_GPIO_Init_1 */
+/* USER CODE BEGIN MX_GPIO_Init_1 */
+/* USER CODE END MX_GPIO_Init_1 */
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
@@ -943,57 +955,58 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOD, LED_0_Pin | BIN2_Pin | BIN1_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOD, LED_0_Pin|BIN2_Pin|BIN1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOC, LED_1_Pin | LED_2_Pin | LED_3_Pin | LED_4_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOC, LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, AIN1_Pin | AIN2_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, AIN1_Pin|AIN2_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : BIT_SW_0_Pin BIT_SW_1_Pin BIT_SW_2_Pin BIT_SW_3_Pin
                            BIT_SW_4_Pin */
-  GPIO_InitStruct.Pin = BIT_SW_0_Pin | BIT_SW_1_Pin | BIT_SW_2_Pin | BIT_SW_3_Pin | BIT_SW_4_Pin;
+  GPIO_InitStruct.Pin = BIT_SW_0_Pin|BIT_SW_1_Pin|BIT_SW_2_Pin|BIT_SW_3_Pin
+                          |BIT_SW_4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
 
   /*Configure GPIO pins : BUTTON_0_Pin BUTTON_1_Pin */
-  GPIO_InitStruct.Pin = BUTTON_0_Pin | BUTTON_1_Pin;
+  GPIO_InitStruct.Pin = BUTTON_0_Pin|BUTTON_1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_0_Pin BIN2_Pin BIN1_Pin */
-  GPIO_InitStruct.Pin = LED_0_Pin | BIN2_Pin | BIN1_Pin;
+  GPIO_InitStruct.Pin = LED_0_Pin|BIN2_Pin|BIN1_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_1_Pin LED_2_Pin LED_3_Pin LED_4_Pin */
-  GPIO_InitStruct.Pin = LED_1_Pin | LED_2_Pin | LED_3_Pin | LED_4_Pin;
+  GPIO_InitStruct.Pin = LED_1_Pin|LED_2_Pin|LED_3_Pin|LED_4_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
 
   /*Configure GPIO pins : AIN1_Pin AIN2_Pin */
-  GPIO_InitStruct.Pin = AIN1_Pin | AIN2_Pin;
+  GPIO_InitStruct.Pin = AIN1_Pin|AIN2_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /* USER CODE BEGIN MX_GPIO_Init_2 */
-  /* USER CODE END MX_GPIO_Init_2 */
+/* USER CODE BEGIN MX_GPIO_Init_2 */
+/* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
 
 /* USER CODE END 4 */
 
-/* MPU Configuration */
+ /* MPU Configuration */
 
 void MPU_Config(void)
 {
@@ -1003,7 +1016,7 @@ void MPU_Config(void)
   HAL_MPU_Disable();
 
   /** Initializes and configures the Region and the memory to be protected
-   */
+  */
   MPU_InitStruct.Enable = MPU_REGION_ENABLE;
   MPU_InitStruct.Number = MPU_REGION_NUMBER0;
   MPU_InitStruct.BaseAddress = 0x0;
@@ -1019,12 +1032,13 @@ void MPU_Config(void)
   HAL_MPU_ConfigRegion(&MPU_InitStruct);
   /* Enables the MPU */
   HAL_MPU_Enable(MPU_PRIVILEGED_DEFAULT);
+
 }
 
 /**
- * @brief  This function is executed in case of error occurrence.
- * @retval None
- */
+  * @brief  This function is executed in case of error occurrence.
+  * @retval None
+  */
 void Error_Handler(void)
 {
   /* USER CODE BEGIN Error_Handler_Debug */
@@ -1036,14 +1050,14 @@ void Error_Handler(void)
   /* USER CODE END Error_Handler_Debug */
 }
 
-#ifdef USE_FULL_ASSERT
+#ifdef  USE_FULL_ASSERT
 /**
- * @brief  Reports the name of the source file and the source line number
- *         where the assert_param error has occurred.
- * @param  file: pointer to the source file name
- * @param  line: assert_param error line source number
- * @retval None
- */
+  * @brief  Reports the name of the source file and the source line number
+  *         where the assert_param error has occurred.
+  * @param  file: pointer to the source file name
+  * @param  line: assert_param error line source number
+  * @retval None
+  */
 void assert_failed(uint8_t *file, uint32_t line)
 {
   /* USER CODE BEGIN 6 */

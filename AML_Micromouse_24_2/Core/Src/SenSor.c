@@ -16,7 +16,7 @@
 
 #define GET_DISTANCE(voltage, index) (index > 0) ? GET_DISTANCE_2_15(voltage) : GET_DISTANCE_4_30(voltage)
 // low pass fillter for ADC input
-#define LOW_PASS_FILTER_ALPHA 0.01
+#define LOW_PASS_FILTER_ALPHA 0.025
 #define LOW_PASS_FILTER(x, y) ((x)*LOW_PASS_FILTER_ALPHA + (y) * (1 - LOW_PASS_FILTER_ALPHA))
 
 
@@ -52,6 +52,8 @@ void AML_IRSensor_Setup(void)
 {
     memset(IRSensorADCValue, 0, sizeof(IRSensorADCValue));
     memset(IRSensorDistanceValue, 0, sizeof(IRSensorDistanceValue));
+    memset(IRSensorDistanceValueFillter, 0, sizeof(IRSensorDistanceValueFillter));
+    memset(IRSensorDistanceValueFillterPre, 0, sizeof(IRSensorDistanceValueFillterPre));
 
 
     // HAL_ADC_Start_DMA(&hadc2, (uint32_t *)IRSensorADCValue, 7);

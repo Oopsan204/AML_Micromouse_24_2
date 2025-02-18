@@ -9,6 +9,7 @@
 #include "AML_Buzzer.h"
 #include "AML_MPUSensor.h"
 #include "AML_Encoder.h"
+#include "AML_LedDebug.h"
 
 void AML_MotorControl_AMLPIDSetup(void);
 void AML_MotorControl_Setup(void);
