@@ -19,7 +19,7 @@ extern debug[100];
 // currentfishin
 
 bool CalibFlag = true;
-double TICKS_ONE_CELL = 380;
+double TICKS_ONE_CELL = 370;
 
 // PID struct-------------------------------------------------------------------------------------------------------//
 
@@ -74,7 +74,7 @@ AML_PID_Struct PID_RightMotor =
 
 AML_PID_Struct PID_TurnLeft =
     {
-        .Kp = 2.5,
+        .Kp = 2.7,
         .Ki = 0.5,
         .Kd = 0.5,
         .tau = 0,
@@ -95,7 +95,7 @@ AML_PID_Struct PID_TurnLeft =
 
 AML_PID_Struct PID_TurnRight =
     {
-        .Kp = 2.5,
+        .Kp = 2.7,
         .Ki = 0.5,
         .Kd = 0.5,
         .tau = 0,
@@ -116,7 +116,7 @@ AML_PID_Struct PID_TurnRight =
 
 AML_PID_Struct PID_MPUFollow =
     {
-        .Kp = 2.5,
+        .Kp = 0.5,
         .Ki = 0.5,
         .Kd = 0.1,
         .tau = 0,
@@ -176,11 +176,53 @@ AML_PID_Struct PID_RightWallFollow =
         .Output = 0,
         .Setpoint = 0,
 };
-AML_PID_Struct PID_GoStraight =
+
+AML_PID_Struct PID_LeftWallFollowWithIRLeft =
     {
-        .Kp = 1,
-        .Ki = 0,
-        .Kd = 0,
+        .Kp = 0.7,
+        .Ki = 0.15,
+        .Kd = 0.2,
+        .tau = 0,
+        .limMin = -MouseSpeed,
+        .limMax = MouseSpeed,
+        .linMinInt = -15,
+        .linMaxInt = 15,
+        .sampleTime = SampleTime,
+        .lastTime = 0,
+        .integratol = 0,
+        .prevError = 0,
+        .differentiator = 0,
+        .prevMeasurement = 0,
+        .Input = 0,
+        .Output = 0,
+        .Setpoint = 0,
+};
+
+AML_PID_Struct PID_RightWallFollowWithIRRight =
+    {
+        .Kp = 0.7,
+        .Ki = 0.15,
+        .Kd = 0.2,
+        .tau = 0,
+        .limMin = -MouseSpeed,
+        .limMax = MouseSpeed,
+        .linMinInt = -15,
+        .linMaxInt = 15,
+        .sampleTime = SampleTime,
+        .lastTime = 0,
+        .integratol = 0,
+        .prevError = 0,
+        .differentiator = 0,
+        .prevMeasurement = 0,
+        .Input = 0,
+        .Output = 0,
+        .Setpoint = 0,
+};
+AML_PID_Struct PID_Calib =
+    {
+        .Kp = 0.5,
+        .Ki = 0.5,
+        .Kd = 0.1,
         .tau = 0,
         .limMin = -MouseSpeed,
         .limMax = MouseSpeed,
@@ -212,6 +254,7 @@ void AML_MotorControl_TurnOnWallFollow(void);
 void AML_MotorControl_TurnOffWallFollow(void);
 
 void AML_MotorControl_UpdateTempAngle(double angle);
+void AML_MotorControl_CalibrateWithMPU(double setpoint);
 void AML_MotorControl_TurnLeft(void);
 void AML_MotorControl_TurnRight(void);
 
@@ -405,14 +448,47 @@ void AML_MotorControl_RightWallFollow(void)
     int32_t rightSpeed = MouseSpeed + (int32_t)PID_RightWallFollow.Output;
     AML_MotorControl_Move(leftSpeed, rightSpeed);
 }
+void AML_MotorControl_LeftWallFollowWithIRLeft(void)
+{
+    PID_LeftWallFollowWithIRLeft.Input = AML_IRSensor_GetDistance(IR_SENSOR_L);
+    PID_LeftWallFollowWithIRLeft.Setpoint = 55;
+
+    AML_PID_Compute(&PID_LeftWallFollowWithIRLeft);
+
+    int32_t leftSpeed = MouseSpeed + (int32_t)PID_LeftWallFollowWithIRLeft.Output;
+    int32_t rightSpeed = MouseSpeed - (int32_t)PID_LeftWallFollowWithIRLeft.Output;
+    AML_MotorControl_Move(leftSpeed, rightSpeed);
+}
+
+void AML_MotorControl_RightWallFollowWithIRRight(void)
+{
+    PID_RightWallFollowWithIRRight.Input = AML_IRSensor_GetDistance(IR_SENSOR_R);
+    PID_RightWallFollowWithIRRight.Setpoint = 55;
+
+    AML_PID_Compute(&PID_RightWallFollowWithIRRight);
+    int32_t leftSpeed = MouseSpeed - (int32_t)PID_RightWallFollowWithIRRight.Output;
+    int32_t rightSpeed = MouseSpeed + (int32_t)PID_RightWallFollowWithIRRight.Output;
+    AML_MotorControl_Move(leftSpeed, rightSpeed);
+}
 
 void AML_MotorControl_GoStraight(void)
 {
-    if (AML_IRSensor_GetDistance(IR_SENSOR_FL) <= 100)
+    if (AML_IRSensor_GetDistance(IR_SENSOR_L) <= 30)
+
+    {
+        AML_MotorControl_LeftWallFollowWithIRLeft();
+        AML_LedDebug_TurnOnLED(N_L);
+    }
+    else if (AML_IRSensor_GetDistance(IR_SENSOR_R) <= 30)
+    {
+        AML_MotorControl_RightWallFollowWithIRRight();
+        AML_LedDebug_TurnOnLED(N_R);
+    }
+    else if (AML_IRSensor_GetDistance(IR_SENSOR_FL) <= 100)
     {
         AML_MotorControl_LeftWallFollow();
         // AML_MotorControl_GoStrastWithIR();
-        AML_LedDebug_TurnOnLED(N_L);
+        AML_LedDebug_TurnOnLED(N_FL);
 
         // TempSetPoint = -PID_LeftWallFollow.Output;
 
@@ -421,19 +497,47 @@ void AML_MotorControl_GoStraight(void)
     else if (AML_IRSensor_GetDistance(IR_SENSOR_FR) <= 100)
     {
         AML_MotorControl_RightWallFollow();
-        AML_LedDebug_TurnOnLED(N_R);
+        AML_LedDebug_TurnOnLED(N_FR);
 
         // TempSetPoint = PID_RightWallFollow.Output;
 
         // AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle() + PID_RightWallFollow.Output);
     }
+
+    
     else
     {
         AML_LedDebug_SetAllLED(GPIO_PIN_SET);
-        AML_MotorControl_GoStraghtWithMPU(AML_MPUSensor_GetAngle());
+        AML_MotorControl_GoStraghtWithMPU(TempSetPoint);
     }
 }
 
+void AML_MotorControl_CalibrateWithMPU(double setpoint)
+{
+    // Move backward until the robot is aligned with the wall using MPU
+    uint32_t startTime = HAL_GetTick();
+    while ((HAL_GetTick() - startTime) < 1000) // Exit loop after 1000ms
+    {
+        PID_Calib.Input = AML_MPUSensor_GetAngle();
+        PID_Calib.Setpoint = setpoint;
+        AML_PID_Compute(&PID_Calib);
+        AML_MotorControl_Move((BACKWARD_SPEED - (int32_t)PID_Calib.Output), (BACKWARD_SPEED + (int32_t)PID_Calib.Output));
+    }
+    // Stop the motors
+    // AML_MotorControl_Stop();
+
+    uint32_t initTime = HAL_GetTick();
+    while (HAL_GetTick() - initTime < 100)
+    {
+        /* code */
+    }
+
+    // Reset MPU angle and encoders
+    AML_MPUSensor_ResetAngle();
+
+    // Update temporary setpoint
+    TempSetPoint = 0;
+}
 //--------------------------------------------------------------------------------------------------------//
 
 void AML_MotorControl_TurnLeft(void)
@@ -444,10 +548,10 @@ void AML_MotorControl_TurnLeft(void)
     if (AML_IRSensor_IsRightWall())
     {
         WallCalibFlag = true;
-        TICKS_ONE_CELL = 380;
+        TICKS_ONE_CELL = 370;
     }
 
-    uint16_t WaitingTime = 1500;
+    uint16_t WaitingTime = 1300;
 
     PID_TurnLeft.Setpoint = TempSetPoint + TuneLeft90Angle;
 
@@ -479,22 +583,16 @@ void AML_MotorControl_TurnLeft(void)
     if (WallCalibFlag == true)
     {
         AML_MotorControl_Move(0, 0);
-        HAL_Delay(10);
-        AML_MotorControl_Move(-50, -50);
-        uint32_t startTime = HAL_GetTick();
-        while (HAL_GetTick() - startTime < 1000)
-        {
-            // Do nothing, just wait
-        }
-        AML_MPUSensor_ResetAngle();
-        TempSetPoint = 0;
+        // HAL_Delay(10);
+        // AML_MotorControl_Move(-60, -60);
+        AML_MotorControl_CalibrateWithMPU(TempSetPoint);
         AML_MotorControl_Move(0, 0);
         WallCalibFlag = false;
     }
     else
     {
         AML_MotorControl_Move(0, 0);
-        TICKS_ONE_CELL = 340;
+        TICKS_ONE_CELL = 330;
     }
 }
 
@@ -506,9 +604,9 @@ void AML_MotorControl_TurnRight(void)
     if (AML_IRSensor_IsLeftWall())
     {
         WallCalibFlag = true;
-        TICKS_ONE_CELL = 380;
+        TICKS_ONE_CELL = 370;
     }
-    uint16_t WaitingTime = 1500;
+    uint16_t WaitingTime = 1300;
 
     PID_TurnRight.Setpoint = TempSetPoint - TuneRight90Angle;
 
@@ -541,50 +639,16 @@ void AML_MotorControl_TurnRight(void)
     if (WallCalibFlag == true)
     {
         AML_MotorControl_Move(0, 0);
-        HAL_Delay(10);
-        AML_MotorControl_Move(-50, -50);
-        uint32_t startTime = HAL_GetTick();
-        while (HAL_GetTick() - startTime < 1000)
-        {
-            // Do nothing, just wait
-        }
-        AML_MPUSensor_ResetAngle();
-        TempSetPoint = 0;
+        // HAL_Delay(10);
+        // AML_MotorControl_Move(-60, -60);
+        AML_MotorControl_CalibrateWithMPU(TempSetPoint);
         AML_MotorControl_Move(0, 0);
         WallCalibFlag = false;
     }
     else
     {
-        TICKS_ONE_CELL = 340;
+        TICKS_ONE_CELL = 330;
         AML_MotorControl_Move(0, 0);
-    }
-}
-
-void AML_MotorControl_GoStrastWithIR(void)
-{
-    uint16_t WaitingTime = 700;
-
-    uint32_t InitTime = HAL_GetTick();
-    uint32_t CurrentTime = HAL_GetTick();
-    uint32_t PreviousTime = CurrentTime;
-
-    while ((CurrentTime - PreviousTime) < 450 && (HAL_GetTick() - InitTime < WaitingTime))
-    {
-        PID_GoStraight.Input = AML_IRSensor_GetDistance(IR_SENSOR_R) - AML_IRSensor_GetDistance(IR_SENSOR_L);
-
-        AML_PID_Compute(&PID_GoStraight);
-
-        AML_MotorControl_Move(-(int32_t)PID_GoStraight.Output, (int32_t)PID_GoStraight.Output);
-
-        if (ABS(PID_GoStraight.Input) < 3)
-        {
-            CurrentTime = HAL_GetTick();
-        }
-        else
-        {
-            CurrentTime = HAL_GetTick();
-            PreviousTime = CurrentTime;
-        }
     }
 }
 
@@ -602,7 +666,7 @@ void AML_MotorControl_MoveForwardOneCell(void)
     AML_MotorControl_TurnOffWallFollow();
     AML_MotorControl_Stop();
     AML_Buzzer_Beep();
-    TICKS_ONE_CELL = 340;
+    TICKS_ONE_CELL = 330;
 }
 
 void AML_MotorControl_MoveForwardDistance(int32_t distance)

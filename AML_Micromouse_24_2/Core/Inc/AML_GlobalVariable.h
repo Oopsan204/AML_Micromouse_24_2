@@ -37,8 +37,11 @@
 #define WheelDiameter 21  // mm
 #define TransmissionRatio 1     // ratio between wheel and encoder
 #define EncoderPulsePerRound 140 // 720 pulse per round encoder
-#define MouseSpeed 40 // % of duty cycle
-#define MouseTurnSpeed 80 // % of duty cycle
+#define MouseSpeed 45 // % of duty cycle
+#define MouseTurnSpeed 75 // % of duty cycle
+#define BACKWARD_SPEED -60      // Speed to move backward
+#define CALIB_WAIT_TIME 1000    // Maximum wait time in milliseconds
+#define CALIB_ANGLE_TOLERANCE 3 // Tolerance for angle alignment
 
 // define parameter for PID control
 
